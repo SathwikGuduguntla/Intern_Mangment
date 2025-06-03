@@ -1,0 +1,95 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "WA-.YYYY.-.####",
+ "creation": "2025-06-03 00:08:13.616403",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "intern",
+  "task_delegation",
+  "template",
+  "task",
+  "completion_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "template",
+   "fieldtype": "Link",
+   "label": "Template",
+   "options": "Work Template"
+  },
+  {
+   "fieldname": "task",
+   "fieldtype": "Table",
+   "label": "task",
+   "options": "Work Allocations Task Item"
+  },
+  {
+   "fieldname": "intern",
+   "fieldtype": "Link",
+   "label": "Intern",
+   "options": "Intern"
+  },
+  {
+   "fieldname": "completion_status",
+   "fieldtype": "Select",
+   "label": "Completion Status",
+   "options": "Not Started\nCancelled\nOn Hold\nCompleted\nUploaded on Dev\nIn Progress\nUploaded on Live\nSuccessfully Tested improvements required\nDone Devoplopment"
+  },
+  {
+   "fieldname": "task_delegation",
+   "fieldtype": "Link",
+   "label": "Task Delegation",
+   "options": "Mentor"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-06-03 11:46:22.250228",
+ "modified_by": "Administrator",
+ "module": "Intern Management",
+ "name": "Work Allocations",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Mentor",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Intern",
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
