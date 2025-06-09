@@ -1,0 +1,293 @@
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Error: Not Found
+    at Request.callback (/home/limendo/frappe-bench/apps/frappe/node_modules/superagent/lib/node/index.js:845:17)
+    at /home/limendo/frappe-bench/apps/frappe/node_modules/superagent/lib/node/index.js:1070:18
+    at IncomingMessage.<anonymous> (/home/limendo/frappe-bench/apps/frappe/node_modules/superagent/lib/node/parsers/json.js:21:7)
+    at Stream.emit (node:events:517:28)
+    at Unzip.<anonymous> (/home/limendo/frappe-bench/apps/frappe/node_modules/superagent/lib/node/unzip.js:54:12)
+    at Unzip.emit (node:events:517:28)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  status: 404,
+  response: <ref *1> Response {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: undefined,
+    res: IncomingMessage {
+      _readableState: [ReadableState],
+      _events: [Object: null prototype],
+      _eventsCount: 3,
+      _maxListeners: undefined,
+      socket: [Socket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 404,
+      statusMessage: 'NOT FOUND',
+      client: [Socket],
+      _consuming: false,
+      _dumped: false,
+      req: [ClientRequest],
+      setEncoding: [Function (anonymous)],
+      on: [Function (anonymous)],
+      text: '{"exc_type":"DoesNotExistError","_server_messages":"[\\"{\\\\\\"message\\\\\\": \\\\\\"Help Article new-help-article-fgtrxupene not found\\\\\\", \\\\\\"title\\\\\\": \\\\\\"Message\\\\\\", \\\\\\"indicator\\\\\\": \\\\\\"red\\\\\\", \\\\\\"raise_exception\\\\\\": 1, \\\\\\"__frappe_exc_id\\\\\\": \\\\\\"8bca79456e48ffa84addbdf832ae8a084e79f129ec42de1fd68c61a6\\\\\\"}\\"]"}',
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 24,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    request: Request {
+      _events: [Object: null prototype] {},
+      _eventsCount: 0,
+      _maxListeners: undefined,
+      _enableHttp2: false,
+      _agent: false,
+      _formData: null,
+      method: 'GET',
+      url: 'http://172.22.21.60/api/method/frappe.realtime.can_subscribe_doc?sid=f1ce736042241d5e31791c39ea6fa2c0ed671bcd30721f2f5ac14419&doctype=Help%20Article&docname=new-help-article-fgtrxupene',
+      _header: [Object],
+      header: [Object],
+      writable: true,
+      _redirects: 0,
+      _maxRedirects: 5,
+      cookies: '',
+      qs: {},
+      _query: [],
+      qsRaw: [],
+      _redirectList: [],
+      _streamRequest: false,
+      _lookup: undefined,
+      req: [ClientRequest],
+      protocol: 'http:',
+      host: '172.22.21.60',
+      _endCalled: true,
+      _callback: [Function (anonymous)],
+      res: [IncomingMessage],
+      _resBuffered: true,
+      response: [Circular *1],
+      called: true,
+      [Symbol(kCapture)]: false
+    },
+    req: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 3,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      socket: [Socket],
+      _header: 'GET /api/method/frappe.realtime.can_subscribe_doc?sid=f1ce736042241d5e31791c39ea6fa2c0ed671bcd30721f2f5ac14419&doctype=Help%20Article&docname=new-help-article-fgtrxupene HTTP/1.1\r\n' +
+        'Host: 172.22.21.60\r\n' +
+        'Accept-Encoding: gzip, deflate\r\n' +
+        'Content-Type: application/x-www-form-urlencoded\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/api/method/frappe.realtime.can_subscribe_doc?sid=f1ce736042241d5e31791c39ea6fa2c0ed671bcd30721f2f5ac14419&doctype=Help%20Article&docname=new-help-article-fgtrxupene',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: '172.22.21.60',
+      protocol: 'http:',
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 16384,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    text: '{"exc_type":"DoesNotExistError","_server_messages":"[\\"{\\\\\\"message\\\\\\": \\\\\\"Help Article new-help-article-fgtrxupene not found\\\\\\", \\\\\\"title\\\\\\": \\\\\\"Message\\\\\\", \\\\\\"indicator\\\\\\": \\\\\\"red\\\\\\", \\\\\\"raise_exception\\\\\\": 1, \\\\\\"__frappe_exc_id\\\\\\": \\\\\\"8bca79456e48ffa84addbdf832ae8a084e79f129ec42de1fd68c61a6\\\\\\"}\\"]"}',
+    files: undefined,
+    buffered: true,
+    headers: {
+      server: 'nginx',
+      date: 'Tue, 13 May 2025 10:13:43 GMT',
+      'content-type': 'application/json',
+      'transfer-encoding': 'chunked',
+      connection: 'close',
+      vary: 'Accept-Encoding',
+      'set-cookie': [Array],
+      'content-encoding': 'gzip'
+    },
+    header: {
+      server: 'nginx',
+      date: 'Tue, 13 May 2025 10:13:43 GMT',
+      'content-type': 'application/json',
+      'transfer-encoding': 'chunked',
+      connection: 'close',
+      vary: 'Accept-Encoding',
+      'set-cookie': [Array],
+      'content-encoding': 'gzip'
+    },
+    statusCode: 404,
+    status: 404,
+    statusType: 4,
+    info: false,
+    ok: false,
+    redirect: false,
+    clientError: true,
+    serverError: false,
+    error: Error: cannot GET /api/method/frappe.realtime.can_subscribe_doc?sid=f1ce736042241d5e31791c39ea6fa2c0ed671bcd30721f2f5ac14419&doctype=Help%20Article&docname=new-help-article-fgtrxupene (404)
+        at Response.toError (/home/limendo/frappe-bench/apps/frappe/node_modules/superagent/lib/node/response.js:107:17)
+        at ResponseBase._setStatusProperties (/home/limendo/frappe-bench/apps/frappe/node_modules/superagent/lib/response-base.js:107:48)
+        at new Response (/home/limendo/frappe-bench/apps/frappe/node_modules/superagent/lib/node/response.js:44:8)
+        at Request._emitResponse (/home/limendo/frappe-bench/apps/frappe/node_modules/superagent/lib/node/index.js:891:20)
+        at /home/limendo/frappe-bench/apps/frappe/node_modules/superagent/lib/node/index.js:1070:38
+        at IncomingMessage.<anonymous> (/home/limendo/frappe-bench/apps/frappe/node_modules/superagent/lib/node/parsers/json.js:21:7)
+        at Stream.emit (node:events:517:28)
+        at Unzip.<anonymous> (/home/limendo/frappe-bench/apps/frappe/node_modules/superagent/lib/node/unzip.js:54:12)
+        at Unzip.emit (node:events:517:28)
+        at endReadableNT (node:internal/streams/readable:1400:12) {
+      status: 404,
+      text: '{"exc_type":"DoesNotExistError","_server_messages":"[\\"{\\\\\\"message\\\\\\": \\\\\\"Help Article new-help-article-fgtrxupene not found\\\\\\", \\\\\\"title\\\\\\": \\\\\\"Message\\\\\\", \\\\\\"indicator\\\\\\": \\\\\\"red\\\\\\", \\\\\\"raise_exception\\\\\\": 1, \\\\\\"__frappe_exc_id\\\\\\": \\\\\\"8bca79456e48ffa84addbdf832ae8a084e79f129ec42de1fd68c61a6\\\\\\"}\\"]"}',
+      method: 'GET',
+      path: '/api/method/frappe.realtime.can_subscribe_doc?sid=f1ce736042241d5e31791c39ea6fa2c0ed671bcd30721f2f5ac14419&doctype=Help%20Article&docname=new-help-article-fgtrxupene'
+    },
+    created: false,
+    accepted: false,
+    noContent: false,
+    badRequest: false,
+    unauthorized: false,
+    notAcceptable: false,
+    forbidden: false,
+    notFound: true,
+    unprocessableEntity: false,
+    type: 'application/json',
+    links: {},
+    setEncoding: [Function: bound ],
+    redirects: [],
+    _body: {
+      exc_type: 'DoesNotExistError',
+      _server_messages: '["{\\"message\\": \\"Help Article new-help-article-fgtrxupene not found\\", \\"title\\": \\"Message\\", \\"indicator\\": \\"red\\", \\"raise_exception\\": 1, \\"__frappe_exc_id\\": \\"8bca79456e48ffa84addbdf832ae8a084e79f129ec42de1fd68c61a6\\"}"]'
+    },
+    pipe: [Function (anonymous)],
+    [Symbol(kCapture)]: false
+  }
+}
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000

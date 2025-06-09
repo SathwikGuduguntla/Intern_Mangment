@@ -1,0 +1,8 @@
+2025-05-15 09:49:10,997 WARNING database DDL Query made to DB:
+ALTER TABLE `tabArticle` ADD COLUMN `author` varchar(140)
+2025-05-15 09:50:52,400 WARNING database DDL Query made to DB:
+ALTER TABLE `tabArticle` ADD COLUMN `publisher` varchar(140)
+2025-05-15 10:03:18,819 WARNING database DDL Query made to DB:
+ALTER TABLE `tabArticle` ADD UNIQUE INDEX IF NOT EXISTS article_name (`article_name`)
+2025-05-15 10:11:09,343 WARNING database DDL Query made to DB:
+ALTER TABLE `tabLibrary Member` ADD COLUMN `last_name` varchar(140)

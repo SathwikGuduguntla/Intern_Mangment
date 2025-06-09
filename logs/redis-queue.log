@@ -1,0 +1,380 @@
+29358:C 13 May 2025 07:16:50.718 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29358:C 13 May 2025 07:16:50.718 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29358, just started
+29358:C 13 May 2025 07:16:50.718 # Configuration loaded
+29358:M 13 May 2025 07:16:50.724 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29358:M 13 May 2025 07:16:50.724 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29389:C 13 May 2025 07:16:51.780 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29389:C 13 May 2025 07:16:51.780 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29389, just started
+29389:C 13 May 2025 07:16:51.780 # Configuration loaded
+29389:M 13 May 2025 07:16:51.780 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29389:M 13 May 2025 07:16:51.781 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29412:C 13 May 2025 07:16:54.925 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29412:C 13 May 2025 07:16:54.925 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29412, just started
+29412:C 13 May 2025 07:16:54.925 # Configuration loaded
+29412:M 13 May 2025 07:16:54.925 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29412:M 13 May 2025 07:16:54.925 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29421:C 13 May 2025 07:16:58.073 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29421:C 13 May 2025 07:16:58.073 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29421, just started
+29421:C 13 May 2025 07:16:58.073 # Configuration loaded
+29421:M 13 May 2025 07:16:58.074 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29421:M 13 May 2025 07:16:58.074 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29439:C 13 May 2025 07:17:02.222 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29439:C 13 May 2025 07:17:02.222 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29439, just started
+29439:C 13 May 2025 07:17:02.222 # Configuration loaded
+29439:M 13 May 2025 07:17:02.222 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29439:M 13 May 2025 07:17:02.222 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29451:C 13 May 2025 07:17:07.373 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29451:C 13 May 2025 07:17:07.373 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29451, just started
+29451:C 13 May 2025 07:17:07.373 # Configuration loaded
+29451:M 13 May 2025 07:17:07.373 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29451:M 13 May 2025 07:17:07.373 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29460:C 13 May 2025 07:17:13.525 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29460:C 13 May 2025 07:17:13.525 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29460, just started
+29460:C 13 May 2025 07:17:13.525 # Configuration loaded
+29460:M 13 May 2025 07:17:13.525 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29460:M 13 May 2025 07:17:13.525 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29469:C 13 May 2025 07:17:20.678 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29469:C 13 May 2025 07:17:20.678 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29469, just started
+29469:C 13 May 2025 07:17:20.678 # Configuration loaded
+29469:M 13 May 2025 07:17:20.678 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29469:M 13 May 2025 07:17:20.678 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29478:C 13 May 2025 07:17:28.832 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29478:C 13 May 2025 07:17:28.832 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29478, just started
+29478:C 13 May 2025 07:17:28.832 # Configuration loaded
+29478:M 13 May 2025 07:17:28.833 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29478:M 13 May 2025 07:17:28.833 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29487:C 13 May 2025 07:17:37.985 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29487:C 13 May 2025 07:17:37.985 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29487, just started
+29487:C 13 May 2025 07:17:37.985 # Configuration loaded
+29487:M 13 May 2025 07:17:37.986 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29487:M 13 May 2025 07:17:37.986 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29496:C 13 May 2025 07:17:48.143 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29496:C 13 May 2025 07:17:48.143 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29496, just started
+29496:C 13 May 2025 07:17:48.143 # Configuration loaded
+29496:M 13 May 2025 07:17:48.143 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29496:M 13 May 2025 07:17:48.143 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29526:C 13 May 2025 07:18:00.085 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29526:C 13 May 2025 07:18:00.086 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29526, just started
+29526:C 13 May 2025 07:18:00.086 # Configuration loaded
+29526:M 13 May 2025 07:18:00.086 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29526:M 13 May 2025 07:18:00.089 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29549:C 13 May 2025 07:18:01.588 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29549:C 13 May 2025 07:18:01.601 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29549, just started
+29549:C 13 May 2025 07:18:01.601 # Configuration loaded
+29549:M 13 May 2025 07:18:01.601 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29549:M 13 May 2025 07:18:01.601 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29567:C 13 May 2025 07:18:04.012 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29567:C 13 May 2025 07:18:04.012 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29567, just started
+29567:C 13 May 2025 07:18:04.012 # Configuration loaded
+29567:M 13 May 2025 07:18:04.013 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29567:M 13 May 2025 07:18:04.013 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29576:C 13 May 2025 07:18:07.151 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29576:C 13 May 2025 07:18:07.151 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29576, just started
+29576:C 13 May 2025 07:18:07.151 # Configuration loaded
+29576:M 13 May 2025 07:18:07.152 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29576:M 13 May 2025 07:18:07.152 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29585:C 13 May 2025 07:18:11.291 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29585:C 13 May 2025 07:18:11.291 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29585, just started
+29585:C 13 May 2025 07:18:11.291 # Configuration loaded
+29585:M 13 May 2025 07:18:11.292 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29585:M 13 May 2025 07:18:11.292 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29594:C 13 May 2025 07:18:16.435 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29594:C 13 May 2025 07:18:16.435 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29594, just started
+29594:C 13 May 2025 07:18:16.435 # Configuration loaded
+29594:M 13 May 2025 07:18:16.436 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29594:M 13 May 2025 07:18:16.436 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29603:C 13 May 2025 07:18:22.577 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29603:C 13 May 2025 07:18:22.578 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29603, just started
+29603:C 13 May 2025 07:18:22.578 # Configuration loaded
+29603:M 13 May 2025 07:18:22.578 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29603:M 13 May 2025 07:18:22.579 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29612:C 13 May 2025 07:18:29.720 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29612:C 13 May 2025 07:18:29.720 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29612, just started
+29612:C 13 May 2025 07:18:29.720 # Configuration loaded
+29612:M 13 May 2025 07:18:29.721 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29612:M 13 May 2025 07:18:29.721 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29621:C 13 May 2025 07:18:37.868 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29621:C 13 May 2025 07:18:37.869 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29621, just started
+29621:C 13 May 2025 07:18:37.869 # Configuration loaded
+29621:M 13 May 2025 07:18:37.870 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29621:M 13 May 2025 07:18:37.870 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29632:C 13 May 2025 07:18:47.014 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29632:C 13 May 2025 07:18:47.015 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29632, just started
+29632:C 13 May 2025 07:18:47.015 # Configuration loaded
+29632:M 13 May 2025 07:18:47.015 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29632:M 13 May 2025 07:18:47.015 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29643:C 13 May 2025 07:18:57.165 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29643:C 13 May 2025 07:18:57.166 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29643, just started
+29643:C 13 May 2025 07:18:57.166 # Configuration loaded
+29643:M 13 May 2025 07:18:57.166 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29643:M 13 May 2025 07:18:57.167 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29738:C 13 May 2025 07:23:29.724 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29738:C 13 May 2025 07:23:29.725 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29738, just started
+29738:C 13 May 2025 07:23:29.725 # Configuration loaded
+29738:M 13 May 2025 07:23:29.725 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29738:M 13 May 2025 07:23:29.729 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29757:C 13 May 2025 07:23:31.239 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29757:C 13 May 2025 07:23:31.241 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29757, just started
+29757:C 13 May 2025 07:23:31.241 # Configuration loaded
+29757:M 13 May 2025 07:23:31.242 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29757:M 13 May 2025 07:23:31.243 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29773:C 13 May 2025 07:23:33.643 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29773:C 13 May 2025 07:23:33.643 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29773, just started
+29773:C 13 May 2025 07:23:33.643 # Configuration loaded
+29773:M 13 May 2025 07:23:33.644 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29773:M 13 May 2025 07:23:33.644 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29782:C 13 May 2025 07:23:36.783 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29782:C 13 May 2025 07:23:36.783 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29782, just started
+29782:C 13 May 2025 07:23:36.784 # Configuration loaded
+29782:M 13 May 2025 07:23:36.784 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29782:M 13 May 2025 07:23:36.784 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29791:C 13 May 2025 07:23:40.925 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29791:C 13 May 2025 07:23:40.926 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29791, just started
+29791:C 13 May 2025 07:23:40.926 # Configuration loaded
+29791:M 13 May 2025 07:23:40.926 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29791:M 13 May 2025 07:23:40.927 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29800:C 13 May 2025 07:23:46.068 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29800:C 13 May 2025 07:23:46.069 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29800, just started
+29800:C 13 May 2025 07:23:46.069 # Configuration loaded
+29800:M 13 May 2025 07:23:46.070 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29800:M 13 May 2025 07:23:46.070 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29815:C 13 May 2025 07:23:52.217 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29815:C 13 May 2025 07:23:52.217 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29815, just started
+29815:C 13 May 2025 07:23:52.217 # Configuration loaded
+29815:M 13 May 2025 07:23:52.218 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29815:M 13 May 2025 07:23:52.218 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29824:C 13 May 2025 07:23:59.361 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29824:C 13 May 2025 07:23:59.361 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29824, just started
+29824:C 13 May 2025 07:23:59.361 # Configuration loaded
+29824:M 13 May 2025 07:23:59.361 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29824:M 13 May 2025 07:23:59.361 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29839:C 13 May 2025 07:24:07.511 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29839:C 13 May 2025 07:24:07.512 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29839, just started
+29839:C 13 May 2025 07:24:07.512 # Configuration loaded
+29839:M 13 May 2025 07:24:07.512 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29839:M 13 May 2025 07:24:07.513 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29848:C 13 May 2025 07:24:16.654 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29848:C 13 May 2025 07:24:16.655 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29848, just started
+29848:C 13 May 2025 07:24:16.655 # Configuration loaded
+29848:M 13 May 2025 07:24:16.656 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29848:M 13 May 2025 07:24:16.656 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29862:C 13 May 2025 07:24:26.802 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29862:C 13 May 2025 07:24:26.802 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29862, just started
+29862:C 13 May 2025 07:24:26.802 # Configuration loaded
+29862:M 13 May 2025 07:24:26.803 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29862:M 13 May 2025 07:24:26.803 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29897:C 13 May 2025 07:25:36.751 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29897:C 13 May 2025 07:25:36.751 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29897, just started
+29897:C 13 May 2025 07:25:36.757 # Configuration loaded
+29897:M 13 May 2025 07:25:36.757 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29897:M 13 May 2025 07:25:36.761 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29916:C 13 May 2025 07:25:37.810 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29916:C 13 May 2025 07:25:37.810 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29916, just started
+29916:C 13 May 2025 07:25:37.810 # Configuration loaded
+29916:M 13 May 2025 07:25:37.810 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29916:M 13 May 2025 07:25:37.810 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29931:C 13 May 2025 07:25:38.903 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29931:C 13 May 2025 07:25:38.903 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29931, just started
+29931:C 13 May 2025 07:25:38.903 # Configuration loaded
+29931:M 13 May 2025 07:25:38.903 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29931:M 13 May 2025 07:25:38.903 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29941:C 13 May 2025 07:25:41.162 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29941:C 13 May 2025 07:25:41.162 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29941, just started
+29941:C 13 May 2025 07:25:41.162 # Configuration loaded
+29941:M 13 May 2025 07:25:41.162 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29941:M 13 May 2025 07:25:41.162 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29946:C 13 May 2025 07:25:42.598 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29946:C 13 May 2025 07:25:42.598 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29946, just started
+29946:C 13 May 2025 07:25:42.598 # Configuration loaded
+29946:M 13 May 2025 07:25:42.599 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29946:M 13 May 2025 07:25:42.599 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29979:C 13 May 2025 07:25:47.726 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29979:C 13 May 2025 07:25:47.726 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29979, just started
+29979:C 13 May 2025 07:25:47.726 # Configuration loaded
+29979:M 13 May 2025 07:25:47.727 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29979:M 13 May 2025 07:25:47.727 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29988:C 13 May 2025 07:25:52.997 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29988:C 13 May 2025 07:25:52.997 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29988, just started
+29988:C 13 May 2025 07:25:52.997 # Configuration loaded
+29988:M 13 May 2025 07:25:52.997 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29988:M 13 May 2025 07:25:52.997 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+29997:C 13 May 2025 07:25:59.265 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+29997:C 13 May 2025 07:25:59.265 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=29997, just started
+29997:C 13 May 2025 07:25:59.265 # Configuration loaded
+29997:M 13 May 2025 07:25:59.265 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+29997:M 13 May 2025 07:25:59.265 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+30012:C 13 May 2025 07:26:06.536 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+30012:C 13 May 2025 07:26:06.536 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=30012, just started
+30012:C 13 May 2025 07:26:06.536 # Configuration loaded
+30012:M 13 May 2025 07:26:06.537 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+30012:M 13 May 2025 07:26:06.537 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+30021:C 13 May 2025 07:26:14.813 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+30021:C 13 May 2025 07:26:14.813 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=30021, just started
+30021:C 13 May 2025 07:26:14.813 # Configuration loaded
+30021:M 13 May 2025 07:26:14.813 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+30021:M 13 May 2025 07:26:14.813 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+30030:C 13 May 2025 07:26:24.086 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+30030:C 13 May 2025 07:26:24.086 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=30030, just started
+30030:C 13 May 2025 07:26:24.086 # Configuration loaded
+30030:M 13 May 2025 07:26:24.086 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+30030:M 13 May 2025 07:26:24.086 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+30039:C 13 May 2025 07:26:34.361 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+30039:C 13 May 2025 07:26:34.361 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=30039, just started
+30039:C 13 May 2025 07:26:34.361 # Configuration loaded
+30039:M 13 May 2025 07:26:34.361 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+30039:M 13 May 2025 07:26:34.361 # Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use
+792:C 14 May 2025 05:38:57.415 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+792:C 14 May 2025 05:38:57.415 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=792, just started
+792:C 14 May 2025 05:38:57.415 # Configuration loaded
+792:M 14 May 2025 05:38:57.419 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+792:M 14 May 2025 05:38:57.419 * Running mode=standalone, port=11000.
+792:M 14 May 2025 05:38:57.419 # Server initialized
+792:M 14 May 2025 05:38:57.419 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+792:M 14 May 2025 05:38:57.419 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo madvise > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled (set to 'madvise' or 'never').
+792:M 14 May 2025 05:38:57.422 * Ready to accept connections
+792:signal-handler (1747295419) Received SIGTERM scheduling shutdown...
+792:M 15 May 2025 07:50:19.209 # User requested shutdown...
+792:M 15 May 2025 07:50:19.209 * Removing the pid file.
+792:M 15 May 2025 07:50:19.210 # Redis is now ready to exit, bye bye...
+47093:C 15 May 2025 07:50:20.388 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+47093:C 15 May 2025 07:50:20.388 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=47093, just started
+47093:C 15 May 2025 07:50:20.388 # Configuration loaded
+47093:M 15 May 2025 07:50:20.389 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+47093:M 15 May 2025 07:50:20.390 * Running mode=standalone, port=11000.
+47093:M 15 May 2025 07:50:20.390 # Server initialized
+47093:M 15 May 2025 07:50:20.390 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+47093:M 15 May 2025 07:50:20.390 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo madvise > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled (set to 'madvise' or 'never').
+47093:M 15 May 2025 07:50:20.394 * Ready to accept connections
+47093:signal-handler (1747295587) Received SIGTERM scheduling shutdown...
+47093:M 15 May 2025 07:53:07.281 # User requested shutdown...
+47093:M 15 May 2025 07:53:07.281 * Removing the pid file.
+47093:M 15 May 2025 07:53:07.282 # Redis is now ready to exit, bye bye...
+47195:C 15 May 2025 07:53:08.471 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+47195:C 15 May 2025 07:53:08.471 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=47195, just started
+47195:C 15 May 2025 07:53:08.471 # Configuration loaded
+47195:M 15 May 2025 07:53:08.471 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+47195:M 15 May 2025 07:53:08.472 * Running mode=standalone, port=11000.
+47195:M 15 May 2025 07:53:08.472 # Server initialized
+47195:M 15 May 2025 07:53:08.472 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+47195:M 15 May 2025 07:53:08.472 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo madvise > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled (set to 'madvise' or 'never').
+47195:M 15 May 2025 07:53:08.477 * Ready to accept connections
+47195:signal-handler (1747295959) Received SIGTERM scheduling shutdown...
+47195:M 15 May 2025 07:59:19.622 # User requested shutdown...
+47195:M 15 May 2025 07:59:19.622 * Removing the pid file.
+47195:M 15 May 2025 07:59:19.622 # Redis is now ready to exit, bye bye...
+47336:C 15 May 2025 07:59:20.833 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+47336:C 15 May 2025 07:59:20.833 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=47336, just started
+47336:C 15 May 2025 07:59:20.833 # Configuration loaded
+47336:M 15 May 2025 07:59:20.840 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+47336:M 15 May 2025 07:59:20.841 * Running mode=standalone, port=11000.
+47336:M 15 May 2025 07:59:20.841 # Server initialized
+47336:M 15 May 2025 07:59:20.841 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+47336:M 15 May 2025 07:59:20.841 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo madvise > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled (set to 'madvise' or 'never').
+47336:M 15 May 2025 07:59:20.841 * Ready to accept connections
+829:C 17 May 2025 12:53:32.009 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+829:C 17 May 2025 12:53:32.009 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=829, just started
+829:C 17 May 2025 12:53:32.009 # Configuration loaded
+829:M 17 May 2025 12:53:32.009 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+829:M 17 May 2025 12:53:32.011 * Running mode=standalone, port=11000.
+829:M 17 May 2025 12:53:32.011 # Server initialized
+829:M 17 May 2025 12:53:32.011 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+829:M 17 May 2025 12:53:32.011 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo madvise > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled (set to 'madvise' or 'never').
+829:M 17 May 2025 12:53:32.011 * Ready to accept connections
+864:C 20 May 2025 05:14:45.069 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+864:C 20 May 2025 05:14:45.069 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=864, just started
+864:C 20 May 2025 05:14:45.069 # Configuration loaded
+864:M 20 May 2025 05:14:45.070 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+864:M 20 May 2025 05:14:45.070 * Running mode=standalone, port=11000.
+864:M 20 May 2025 05:14:45.070 # Server initialized
+864:M 20 May 2025 05:14:45.070 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+864:M 20 May 2025 05:14:45.070 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo madvise > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled (set to 'madvise' or 'never').
+864:M 20 May 2025 05:14:45.070 * Ready to accept connections
+827:C 21 May 2025 09:03:33.327 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+827:C 21 May 2025 09:03:33.327 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=827, just started
+827:C 21 May 2025 09:03:33.327 # Configuration loaded
+827:M 21 May 2025 09:03:33.328 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+827:M 21 May 2025 09:03:33.329 * Running mode=standalone, port=11000.
+827:M 21 May 2025 09:03:33.329 # Server initialized
+827:M 21 May 2025 09:03:33.329 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+827:M 21 May 2025 09:03:33.329 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo madvise > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled (set to 'madvise' or 'never').
+827:M 21 May 2025 09:03:33.331 * Ready to accept connections
+827:signal-handler (1747818387) Received SIGTERM scheduling shutdown...
+827:M 21 May 2025 09:06:27.899 # User requested shutdown...
+827:M 21 May 2025 09:06:27.899 * Removing the pid file.
+827:M 21 May 2025 09:06:27.900 # Redis is now ready to exit, bye bye...
+825:C 21 May 2025 09:07:41.092 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+825:C 21 May 2025 09:07:41.092 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=825, just started
+825:C 21 May 2025 09:07:41.092 # Configuration loaded
+825:M 21 May 2025 09:07:41.093 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+825:M 21 May 2025 09:07:41.103 * Running mode=standalone, port=11000.
+825:M 21 May 2025 09:07:41.103 # Server initialized
+825:M 21 May 2025 09:07:41.103 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+825:M 21 May 2025 09:07:41.103 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo madvise > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled (set to 'madvise' or 'never').
+825:M 21 May 2025 09:07:41.103 * Ready to accept connections
+797:C 23 May 2025 11:12:23.975 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+797:C 23 May 2025 11:12:23.975 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=797, just started
+797:C 23 May 2025 11:12:23.975 # Configuration loaded
+797:M 23 May 2025 11:12:23.976 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+797:M 23 May 2025 11:12:23.978 * Running mode=standalone, port=11000.
+797:M 23 May 2025 11:12:23.978 # Server initialized
+797:M 23 May 2025 11:12:23.978 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+797:M 23 May 2025 11:12:23.978 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo madvise > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled (set to 'madvise' or 'never').
+797:M 23 May 2025 11:12:23.978 * Ready to accept connections
+777:C 26 May 2025 05:19:24.636 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+777:C 26 May 2025 05:19:24.636 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=777, just started
+777:C 26 May 2025 05:19:24.636 # Configuration loaded
+777:M 26 May 2025 05:19:24.637 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+777:M 26 May 2025 05:19:24.638 * Running mode=standalone, port=11000.
+777:M 26 May 2025 05:19:24.638 # Server initialized
+777:M 26 May 2025 05:19:24.638 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+777:M 26 May 2025 05:19:24.638 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo madvise > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled (set to 'madvise' or 'never').
+777:M 26 May 2025 05:19:24.638 * Ready to accept connections
+796:C 28 May 2025 04:33:21.400 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+796:C 28 May 2025 04:33:21.400 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=796, just started
+796:C 28 May 2025 04:33:21.400 # Configuration loaded
+796:M 28 May 2025 04:33:21.400 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+796:M 28 May 2025 04:33:21.404 * Running mode=standalone, port=11000.
+796:M 28 May 2025 04:33:21.404 # Server initialized
+796:M 28 May 2025 04:33:21.404 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+796:M 28 May 2025 04:33:21.404 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo madvise > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled (set to 'madvise' or 'never').
+796:M 28 May 2025 04:33:21.404 * Ready to accept connections
+780:C 28 May 2025 12:30:28.357 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+780:C 28 May 2025 12:30:28.357 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=780, just started
+780:C 28 May 2025 12:30:28.357 # Configuration loaded
+780:M 28 May 2025 12:30:28.358 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+780:M 28 May 2025 12:30:28.358 * Running mode=standalone, port=11000.
+780:M 28 May 2025 12:30:28.358 # Server initialized
+780:M 28 May 2025 12:30:28.358 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+780:M 28 May 2025 12:30:28.358 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo madvise > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled (set to 'madvise' or 'never').
+780:M 28 May 2025 12:30:28.358 * Ready to accept connections
+780:signal-handler (1748511576) Received SIGTERM scheduling shutdown...
+780:M 29 May 2025 09:39:36.968 # User requested shutdown...
+780:M 29 May 2025 09:39:36.968 * Removing the pid file.
+780:M 29 May 2025 09:39:36.968 # Redis is now ready to exit, bye bye...
+810:C 29 May 2025 09:39:54.763 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+810:C 29 May 2025 09:39:54.763 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=810, just started
+810:C 29 May 2025 09:39:54.763 # Configuration loaded
+810:M 29 May 2025 09:39:54.763 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+810:M 29 May 2025 09:39:54.764 * Running mode=standalone, port=11000.
+810:M 29 May 2025 09:39:54.764 # Server initialized
+810:M 29 May 2025 09:39:54.764 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+810:M 29 May 2025 09:39:54.764 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo madvise > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled (set to 'madvise' or 'never').
+810:M 29 May 2025 09:39:54.764 * Ready to accept connections
+843:C 31 May 2025 14:33:25.613 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+843:C 31 May 2025 14:33:25.613 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=843, just started
+843:C 31 May 2025 14:33:25.613 # Configuration loaded
+843:M 31 May 2025 14:33:25.614 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+843:M 31 May 2025 14:33:25.615 * Running mode=standalone, port=11000.
+843:M 31 May 2025 14:33:25.615 # Server initialized
+843:M 31 May 2025 14:33:25.615 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+843:M 31 May 2025 14:33:25.615 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo madvise > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled (set to 'madvise' or 'never').
+843:M 31 May 2025 14:33:25.616 * Ready to accept connections
+743:C 02 Jun 2025 02:35:25.701 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+743:C 02 Jun 2025 02:35:25.701 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=743, just started
+743:C 02 Jun 2025 02:35:25.701 # Configuration loaded
+743:M 02 Jun 2025 02:35:25.701 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+743:M 02 Jun 2025 02:35:25.718 * Running mode=standalone, port=11000.
+743:M 02 Jun 2025 02:35:25.718 # Server initialized
+743:M 02 Jun 2025 02:35:25.718 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+743:M 02 Jun 2025 02:35:25.718 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo madvise > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled (set to 'madvise' or 'never').
+743:M 02 Jun 2025 02:35:25.721 * Ready to accept connections

@@ -1,0 +1,3 @@
+2025-05-21 08:53:56,302 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for hospital.com
+2025-05-21 08:53:56,326 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for hospital.com
+2025-05-21 08:56:03,825 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for hospital.com

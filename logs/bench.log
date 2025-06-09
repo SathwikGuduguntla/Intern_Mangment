@@ -1,0 +1,1025 @@
+2025-05-13 06:46:57,791 DEBUG cd frappe-bench && python3 -m venv env
+2025-05-13 06:47:00,076 DEBUG cd frappe-bench && /home/limendo/frappe-bench/env/bin/python -m pip install --quiet --upgrade pip
+2025-05-13 06:47:01,385 DEBUG cd frappe-bench && /home/limendo/frappe-bench/env/bin/python -m pip install --quiet wheel
+2025-05-13 06:47:02,478 LOG Getting frappe
+2025-05-13 06:47:02,478 DEBUG cd frappe-bench/apps && git clone https://github.com/frappe/frappe.git --branch version-15 --depth 1 --origin upstream
+2025-05-13 06:47:06,088 LOG Installing frappe
+2025-05-13 06:47:06,089 DEBUG cd /home/limendo/frappe-bench && /home/limendo/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/limendo/frappe-bench/apps/frappe 
+2025-05-13 06:47:32,739 DEBUG cd /home/limendo/frappe-bench/apps/frappe && yarn install --check-files
+2025-05-13 06:47:45,757 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe:
+2025-05-13 06:47:45,899 WARNING cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe: executed with exit code 2
+2025-05-13 06:47:45,899 WARNING restarting supervisor group `frappe:` failed. Use `bench restart` to retry.
+2025-05-13 06:47:45,899 DEBUG cd frappe-bench && bench build
+2025-05-13 06:47:45,985 INFO /usr/local/bin/bench build
+2025-05-13 06:48:06,468 LOG setting up backups
+2025-05-13 06:48:06,472 LOG backups were set up
+2025-05-13 06:48:06,472 INFO Bench frappe-bench initialized
+2025-05-13 06:52:48,149 INFO /usr/local/bin/bench new-site test5.com
+2025-05-13 06:53:36,661 INFO /usr/local/bin/bench get-app payments
+2025-05-13 06:53:36,973 LOG Getting payments
+2025-05-13 06:53:36,974 DEBUG cd ./apps && git clone https://github.com/frappe/payments.git  --depth 1 --origin upstream
+2025-05-13 06:53:37,432 LOG Installing payments
+2025-05-13 06:53:37,432 DEBUG cd /home/limendo/frappe-bench && /home/limendo/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/limendo/frappe-bench/apps/payments 
+2025-05-13 06:53:40,520 DEBUG bench build --app payments
+2025-05-13 06:53:40,606 INFO /usr/local/bin/bench build --app payments
+2025-05-13 06:53:42,058 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe:
+2025-05-13 06:53:42,201 WARNING cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe: executed with exit code 2
+2025-05-13 06:53:42,201 WARNING restarting supervisor group `frappe:` failed. Use `bench restart` to retry.
+2025-05-13 06:58:16,431 INFO /usr/local/bin/bench setup production limendo
+2025-05-13 06:58:16,436 DEBUG bench setup role nginx
+2025-05-13 06:58:16,522 INFO /usr/local/bin/bench setup role nginx
+2025-05-13 06:58:27,347 LOG Updated supervisord.conf: 'chmod' changed from '0700                       ; sockef file mode (default 0700)' to '0760'
+2025-05-13 06:58:27,347 LOG Updated supervisord.conf: 'chown' changed from '' to 'limendo:limendo'
+2025-05-13 06:58:27,390 DEBUG sudo /usr/sbin/nginx -t
+2025-05-13 06:58:27,401 DEBUG sudo systemctl reload nginx
+2025-05-13 07:00:29,855 INFO /usr/local/bin/bench new-site test6.com
+2025-05-13 07:01:24,572 INFO /usr/local/bin/bench get-app payments
+2025-05-13 07:01:28,243 INFO App moved from apps/payments to archived/apps/payments-2025-05-13
+2025-05-13 07:01:28,245 LOG Getting payments
+2025-05-13 07:01:28,245 DEBUG cd ./apps && git clone https://github.com/frappe/payments.git --branch develop --depth 1 --origin upstream
+2025-05-13 07:01:28,695 LOG Installing payments
+2025-05-13 07:01:28,695 DEBUG cd /home/limendo/frappe-bench && /home/limendo/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/limendo/frappe-bench/apps/payments 
+2025-05-13 07:01:30,246 DEBUG bench build --app payments
+2025-05-13 07:01:30,334 INFO /usr/local/bin/bench build --app payments
+2025-05-13 07:01:31,789 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe:
+2025-05-13 07:01:31,944 WARNING cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe: executed with exit code 2
+2025-05-13 07:01:31,944 WARNING restarting supervisor group `frappe:` failed. Use `bench restart` to retry.
+2025-05-13 07:01:47,614 INFO /usr/local/bin/bench get-app --branch version-15 erpnext
+2025-05-13 07:01:48,030 LOG Getting erpnext
+2025-05-13 07:01:48,030 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-15 --depth 1 --origin upstream
+2025-05-13 07:01:52,196 LOG Installing erpnext
+2025-05-13 07:01:52,196 DEBUG cd /home/limendo/frappe-bench && /home/limendo/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/limendo/frappe-bench/apps/erpnext 
+2025-05-13 07:01:56,054 DEBUG cd /home/limendo/frappe-bench/apps/erpnext && yarn install --check-files
+2025-05-13 07:01:56,368 DEBUG bench build --app erpnext
+2025-05-13 07:01:56,458 INFO /usr/local/bin/bench build --app erpnext
+2025-05-13 07:01:59,202 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe:
+2025-05-13 07:01:59,350 WARNING cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe: executed with exit code 2
+2025-05-13 07:01:59,350 WARNING restarting supervisor group `frappe:` failed. Use `bench restart` to retry.
+2025-05-13 07:02:10,330 INFO /usr/local/bin/bench get-app hrms
+2025-05-13 07:02:10,637 LOG Getting hrms
+2025-05-13 07:02:10,637 DEBUG cd ./apps && git clone https://github.com/frappe/hrms.git  --depth 1 --origin upstream
+2025-05-13 07:02:11,933 LOG Installing hrms
+2025-05-13 07:02:11,933 DEBUG cd /home/limendo/frappe-bench && /home/limendo/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/limendo/frappe-bench/apps/hrms 
+2025-05-13 07:02:13,446 DEBUG cd /home/limendo/frappe-bench/apps/hrms && yarn install --check-files
+2025-05-13 07:02:50,353 DEBUG bench build --app hrms
+2025-05-13 07:02:50,442 INFO /usr/local/bin/bench build --app hrms
+2025-05-13 07:03:17,019 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe:
+2025-05-13 07:03:17,169 WARNING cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe: executed with exit code 2
+2025-05-13 07:03:17,169 WARNING restarting supervisor group `frappe:` failed. Use `bench restart` to retry.
+2025-05-13 07:03:56,747 INFO /usr/local/bin/bench --site test6.com install-app erpnext
+2025-05-13 07:05:11,807 INFO /usr/local/bin/bench --site test6.com install-app hrms
+2025-05-13 07:05:52,350 INFO /usr/local/bin/bench start
+2025-05-13 07:06:43,051 INFO /usr/local/bin/bench --site test6.com enable-scheduler
+2025-05-13 07:07:14,667 INFO /usr/local/bin/bench --site test6.com set-maintenance-mode off
+2025-05-13 07:07:29,480 INFO /usr/local/bin/bench setup production sathwik
+2025-05-13 07:07:29,486 LOG Updated supervisord.conf: 'chmod' changed from '0700                       ; sockef file mode (default 0700)' to '0760'
+2025-05-13 07:07:29,486 LOG Updated supervisord.conf: 'chown' changed from '' to 'sathwik:sathwik'
+2025-05-13 07:07:49,221 WARNING /usr/local/bin/bench setup production sathwik executed with exit code 1
+2025-05-13 07:07:53,889 INFO /usr/local/bin/bench setup production sathwik-12
+2025-05-13 07:07:53,894 LOG Updated supervisord.conf: 'chmod' changed from '0700                       ; sockef file mode (default 0700)' to '0760'
+2025-05-13 07:07:53,894 LOG Updated supervisord.conf: 'chown' changed from '' to 'sathwik-12:sathwik-12'
+2025-05-13 07:08:05,066 WARNING /usr/local/bin/bench setup production sathwik-12 executed with exit code 1
+2025-05-13 07:14:19,315 INFO /usr/local/bin/bench start
+2025-05-13 07:16:44,922 INFO /usr/local/bin/bench setup production limendo
+2025-05-13 07:16:44,927 LOG Updated supervisord.conf: 'chmod' changed from '0700                       ; sockef file mode (default 0700)' to '0760'
+2025-05-13 07:16:44,928 LOG Updated supervisord.conf: 'chown' changed from '' to 'limendo:limendo'
+2025-05-13 07:16:50,426 DEBUG /usr/bin/supervisorctl reread
+2025-05-13 07:16:50,564 DEBUG /usr/bin/supervisorctl update
+2025-05-13 07:16:50,720 DEBUG sudo /usr/sbin/nginx -t
+2025-05-13 07:16:50,746 DEBUG sudo systemctl reload nginx
+2025-05-13 07:16:51,075 INFO /usr/local/bin/bench schedule
+2025-05-13 07:16:51,185 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-13 07:16:51,214 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-13 07:17:06,302 INFO /usr/local/bin/bench setup nginx
+2025-05-13 07:18:00,398 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-13 07:18:00,438 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-13 07:18:00,481 INFO /usr/local/bin/bench schedule
+2025-05-13 07:23:17,604 INFO /usr/local/bin/bench setup socketio
+2025-05-13 07:23:30,040 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-13 07:23:30,102 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-13 07:23:30,118 INFO /usr/local/bin/bench schedule
+2025-05-13 07:24:24,391 INFO /usr/local/bin/bench setup redis
+2025-05-13 07:24:35,161 INFO /usr/local/bin/bench setup supervisor
+2025-05-13 07:24:35,299 LOG Updated supervisord.conf: 'chmod' changed from '0700                       ; sockef file mode (default 0700)' to '0760'
+2025-05-13 07:24:35,299 LOG Updated supervisord.conf: 'chown' changed from '' to 'limendo:limendo'
+2025-05-13 07:25:26,350 INFO /usr/local/bin/bench setup redis
+2025-05-13 07:25:36,971 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-13 07:25:37,055 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-13 07:25:37,198 INFO /usr/local/bin/bench schedule
+2025-05-13 07:25:42,934 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-13 07:25:43,001 INFO /usr/local/bin/bench schedule
+2025-05-13 07:25:43,014 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-13 07:41:54,356 INFO /usr/local/bin/bench find
+2025-05-13 07:42:13,421 INFO /usr/local/bin/bench new-app library_management
+2025-05-13 07:42:13,424 LOG creating new app library_management
+2025-05-13 07:45:09,175 LOG Installing library_management
+2025-05-13 07:45:09,176 DEBUG cd /home/limendo/frappe-bench && /home/limendo/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/limendo/frappe-bench/apps/library_management 
+2025-05-13 07:45:10,716 DEBUG bench build --app library_management
+2025-05-13 07:45:10,804 INFO /usr/local/bin/bench build --app library_management
+2025-05-13 07:45:12,489 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-13 07:45:15,849 WARNING cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web: executed with exit code 7
+2025-05-13 07:45:15,849 WARNING restarting supervisor group `frappe-bench-web:` failed. Use `bench restart` to retry.
+2025-05-13 07:45:15,849 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-13 07:45:17,434 INFO /usr/local/bin/bench schedule
+2025-05-13 07:45:17,532 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-13 07:45:17,535 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-13 07:47:58,578 INFO /usr/local/bin/bench restart
+2025-05-13 07:47:58,864 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-13 07:48:02,079 WARNING cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web: executed with exit code 7
+2025-05-13 07:48:02,080 WARNING /usr/local/bin/bench restart executed with exit code 1
+2025-05-13 07:50:07,311 INFO /usr/local/bin/bench build
+2025-05-13 07:51:16,084 INFO /usr/local/bin/bench restart
+2025-05-13 07:51:16,418 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-13 07:51:18,807 WARNING cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web: executed with exit code 7
+2025-05-13 07:51:18,808 WARNING /usr/local/bin/bench restart executed with exit code 1
+2025-05-13 07:53:39,318 INFO /usr/local/bin/bench find
+2025-05-13 07:54:13,134 INFO /usr/local/bin/bench new-app library
+2025-05-13 07:54:13,137 LOG creating new app library
+2025-05-13 07:55:09,614 LOG Installing library
+2025-05-13 07:55:09,616 DEBUG cd /home/limendo/frappe-bench && /home/limendo/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/limendo/frappe-bench/apps/library 
+2025-05-13 07:55:11,176 DEBUG bench build --app library
+2025-05-13 07:55:11,263 INFO /usr/local/bin/bench build --app library
+2025-05-13 07:55:12,998 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-13 07:55:16,304 WARNING cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web: executed with exit code 7
+2025-05-13 07:55:16,304 WARNING restarting supervisor group `frappe-bench-web:` failed. Use `bench restart` to retry.
+2025-05-13 07:55:16,304 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-13 07:55:17,855 INFO /usr/local/bin/bench schedule
+2025-05-13 07:55:17,864 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-13 07:55:17,936 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-13 07:59:44,020 INFO /usr/local/bin/bench new-app library_mangment
+2025-05-13 07:59:44,024 LOG creating new app library_mangment
+2025-05-13 08:00:45,232 LOG Installing library_mangment
+2025-05-13 08:00:45,234 DEBUG cd /home/limendo/frappe-bench && /home/limendo/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/limendo/frappe-bench/apps/library_mangment 
+2025-05-13 08:00:46,747 DEBUG bench build --app library_mangment
+2025-05-13 08:00:46,834 INFO /usr/local/bin/bench build --app library_mangment
+2025-05-13 08:00:48,456 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-13 08:00:51,629 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-13 08:00:53,065 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-13 08:00:53,146 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-13 08:00:53,217 INFO /usr/local/bin/bench schedule
+2025-05-13 09:08:46,790 INFO /usr/local/bin/bench new-site library.localhost
+2025-05-13 09:10:08,372 INFO /usr/local/bin/bench new-site library.localhost
+2025-05-13 09:12:13,682 INFO /usr/local/bin/bench show-apps
+2025-05-13 09:15:01,861 INFO /usr/local/bin/bench new-app library_management
+2025-05-13 09:15:01,864 LOG creating new app library_management
+2025-05-13 09:16:07,232 INFO /usr/local/bin/bench new-app library_management
+2025-05-13 09:16:07,236 LOG creating new app library_management
+2025-05-13 09:19:30,185 INFO /usr/local/bin/bench new-app library_management
+2025-05-13 09:19:30,188 LOG creating new app library_management
+2025-05-13 09:20:16,271 LOG Installing library_management
+2025-05-13 09:20:16,272 DEBUG cd /home/limendo/frappe-bench && /home/limendo/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/limendo/frappe-bench/apps/library_management 
+2025-05-13 09:20:17,909 DEBUG bench build --app library_management
+2025-05-13 09:20:17,999 INFO /usr/local/bin/bench build --app library_management
+2025-05-13 09:20:19,742 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-13 09:20:23,102 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-13 09:20:23,585 INFO /usr/local/bin/bench schedule
+2025-05-13 09:20:23,663 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-13 09:20:23,749 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-13 09:26:14,232 INFO /usr/local/bin/bench new-site library_managment.localhost
+2025-05-13 09:37:56,483 INFO /usr/local/bin/bench --site library_managment.localhost console
+2025-05-13 09:40:40,174 INFO /usr/local/bin/bench --site library_managment.localhost mariadb
+2025-05-13 09:51:41,485 INFO /usr/local/bin/bench --site library_managment.localhost backup
+2025-05-13 09:52:16,824 INFO /usr/local/bin/bench --help
+2025-05-13 10:02:07,150 INFO /usr/local/bin/bench set-config -g developer_mode true
+2025-05-13 10:02:16,498 INFO /usr/local/bin/bench start
+2025-05-13 10:17:34,556 INFO /usr/local/bin/bench --site library_managment.test mariadb
+2025-05-13 10:18:13,919 INFO /usr/local/bin/bench --site library_managment.localhost mariadb
+2025-05-13 12:00:01,115 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-13 12:13:12,846 INFO /usr/local/bin/bench start
+2025-05-13 18:00:01,773 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-14 00:00:01,664 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-14 05:38:58,228 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-14 05:38:58,234 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-14 05:38:58,238 INFO /usr/local/bin/bench schedule
+2025-05-14 06:00:01,610 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-14 08:53:12,299 INFO /usr/local/bin/bench new-site car
+2025-05-14 08:58:20,694 INFO /usr/local/bin/bench new-app rentals
+2025-05-14 08:58:20,707 LOG creating new app rentals
+2025-05-14 08:59:19,004 LOG Installing rentals
+2025-05-14 08:59:19,005 DEBUG cd /home/limendo/frappe-bench && /home/limendo/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/limendo/frappe-bench/apps/rentals 
+2025-05-14 08:59:21,294 DEBUG bench build --app rentals
+2025-05-14 08:59:21,386 INFO /usr/local/bin/bench build --app rentals
+2025-05-14 08:59:24,650 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-14 08:59:27,825 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-14 08:59:29,311 INFO /usr/local/bin/bench schedule
+2025-05-14 08:59:29,394 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-14 08:59:29,471 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-14 09:00:05,361 INFO /usr/local/bin/bench rentals
+2025-05-14 09:01:03,018 INFO /usr/local/bin/bench stop
+2025-05-14 09:26:11,647 INFO /usr/local/bin/bench new-app rent
+2025-05-14 09:26:11,651 LOG creating new app rent
+2025-05-14 09:26:42,923 LOG Installing rent
+2025-05-14 09:26:42,924 DEBUG cd /home/limendo/frappe-bench && /home/limendo/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/limendo/frappe-bench/apps/rent 
+2025-05-14 09:26:44,592 DEBUG bench build --app rent
+2025-05-14 09:26:44,682 INFO /usr/local/bin/bench build --app rent
+2025-05-14 09:26:46,469 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-14 09:26:49,739 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-14 09:26:51,270 INFO /usr/local/bin/bench schedule
+2025-05-14 09:26:51,351 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-14 09:26:51,430 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-14 09:49:23,151 INFO /usr/local/bin/bench list-apps
+2025-05-14 09:50:13,780 INFO /usr/local/bin/bench install-app library_management
+2025-05-14 09:50:34,058 INFO /usr/local/bin/bench use car
+2025-05-14 09:50:37,436 INFO /usr/local/bin/bench install-app library_management
+2025-05-14 09:50:51,127 INFO /usr/local/bin/bench migrate
+2025-05-14 09:51:53,667 INFO /usr/local/bin/bench list-apps
+2025-05-14 09:56:04,001 INFO /usr/local/bin/bench --site test5.com list-apps
+2025-05-14 09:56:16,337 INFO /usr/local/bin/bench --site test6.com list-apps
+2025-05-14 09:56:37,534 INFO /usr/local/bin/bench --site test6.com install-app library_management
+2025-05-14 09:56:55,339 INFO /usr/local/bin/bench --site test6.com migrate
+2025-05-14 10:25:05,725 INFO /usr/local/bin/bench set-config -g developer_mode true
+2025-05-14 10:25:14,572 INFO /usr/local/bin/bench start
+2025-05-14 11:39:01,562 INFO /usr/local/bin/bench --site library.localhost mariadbbench --site library.localhost mariad
+2025-05-14 11:39:51,766 INFO /usr/local/bin/bench --site test6.com mariadb
+2025-05-14 12:00:01,249 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-14 12:42:24,847 INFO /usr/local/bin/bench set-config -g developer_mode true
+2025-05-14 12:42:31,762 INFO /usr/local/bin/bench start
+2025-05-14 12:43:32,705 INFO /usr/local/bin/bench find .
+2025-05-14 12:43:45,275 INFO /usr/local/bin/bench new-app library_management
+2025-05-14 12:43:45,278 LOG creating new app library_management
+2025-05-14 12:44:45,384 LOG Installing library_management
+2025-05-14 12:44:45,385 DEBUG cd /home/limendo/frappe-bench && /home/limendo/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/limendo/frappe-bench/apps/library_management 
+2025-05-14 12:44:47,155 DEBUG bench build --app library_management
+2025-05-14 12:44:47,249 INFO /usr/local/bin/bench build --app library_management
+2025-05-14 12:44:49,290 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-14 12:44:52,642 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-14 12:44:54,118 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-14 12:44:54,235 INFO /usr/local/bin/bench schedule
+2025-05-14 12:44:54,296 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-14 12:45:40,736 INFO /usr/local/bin/bench new-site library.test
+2025-05-14 12:49:32,825 INFO /usr/local/bin/bench --site library.test add-to-hosts
+2025-05-14 12:51:02,824 INFO /usr/local/bin/bench --site library.test install-app library_management
+2025-05-14 12:51:13,300 INFO /usr/local/bin/bench --site library.test list-apps
+2025-05-14 12:54:29,594 INFO /usr/local/bin/bench --site library.localhost console
+2025-05-14 12:57:37,500 INFO /usr/local/bin/bench --site library.test console
+2025-05-14 13:01:14,501 INFO /usr/local/bin/bench --site library.test mariadb
+2025-05-14 13:03:58,907 INFO /usr/local/bin/bench --site library.test backup
+2025-05-14 13:04:32,261 INFO /usr/local/bin/bench set-config -g developer_mode true
+2025-05-14 13:04:40,876 INFO /usr/local/bin/bench start
+2025-05-14 13:21:22,859 INFO /usr/local/bin/bench --site library.test mariadb
+2025-05-14 18:00:01,158 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-15 00:00:01,556 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-15 05:41:40,715 INFO /usr/local/bin/bench mariadb
+2025-05-15 05:48:13,700 INFO /usr/local/bin/bench migrate
+2025-05-15 05:49:07,249 INFO /usr/local/bin/bench mariadb
+2025-05-15 05:54:12,592 INFO /usr/local/bin/bench mariadb
+2025-05-15 06:00:02,045 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-15 06:26:25,822 INFO /usr/local/bin/bench new-app library management
+2025-05-15 06:26:25,828 WARNING /usr/local/bin/bench new-app library management executed with exit code 2
+2025-05-15 06:26:52,810 INFO /usr/local/bin/bench new-app library_management
+2025-05-15 06:26:52,814 LOG creating new app library_management
+2025-05-15 06:27:44,495 LOG Installing library_management
+2025-05-15 06:27:44,497 DEBUG cd /home/limendo/frappe-bench && /home/limendo/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/limendo/frappe-bench/apps/library_management 
+2025-05-15 06:27:47,120 DEBUG bench build --app library_management
+2025-05-15 06:27:47,214 INFO /usr/local/bin/bench build --app library_management
+2025-05-15 06:27:49,286 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-15 06:27:52,538 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-15 06:27:52,977 INFO /usr/local/bin/bench schedule
+2025-05-15 06:27:53,056 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-15 06:27:53,142 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-15 06:28:16,200 INFO /usr/local/bin/bench install-app library_management
+2025-05-15 06:59:49,376 INFO /usr/local/bin/bench --sitetest5.com unistall-app car
+2025-05-15 07:00:16,574 INFO /usr/local/bin/bench --site test5.com uninstall-app car
+2025-05-15 07:00:56,301 INFO /usr/local/bin/bench uninstall-app car
+2025-05-15 07:03:15,500 INFO /usr/local/bin/bench list-apps
+2025-05-15 07:03:34,923 INFO /usr/local/bin/bench --site test5.com list-apps
+2025-05-15 07:04:42,443 INFO /usr/local/bin/bench list-apps
+2025-05-15 07:04:50,756 INFO /usr/local/bin/bench --site test5.com list-apps
+2025-05-15 07:05:14,928 INFO /usr/local/bin/bench --site test5.com uninstall-app frappe
+2025-05-15 07:06:08,547 INFO /usr/local/bin/bench --site test5.com list-apps
+2025-05-15 07:06:45,965 INFO /usr/local/bin/bench list-apps
+2025-05-15 07:08:29,999 INFO /usr/local/bin/bench --site library.test list-apps
+2025-05-15 07:09:04,857 INFO /usr/local/bin/bench --site library.test unistall library_management
+2025-05-15 07:09:31,826 INFO /usr/local/bin/bench --site library.test uninstall-app library_management
+2025-05-15 07:10:11,719 INFO /usr/local/bin/bench --site library_managment.localhost list-apps
+2025-05-15 07:21:00,276 INFO /usr/local/bin/bench list-apps
+2025-05-15 07:21:20,936 INFO /usr/local/bin/bench list-apps
+2025-05-15 07:24:12,708 INFO /usr/local/bin/bench --site test5.com list-apps
+2025-05-15 07:26:14,451 INFO /usr/local/bin/bench --site assests list-apps
+2025-05-15 07:26:41,680 INFO /usr/local/bin/bench --site assests list-apps
+2025-05-15 07:30:19,305 INFO /usr/local/bin/bench find .
+2025-05-15 07:30:32,466 INFO /usr/local/bin/bench new-app library_management
+2025-05-15 07:30:32,469 LOG creating new app library_management
+2025-05-15 07:31:28,267 LOG Installing library_management
+2025-05-15 07:31:28,268 DEBUG cd /home/limendo/frappe-bench && /home/limendo/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/limendo/frappe-bench/apps/library_management 
+2025-05-15 07:31:30,562 DEBUG bench build --app library_management
+2025-05-15 07:31:30,663 INFO /usr/local/bin/bench build --app library_management
+2025-05-15 07:31:33,068 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-15 07:31:35,486 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-15 07:31:36,126 INFO /usr/local/bin/bench schedule
+2025-05-15 07:31:36,127 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-15 07:31:36,147 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-15 07:32:54,057 INFO /usr/local/bin/bench new-site library.test
+2025-05-15 07:37:31,053 INFO /usr/local/bin/bench new-site library.test
+2025-05-15 07:38:24,467 INFO /usr/local/bin/bench new-site test6.com
+2025-05-15 07:49:47,582 INFO /usr/local/bin/bench restart
+2025-05-15 07:49:47,890 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-15 07:49:51,116 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-15 07:49:51,601 INFO /usr/local/bin/bench schedule
+2025-05-15 07:49:51,774 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-15 07:49:51,775 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-15 07:50:20,585 INFO /usr/local/bin/bench schedule
+2025-05-15 07:50:20,871 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-15 07:50:20,927 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-15 07:52:59,695 INFO /usr/local/bin/bench restart
+2025-05-15 07:53:00,013 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-15 07:53:03,260 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-15 07:53:03,750 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-15 07:53:03,843 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-15 07:53:03,916 INFO /usr/local/bin/bench schedule
+2025-05-15 07:53:08,844 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-15 07:53:08,910 INFO /usr/local/bin/bench schedule
+2025-05-15 07:53:08,953 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-15 07:59:08,820 INFO /usr/local/bin/bench restart
+2025-05-15 07:59:09,134 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-15 07:59:12,401 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-15 07:59:12,885 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-15 07:59:12,963 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-15 07:59:13,041 INFO /usr/local/bin/bench schedule
+2025-05-15 07:59:21,261 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-15 07:59:21,337 INFO /usr/local/bin/bench schedule
+2025-05-15 07:59:21,339 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-15 08:03:37,461 INFO /usr/local/bin/bench migrate
+2025-05-15 08:03:57,463 INFO /usr/local/bin/bench --site test.com migrate
+2025-05-15 08:04:33,684 INFO /usr/local/bin/bench --site test6.com migrate
+2025-05-15 08:55:19,531 INFO /usr/local/bin/bench use test6.com
+2025-05-15 08:55:37,913 INFO /usr/local/bin/bench mariadb
+2025-05-15 08:55:46,940 INFO /usr/local/bin/bench use library.test
+2025-05-15 08:55:49,524 INFO /usr/local/bin/bench mariadb
+2025-05-15 08:55:56,589 INFO /usr/local/bin/bench restart
+2025-05-15 08:55:56,909 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-15 08:56:00,200 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-15 08:56:00,707 INFO /usr/local/bin/bench schedule
+2025-05-15 08:56:00,783 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-15 08:56:00,891 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-15 08:56:04,694 INFO /usr/local/bin/bench migrate
+2025-05-15 08:57:33,049 INFO /usr/local/bin/bench site --reinstall library.test
+2025-05-15 08:58:02,023 INFO /usr/local/bin/bench site library.test reinstall
+2025-05-15 08:58:13,349 INFO /usr/local/bin/bench site --library.test reinstall
+2025-05-15 08:58:34,701 INFO /usr/local/bin/bench frappe --help
+2025-05-15 08:59:44,346 INFO /usr/local/bin/bench site --library.test reinstall library.test
+2025-05-15 08:59:51,853 INFO /usr/local/bin/bench reinstall library.test
+2025-05-15 09:00:24,262 INFO /usr/local/bin/bench reinstall library.test --yes
+2025-05-15 09:00:29,710 INFO /usr/local/bin/bench reinstall library.test
+2025-05-15 09:00:39,500 INFO /usr/local/bin/bench reinstall test6.com
+2025-05-15 09:01:34,426 INFO /usr/local/bin/bench --site library.test reinstall
+2025-05-15 09:01:46,195 INFO /usr/local/bin/bench --site library.test reinstall
+2025-05-15 09:01:56,880 INFO /usr/local/bin/bench --site library.test reinstall
+2025-05-15 09:02:44,200 INFO /usr/local/bin/bench migrate
+2025-05-15 09:03:17,677 INFO /usr/local/bin/bench use test6.com
+2025-05-15 09:03:29,639 INFO /usr/local/bin/bench --site test6.com reinstall
+2025-05-15 09:04:36,550 INFO /usr/local/bin/bench setup --nginx
+2025-05-15 09:04:36,556 WARNING /usr/local/bin/bench setup --nginx executed with exit code 2
+2025-05-15 09:04:41,520 INFO /usr/local/bin/bench setup nginx
+2025-05-15 09:08:42,183 INFO /usr/local/bin/bench version
+2025-05-15 09:10:58,834 INFO /usr/local/bin/bench find
+2025-05-15 09:11:10,528 WARNING /usr/local/bin/bench find executed with exit code 1
+2025-05-15 09:11:15,186 INFO /usr/local/bin/bench new-app library_management
+2025-05-15 09:11:15,190 LOG creating new app library_management
+2025-05-15 09:13:15,576 LOG Installing library_management
+2025-05-15 09:13:15,577 DEBUG cd /home/limendo/frappe-bench && /home/limendo/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/limendo/frappe-bench/apps/library_management 
+2025-05-15 09:13:17,547 DEBUG bench build --app library_management
+2025-05-15 09:13:17,643 INFO /usr/local/bin/bench build --app library_management
+2025-05-15 09:13:19,689 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-15 09:13:23,072 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-15 09:13:24,579 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-15 09:13:24,665 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-15 09:13:24,670 INFO /usr/local/bin/bench schedule
+2025-05-15 09:18:11,136 INFO /usr/local/bin/bench start
+2025-05-15 09:18:47,342 INFO /usr/local/bin/bench --version
+2025-05-15 09:20:45,049 INFO /usr/local/bin/bench migrate
+2025-05-15 09:22:20,019 INFO /usr/local/bin/bench use testest6.com
+2025-05-15 09:22:29,562 INFO /usr/local/bin/bench use test6.com
+2025-05-15 09:22:36,787 INFO /usr/local/bin/bench migrate
+2025-05-15 09:24:03,656 INFO /usr/local/bin/bench get-app erpnext
+2025-05-15 09:24:05,856 INFO App moved from apps/erpnext to archived/apps/erpnext-2025-05-15
+2025-05-15 09:24:05,859 LOG Getting erpnext
+2025-05-15 09:24:05,859 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-15 --depth 1 --origin upstream
+2025-05-15 09:24:09,914 LOG Installing erpnext
+2025-05-15 09:24:09,914 DEBUG cd /home/limendo/frappe-bench && /home/limendo/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/limendo/frappe-bench/apps/erpnext 
+2025-05-15 09:24:12,366 DEBUG cd /home/limendo/frappe-bench/apps/erpnext && yarn install --check-files
+2025-05-15 09:24:13,122 DEBUG bench build --app erpnext
+2025-05-15 09:24:13,224 INFO /usr/local/bin/bench build --app erpnext
+2025-05-15 09:24:16,544 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-15 09:24:19,773 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-15 09:24:21,219 INFO /usr/local/bin/bench schedule
+2025-05-15 09:24:21,299 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-15 09:24:21,392 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-15 09:24:43,453 INFO /usr/local/bin/bench --site test6.com install-app erpnext
+2025-05-15 09:24:58,764 INFO /usr/local/bin/bench --site test6.com install-app erpnext
+2025-05-15 09:27:07,339 INFO /usr/local/bin/bench --site test6.com reinstall
+2025-05-15 09:28:37,155 INFO /usr/local/bin/bench --site test6.com install-app erpnext
+2025-05-15 09:31:32,395 INFO /usr/local/bin/bench find .
+2025-05-15 09:31:52,845 INFO /usr/local/bin/bench new-app library_management
+2025-05-15 09:31:52,848 LOG creating new app library_management
+2025-05-15 09:32:31,049 LOG Installing library_management
+2025-05-15 09:32:31,050 DEBUG cd /home/limendo/frappe-bench && /home/limendo/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/limendo/frappe-bench/apps/library_management 
+2025-05-15 09:32:33,049 DEBUG bench build --app library_management
+2025-05-15 09:32:33,145 INFO /usr/local/bin/bench build --app library_management
+2025-05-15 09:32:35,001 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-15 09:32:38,456 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-15 09:32:38,960 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-15 09:32:39,050 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-15 09:32:39,128 INFO /usr/local/bin/bench schedule
+2025-05-15 09:35:55,124 INFO /usr/local/bin/bench restart
+2025-05-15 09:35:55,440 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-15 09:35:57,878 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-15 09:35:58,356 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-15 09:35:58,359 INFO /usr/local/bin/bench schedule
+2025-05-15 09:35:58,468 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-15 09:38:05,821 INFO /usr/local/bin/bench new-site library.test
+2025-05-15 09:39:15,543 INFO /usr/local/bin/bench new-site librayes.test
+2025-05-15 09:45:46,523 INFO /usr/local/bin/bench install-app library_management
+2025-05-15 09:45:52,557 INFO /usr/local/bin/bench migrate
+2025-05-15 09:51:34,028 INFO /usr/local/bin/bench --site test6.com mariadb
+2025-05-15 10:06:21,861 INFO /usr/local/bin/bench --site test6.com mariadb
+2025-05-15 10:24:39,823 INFO /usr/local/bin/bench --site set-config server_script_enabled true
+2025-05-15 10:25:30,594 INFO /usr/local/bin/bench --site test6.com set-config server_script_enabled true
+2025-05-15 10:27:24,017 INFO /usr/local/bin/bench --site test6.com mariadb
+2025-05-15 12:00:01,864 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-15 18:00:01,456 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-16 00:00:02,097 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-16 06:00:01,857 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-16 06:20:01,426 INFO /usr/local/bin/bench --site test6.com listapps
+2025-05-16 06:20:18,477 INFO /usr/local/bin/bench start
+2025-05-16 06:20:21,943 INFO /usr/local/bin/bench --site test6.com listapps
+2025-05-16 06:21:06,462 INFO /usr/local/bin/bench --site test6.com list-apps
+2025-05-16 06:22:38,151 INFO /usr/local/bin/bench --site test6.com console
+2025-05-16 08:47:38,661 INFO /usr/local/bin/bench list-apps
+2025-05-16 12:00:01,931 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-17 12:53:33,035 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-17 12:53:33,047 INFO /usr/local/bin/bench schedule
+2025-05-17 12:53:33,047 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-17 13:25:19,493 INFO /usr/local/bin/bench start
+2025-05-17 18:00:01,604 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-18 00:00:01,713 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-18 06:00:02,024 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-18 12:00:01,132 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-18 17:09:16,196 INFO /usr/local/bin/bench start
+2025-05-18 17:15:58,492 INFO /usr/local/bin/bench --site test6.com migrate
+2025-05-18 17:16:07,301 INFO /usr/local/bin/bench restart
+2025-05-18 17:16:07,630 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-18 17:16:10,890 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-18 17:16:12,198 INFO /usr/local/bin/bench schedule
+2025-05-18 17:16:12,280 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-18 17:16:12,351 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-18 17:24:17,803 INFO /usr/local/bin/bench --site test6.com migrate
+2025-05-18 17:24:27,864 INFO /usr/local/bin/bench restart
+2025-05-18 17:24:28,152 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-18 17:24:31,452 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-18 17:24:32,951 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-18 17:24:33,029 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-18 17:24:33,097 INFO /usr/local/bin/bench schedule
+2025-05-18 17:26:14,321 INFO /usr/local/bin/bench --site test6.com doctor
+2025-05-18 17:27:29,948 INFO /usr/local/bin/bench --site test6.com uninstall-app library_management
+2025-05-18 17:27:42,184 INFO /usr/local/bin/bench clear-cache
+2025-05-18 17:27:48,575 INFO /usr/local/bin/bench build
+2025-05-18 17:30:36,873 INFO /usr/local/bin/bench migrate --site test6.com
+2025-05-18 17:31:04,565 INFO /usr/local/bin/bench --site test6.com list-apps
+2025-05-18 17:33:55,957 INFO /usr/local/bin/bench get-app library_management /path/to/library_management
+2025-05-18 17:33:56,406 WARNING /usr/local/bin/bench get-app library_management /path/to/library_management executed with exit code 1
+2025-05-18 17:36:52,675 INFO /usr/local/bin/bench backup
+2025-05-18 17:40:12,099 INFO /usr/local/bin/bench --site test6.com install-app library_management
+2025-05-18 17:41:16,893 INFO /usr/local/bin/bench --site test6.com install-app library_management
+2025-05-18 17:42:08,808 INFO /usr/local/bin/bench --site test6.com install app Library_management
+2025-05-18 17:42:08,810 WARNING /usr/local/bin/bench --site test6.com install app Library_management executed with exit code 2
+2025-05-18 17:42:56,778 INFO /usr/local/bin/bench --site test6.com install-app Library_management
+2025-05-18 17:43:11,119 INFO /usr/local/bin/bench --site test6.com install-app library_management
+2025-05-18 17:43:44,828 INFO /usr/local/bin/bench --site test6.com install-app Library_management
+2025-05-18 17:45:34,355 INFO /usr/local/bin/bench --site test6.com --force add-to-bench library_management
+2025-05-18 17:46:33,089 INFO /usr/local/bin/bench --site test6.com install-app library_management
+2025-05-18 17:47:33,547 INFO /usr/local/bin/bench --site test6.com install-app Library_management
+2025-05-18 17:47:49,132 INFO /usr/local/bin/bench --site test6.com install-app library_management
+2025-05-18 17:49:58,309 INFO /usr/local/bin/bench add-app library_management
+2025-05-18 17:50:16,799 INFO /usr/local/bin/bench add-apps library_management
+2025-05-18 17:50:43,465 INFO /usr/local/bin/bench --site test6.com install-app library_management
+2025-05-18 17:52:11,378 INFO /usr/local/bin/bench --site test6.com install-app library_management
+2025-05-18 17:52:41,505 INFO /usr/local/bin/bench --site test6.com install-app library_management
+2025-05-18 17:53:22,718 INFO /usr/local/bin/bench --site test6.com clear-cache
+2025-05-18 17:53:35,557 INFO /usr/local/bin/bench --site test6.com build
+2025-05-18 17:55:08,734 INFO /usr/local/bin/bench --site test6.com migrate
+2025-05-18 18:00:01,928 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-18 18:02:36,495 INFO /usr/local/bin/bench --site test6.com list-apps
+2025-05-18 18:03:11,624 INFO /usr/local/bin/bench --site test6.com migrate
+2025-05-18 18:07:06,032 INFO /usr/local/bin/bench --site test6.com migrate
+2025-05-18 18:07:18,082 INFO /usr/local/bin/bench restart
+2025-05-18 18:07:18,412 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-18 18:07:21,635 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-18 18:07:23,015 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-18 18:07:23,091 INFO /usr/local/bin/bench schedule
+2025-05-18 18:07:23,167 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-19 00:00:01,946 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-19 06:00:02,089 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-19 08:49:43,218 INFO /usr/local/bin/bench restart
+2025-05-19 08:49:43,591 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-19 08:49:46,980 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-19 08:49:48,402 INFO /usr/local/bin/bench schedule
+2025-05-19 08:49:48,496 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-19 08:49:48,586 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-19 09:09:16,901 INFO /usr/local/bin/bench restart
+2025-05-19 09:09:17,217 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-19 09:09:20,502 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-19 09:09:20,924 INFO /usr/local/bin/bench schedule
+2025-05-19 09:09:21,084 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-19 09:09:21,086 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-19 09:16:33,353 INFO /usr/local/bin/bench restart
+2025-05-19 09:16:33,667 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-19 09:16:36,918 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-19 09:16:38,332 INFO /usr/local/bin/bench schedule
+2025-05-19 09:16:38,440 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-19 09:16:38,504 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-19 09:26:10,689 INFO /usr/local/bin/bench restart
+2025-05-19 09:26:11,019 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-19 09:26:13,431 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-19 09:26:13,933 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-19 09:26:13,947 INFO /usr/local/bin/bench schedule
+2025-05-19 09:26:13,998 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-19 12:00:01,174 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-20 05:14:46,117 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-20 05:14:46,122 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-20 05:14:46,122 INFO /usr/local/bin/bench schedule
+2025-05-20 06:00:01,275 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-20 07:22:25,814 INFO /usr/local/bin/bench restart
+2025-05-20 07:22:26,233 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-20 07:22:28,655 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-20 07:22:29,179 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-20 07:22:29,344 INFO /usr/local/bin/bench schedule
+2025-05-20 07:22:29,347 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-20 09:50:10,924 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-20 09:50:10,925 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-20 10:27:41,381 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-20 10:27:41,381 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-20 10:57:08,738 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-20 10:57:08,738 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-20 11:08:39,380 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-20 11:08:39,382 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-20 12:09:02,548 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-20 12:09:02,878 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-20 12:09:04,028 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-20 12:16:43,948 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-20 12:16:45,360 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-20 12:42:12,632 INFO /usr/local/bin/bench find .
+2025-05-20 12:42:41,047 INFO /usr/local/bin/bench new-app hospital
+2025-05-20 12:42:41,051 LOG creating new app hospital
+2025-05-20 12:43:15,954 LOG Installing hospital
+2025-05-20 12:43:15,955 DEBUG cd /home/limendo/frappe-bench && /home/limendo/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/limendo/frappe-bench/apps/hospital 
+2025-05-20 12:43:18,328 DEBUG bench build --app hospital
+2025-05-20 12:43:18,419 INFO /usr/local/bin/bench build --app hospital
+2025-05-20 12:43:21,281 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-20 12:43:24,587 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-20 12:43:24,954 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-20 12:43:25,015 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-20 12:43:25,093 INFO /usr/local/bin/bench schedule
+2025-05-20 12:46:57,571 INFO /usr/local/bin/bench --site test6.com list-apps
+2025-05-20 12:50:30,050 INFO /usr/local/bin/bench new-site hospital.com
+2025-05-20 16:55:53,176 INFO /usr/local/bin/bench new-site hospital.com
+2025-05-20 16:56:00,746 INFO /usr/local/bin/bench --site hospital.com install-app frappe
+2025-05-20 16:56:18,322 INFO /usr/local/bin/bench --site hospital.com add-to-hosts
+2025-05-20 16:56:48,637 INFO /usr/local/bin/bench setup nginx
+2025-05-20 16:59:53,528 INFO /usr/local/bin/bench --site hospital.com install-app hospital
+2025-05-20 17:00:26,075 INFO /usr/local/bin/bench --site hospital.com list apps
+2025-05-20 17:00:47,828 INFO /usr/local/bin/bench --site hospital.com list-apps
+2025-05-20 17:02:19,330 INFO /usr/local/bin/bench --site hospital.com install-app erpnext
+2025-05-20 17:06:00,752 INFO /usr/local/bin/bench --site hospital.com migrate
+2025-05-20 17:06:22,216 INFO /usr/local/bin/bench --site hospital.com shell
+2025-05-20 17:06:43,153 INFO /usr/local/bin/bench use hospital.com
+2025-05-20 17:06:54,003 INFO /usr/local/bin/bench start
+2025-05-20 17:07:03,484 INFO /usr/local/bin/bench restart
+2025-05-20 17:07:03,776 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-20 17:07:07,133 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-20 17:07:07,598 INFO /usr/local/bin/bench schedule
+2025-05-20 17:07:07,682 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-20 17:07:07,755 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-20 17:17:55,291 INFO /usr/local/bin/bench setup nginx
+2025-05-20 18:00:01,618 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-20 18:28:13,711 INFO /usr/local/bin/bench restart
+2025-05-20 18:28:14,021 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-20 18:28:17,336 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-20 18:28:17,790 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-20 18:28:17,878 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-20 18:28:17,939 INFO /usr/local/bin/bench schedule
+2025-05-20 18:30:45,014 INFO /usr/local/bin/bench restart
+2025-05-20 18:30:45,303 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-20 18:30:48,478 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-20 18:30:48,998 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-20 18:30:49,019 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-20 18:30:49,094 INFO /usr/local/bin/bench schedule
+2025-05-21 00:00:01,136 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-21 05:53:43,120 INFO /usr/local/bin/bench start
+2025-05-21 05:53:59,578 INFO /usr/local/bin/bench restart
+2025-05-21 05:53:59,909 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 05:54:03,258 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 05:54:03,750 INFO /usr/local/bin/bench schedule
+2025-05-21 05:54:03,828 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 05:54:03,904 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 06:00:01,525 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-21 06:00:35,538 INFO /usr/local/bin/bench restart
+2025-05-21 06:00:35,835 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 06:00:39,113 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 06:00:39,618 INFO /usr/local/bin/bench schedule
+2025-05-21 06:00:39,696 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 06:00:39,780 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 06:02:36,498 INFO /usr/local/bin/bench --site hospital.com clear-cache
+2025-05-21 06:23:12,146 INFO /usr/local/bin/bench --site test6.com clear-cache
+2025-05-21 06:23:26,154 INFO /usr/local/bin/bench restart
+2025-05-21 06:23:26,448 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 06:23:29,720 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 06:23:30,216 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 06:23:30,293 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 06:23:30,374 INFO /usr/local/bin/bench schedule
+2025-05-21 06:29:36,274 INFO /usr/local/bin/bench --site test6.com clear-cache
+2025-05-21 06:29:43,026 INFO /usr/local/bin/bench restart
+2025-05-21 06:29:43,329 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 06:29:46,525 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 06:29:47,994 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 06:29:48,095 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 06:29:48,158 INFO /usr/local/bin/bench schedule
+2025-05-21 06:35:35,717 INFO /usr/local/bin/bench --site test6.com clear-cache
+2025-05-21 06:35:46,314 INFO /usr/local/bin/bench restart
+2025-05-21 06:35:46,672 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 06:35:49,093 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 06:35:50,736 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 06:35:50,837 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 06:35:50,862 INFO /usr/local/bin/bench schedule
+2025-05-21 06:40:37,244 INFO /usr/local/bin/bench --site test6.com clear-cache
+2025-05-21 06:40:40,868 INFO /usr/local/bin/bench restart
+2025-05-21 06:40:41,169 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 06:40:44,438 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 06:40:45,784 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 06:40:45,963 INFO /usr/local/bin/bench schedule
+2025-05-21 06:40:45,980 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 06:44:46,175 INFO /usr/local/bin/bench --site test6.com clear-cache
+2025-05-21 06:44:50,709 INFO /usr/local/bin/bench restart
+2025-05-21 06:44:51,016 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 06:44:54,196 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 06:44:55,739 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 06:44:55,911 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 06:44:55,952 INFO /usr/local/bin/bench schedule
+2025-05-21 06:46:58,711 INFO /usr/local/bin/bench --site test6.com clear-cache
+2025-05-21 06:47:05,086 INFO /usr/local/bin/bench restart
+2025-05-21 06:47:05,387 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 06:47:08,601 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 06:47:10,019 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 06:47:10,106 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 06:47:10,174 INFO /usr/local/bin/bench schedule
+2025-05-21 06:51:24,268 INFO /usr/local/bin/bench --site hospital.com clear-cache
+2025-05-21 06:51:27,057 INFO /usr/local/bin/bench restart
+2025-05-21 06:51:27,361 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 06:51:30,611 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 06:51:31,051 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 06:51:31,114 INFO /usr/local/bin/bench schedule
+2025-05-21 06:51:31,127 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 08:28:42,141 INFO /usr/local/bin/bench restart
+2025-05-21 08:28:42,467 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 08:28:44,952 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 08:28:45,515 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 08:28:45,536 INFO /usr/local/bin/bench schedule
+2025-05-21 08:28:45,600 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 08:29:06,828 INFO /usr/local/bin/bench --site test6.com clear-cache
+2025-05-21 08:29:09,857 INFO /usr/local/bin/bench restart
+2025-05-21 08:29:10,152 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 08:29:13,323 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 08:29:14,752 INFO /usr/local/bin/bench schedule
+2025-05-21 08:29:14,833 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 08:29:14,906 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 08:31:17,676 INFO /usr/local/bin/bench --site test6.com clear-cache
+2025-05-21 08:31:20,377 INFO /usr/local/bin/bench restart
+2025-05-21 08:31:20,677 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 08:31:23,099 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 08:31:23,657 INFO /usr/local/bin/bench schedule
+2025-05-21 08:31:23,688 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 08:31:23,717 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 08:35:06,225 INFO /usr/local/bin/bench --site test6.com clear-cache
+2025-05-21 08:35:15,517 INFO /usr/local/bin/bench restart
+2025-05-21 08:35:15,811 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 08:35:18,232 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 08:35:19,708 INFO /usr/local/bin/bench schedule
+2025-05-21 08:35:19,806 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 08:35:19,852 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 09:03:34,348 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 09:03:34,348 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 09:03:34,358 INFO /usr/local/bin/bench schedule
+2025-05-21 09:07:41,876 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 09:07:41,880 INFO /usr/local/bin/bench schedule
+2025-05-21 09:07:41,881 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 09:51:51,925 INFO /usr/local/bin/bench --site hospital.com clear-cache
+2025-05-21 09:52:00,376 INFO /usr/local/bin/bench restart
+2025-05-21 09:52:00,723 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 09:52:04,091 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 09:52:05,643 INFO /usr/local/bin/bench schedule
+2025-05-21 09:52:05,735 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 09:52:05,760 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 09:54:01,440 INFO /usr/local/bin/bench --site hospital.com clear-cache
+2025-05-21 09:54:04,178 INFO /usr/local/bin/bench restart
+2025-05-21 09:54:04,471 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 09:54:07,104 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 09:54:07,660 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 09:54:07,736 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 09:54:07,810 INFO /usr/local/bin/bench schedule
+2025-05-21 09:56:55,798 INFO /usr/local/bin/bench --site hospital.com clear-cache
+2025-05-21 09:56:58,665 INFO /usr/local/bin/bench restart
+2025-05-21 09:56:58,958 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 09:57:02,116 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 09:57:03,524 INFO /usr/local/bin/bench schedule
+2025-05-21 09:57:03,605 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 09:57:03,638 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 09:59:42,261 INFO /usr/local/bin/bench --site hospital.com clear-cache
+2025-05-21 09:59:44,979 INFO /usr/local/bin/bench restart
+2025-05-21 09:59:45,277 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 09:59:48,480 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 09:59:49,935 INFO /usr/local/bin/bench schedule
+2025-05-21 09:59:50,018 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 09:59:50,084 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 10:03:05,630 INFO /usr/local/bin/bench --site hospital.com clear-cache
+2025-05-21 10:03:08,547 INFO /usr/local/bin/bench restart
+2025-05-21 10:03:08,841 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 10:03:12,133 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 10:03:12,703 INFO /usr/local/bin/bench schedule
+2025-05-21 10:03:12,742 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 10:03:12,772 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 10:07:32,814 INFO /usr/local/bin/bench --site hospital.com clear-cache
+2025-05-21 10:07:35,291 INFO /usr/local/bin/bench restart
+2025-05-21 10:07:35,606 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 10:07:38,830 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 10:07:40,206 INFO /usr/local/bin/bench schedule
+2025-05-21 10:07:40,310 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 10:07:40,361 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 10:10:42,327 INFO /usr/local/bin/bench restart
+2025-05-21 10:10:42,827 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 10:10:44,365 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 10:10:44,954 INFO /usr/local/bin/bench schedule
+2025-05-21 10:10:44,988 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 10:10:45,033 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 10:14:59,711 INFO /usr/local/bin/bench --site hospital.com clear-cache
+2025-05-21 10:15:02,470 INFO /usr/local/bin/bench restart
+2025-05-21 10:15:02,765 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 10:15:05,979 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 10:15:06,469 INFO /usr/local/bin/bench schedule
+2025-05-21 10:15:06,622 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 10:15:06,623 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 10:18:37,916 INFO /usr/local/bin/bench --site hospital.com clear-cache
+2025-05-21 10:18:40,414 INFO /usr/local/bin/bench restart
+2025-05-21 10:18:40,708 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 10:18:44,039 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 10:18:45,628 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 10:18:45,658 INFO /usr/local/bin/bench schedule
+2025-05-21 10:18:45,716 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 10:33:10,288 INFO /usr/local/bin/bench --site hospital.com clear-cache
+2025-05-21 10:33:13,395 INFO /usr/local/bin/bench restart
+2025-05-21 10:33:13,700 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 10:33:16,986 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 10:33:17,487 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 10:33:17,565 INFO /usr/local/bin/bench schedule
+2025-05-21 10:33:17,597 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 10:47:55,215 INFO /usr/local/bin/bench --site hospital.com clear-cache
+2025-05-21 10:47:58,293 INFO /usr/local/bin/bench restart
+2025-05-21 10:47:58,589 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 10:48:01,785 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 10:48:02,305 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 10:48:02,378 INFO /usr/local/bin/bench schedule
+2025-05-21 10:48:02,444 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 11:17:22,463 INFO /usr/local/bin/bench restart
+2025-05-21 11:17:22,757 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 11:17:26,104 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 11:17:27,623 INFO /usr/local/bin/bench schedule
+2025-05-21 11:17:27,723 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 11:17:27,773 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 11:17:53,361 INFO /usr/local/bin/bench restart
+2025-05-21 11:17:53,669 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 11:17:56,958 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 11:17:58,319 INFO /usr/local/bin/bench schedule
+2025-05-21 11:17:58,410 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 11:17:58,472 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 11:18:57,963 INFO /usr/local/bin/bench restart
+2025-05-21 11:18:58,258 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 11:19:00,666 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 11:19:01,265 INFO /usr/local/bin/bench schedule
+2025-05-21 11:19:01,427 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 11:19:01,428 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 11:21:52,234 INFO /usr/local/bin/bench clear-cache
+2025-05-21 11:22:02,103 INFO /usr/local/bin/bench clear-website-cach
+2025-05-21 11:22:04,453 INFO /usr/local/bin/bench clear-website-cache
+2025-05-21 11:22:22,766 INFO /usr/local/bin/bench build
+2025-05-21 11:28:05,020 INFO /usr/local/bin/bench clear-cache
+2025-05-21 11:28:10,949 INFO /usr/local/bin/bench clear-website-cache
+2025-05-21 11:29:13,798 INFO /usr/local/bin/bench restart
+2025-05-21 11:29:14,095 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 11:29:17,337 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 11:29:17,864 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 11:29:17,903 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 11:29:17,982 INFO /usr/local/bin/bench schedule
+2025-05-21 11:31:42,805 INFO /usr/local/bin/bench restart
+2025-05-21 11:31:43,101 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 11:31:46,307 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 11:31:47,757 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 11:31:47,847 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 11:31:47,896 INFO /usr/local/bin/bench schedule
+2025-05-21 11:33:14,513 INFO /usr/local/bin/bench restart
+2025-05-21 11:33:14,809 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-21 11:33:18,135 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-21 11:33:18,651 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-21 11:33:18,676 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-21 11:33:18,748 INFO /usr/local/bin/bench schedule
+2025-05-21 12:00:01,854 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-21 18:00:01,568 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-22 00:00:02,090 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-22 06:00:02,072 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-22 12:00:01,677 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-22 18:00:01,132 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-23 00:00:01,223 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-23 06:00:01,405 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-23 11:12:24,879 INFO /usr/local/bin/bench schedule
+2025-05-23 11:12:24,883 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-23 11:12:24,883 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-23 12:00:02,083 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-23 18:00:01,533 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-24 00:00:01,799 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-24 06:00:01,476 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-24 12:00:01,727 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-24 18:00:01,451 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-25 00:00:02,014 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-25 06:00:01,612 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-25 12:00:01,746 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-25 18:00:01,137 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-26 00:00:02,004 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-26 05:19:25,716 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-26 05:19:25,726 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-26 05:19:25,728 INFO /usr/local/bin/bench schedule
+2025-05-26 06:00:01,587 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-26 12:00:01,641 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-26 18:00:01,874 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-27 00:00:01,261 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-27 06:00:01,138 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-27 12:00:01,425 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-27 18:00:01,914 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-28 04:33:22,545 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-28 04:33:22,551 INFO /usr/local/bin/bench schedule
+2025-05-28 04:33:22,559 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-28 06:00:02,041 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-28 12:30:29,474 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-28 12:30:29,480 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-28 12:30:29,480 INFO /usr/local/bin/bench schedule
+2025-05-28 18:00:01,813 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-29 00:00:01,842 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-29 05:38:23,864 INFO /usr/local/bin/bench new-app intern_management
+2025-05-29 05:38:23,875 LOG creating new app intern_management
+2025-05-29 05:39:35,739 LOG Installing intern_management
+2025-05-29 05:39:35,741 DEBUG cd /home/limendo/frappe-bench && /home/limendo/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/limendo/frappe-bench/apps/intern_management 
+2025-05-29 05:39:38,045 DEBUG bench build --app intern_management
+2025-05-29 05:39:38,142 INFO /usr/local/bin/bench build --app intern_management
+2025-05-29 05:39:42,647 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-29 05:39:45,759 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-29 05:39:46,265 INFO /usr/local/bin/bench schedule
+2025-05-29 05:39:46,338 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-29 05:39:46,417 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-29 05:40:21,542 INFO /usr/local/bin/bench new-site intern.com
+2025-05-29 05:42:08,425 INFO /usr/local/bin/bench --site intern.com install-app intern_management
+2025-05-29 05:43:08,273 INFO /usr/local/bin/bench start
+2025-05-29 05:43:43,786 INFO /usr/local/bin/bench --site intern.com server
+2025-05-29 05:44:21,177 INFO /usr/local/bin/bench --site intern.com server
+2025-05-29 05:45:00,060 INFO /usr/local/bin/bench --site intern.com serve
+2025-05-29 05:45:44,469 INFO /usr/local/bin/bench --site intern.com serve --port 8006
+2025-05-29 06:00:01,400 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-29 08:09:41,579 INFO /usr/local/bin/bench restart
+2025-05-29 08:09:41,887 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-29 08:09:44,293 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-29 08:09:44,746 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-29 08:09:44,805 INFO /usr/local/bin/bench schedule
+2025-05-29 08:09:44,906 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-29 08:10:32,953 INFO /usr/local/bin/bench restart
+2025-05-29 08:10:33,254 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-29 08:10:36,635 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-29 08:10:37,080 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-29 08:10:37,241 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-29 08:10:37,251 INFO /usr/local/bin/bench schedule
+2025-05-29 08:14:15,498 INFO /usr/local/bin/bench restart
+2025-05-29 08:14:15,794 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-29 08:14:18,198 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-29 08:14:19,650 INFO /usr/local/bin/bench schedule
+2025-05-29 08:14:19,699 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-29 08:14:19,783 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-29 08:53:30,475 INFO /usr/local/bin/bench start
+2025-05-29 08:53:49,747 INFO /usr/local/bin/bench clear cache
+2025-05-29 08:55:37,191 INFO /usr/local/bin/bench --site intern_management clear-cache
+2025-05-29 08:56:02,625 INFO /usr/local/bin/bench --site intern_management clear-cache
+2025-05-29 08:57:17,104 INFO /usr/local/bin/bench --site intern.com clear-cache
+2025-05-29 08:57:46,230 INFO /usr/local/bin/bench --site intern.com clear-website-cache
+2025-05-29 08:58:06,887 INFO /usr/local/bin/bench --site intern.com reload-doc
+2025-05-29 08:58:55,355 INFO /usr/local/bin/bench restart
+2025-05-29 08:58:55,648 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-29 08:58:58,875 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-29 08:58:59,346 INFO /usr/local/bin/bench schedule
+2025-05-29 08:58:59,425 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-29 08:58:59,497 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-29 09:02:38,942 INFO /usr/local/bin/bench --site intern.com serve --port 8006
+2025-05-29 09:04:28,625 INFO /usr/local/bin/bench --site intern.com serve --port 8007
+2025-05-29 09:29:38,566 INFO /usr/local/bin/bench restart
+2025-05-29 09:29:38,884 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-29 09:29:42,213 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-29 09:29:42,707 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-29 09:29:42,839 INFO /usr/local/bin/bench schedule
+2025-05-29 09:29:42,857 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-29 09:39:55,514 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-29 09:39:55,519 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-29 09:39:55,519 INFO /usr/local/bin/bench schedule
+2025-05-29 09:46:22,026 INFO /usr/local/bin/bench start
+2025-05-29 09:47:33,779 INFO /usr/local/bin/bench --site intern.com clear-cache
+2025-05-29 09:47:48,446 INFO /usr/local/bin/bench --site intern.com reload-doc
+2025-05-29 09:48:22,646 INFO /usr/local/bin/bench --site intern.com serve
+2025-05-29 09:49:18,097 INFO /usr/local/bin/bench --site intern.com serve --port 8010
+2025-05-29 10:01:33,897 INFO /usr/local/bin/bench restart
+2025-05-29 10:01:34,216 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-29 10:01:37,522 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-29 10:01:38,867 INFO /usr/local/bin/bench schedule
+2025-05-29 10:01:38,949 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-29 10:01:39,013 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-29 11:19:30,722 INFO /usr/local/bin/bench restart
+2025-05-29 11:19:31,068 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-29 11:19:34,339 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-29 11:19:35,811 INFO /usr/local/bin/bench schedule
+2025-05-29 11:19:35,894 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-29 11:19:35,956 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-29 11:25:44,565 INFO /usr/local/bin/bench version
+2025-05-29 12:00:01,980 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-29 18:00:01,252 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-30 00:00:01,317 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-30 06:00:01,565 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-30 06:08:03,134 INFO /usr/local/bin/bench restart
+2025-05-30 06:08:03,447 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-30 06:08:06,824 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-30 06:08:07,209 INFO /usr/local/bin/bench schedule
+2025-05-30 06:08:07,244 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-30 06:08:07,340 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-30 06:08:56,219 INFO /usr/local/bin/bench --site intern.com serve --port
+2025-05-30 06:09:07,717 INFO /usr/local/bin/bench --site intern.com server
+2025-05-30 06:09:11,983 INFO /usr/local/bin/bench --site intern.com serve
+2025-05-30 06:10:18,472 INFO /usr/local/bin/bench start
+2025-05-30 06:10:58,245 INFO /usr/local/bin/bench --site intern.com serve --port 8008
+2025-05-30 09:48:35,154 INFO /usr/local/bin/bench --site librayes.test remove-app library_mangement
+2025-05-30 09:48:35,156 WARNING /usr/local/bin/bench --site librayes.test remove-app library_mangement executed with exit code 2
+2025-05-30 09:48:56,280 INFO /usr/local/bin/bench --site librayes.test remove-app library_mangement
+2025-05-30 09:48:56,282 WARNING /usr/local/bin/bench --site librayes.test remove-app library_mangement executed with exit code 2
+2025-05-30 12:00:01,553 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-30 12:25:29,096 INFO /usr/local/bin/bench restart
+2025-05-30 12:25:29,436 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-05-30 12:25:31,896 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-05-30 12:25:32,429 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-30 12:25:32,532 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-30 12:25:32,575 INFO /usr/local/bin/bench schedule
+2025-05-30 12:28:10,913 INFO /usr/local/bin/bench start
+2025-05-30 12:31:01,733 INFO /usr/local/bin/bench --site intern.com serve --port 8009
+2025-05-30 18:00:01,536 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-31 00:00:02,184 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-31 06:00:01,926 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-31 12:00:01,473 INFO /usr/local/bin/bench --verbose --site all backup
+2025-05-31 14:33:26,654 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-05-31 14:33:26,673 INFO /usr/local/bin/bench worker --queue short,default
+2025-05-31 14:33:26,673 INFO /usr/local/bin/bench schedule
+2025-05-31 18:00:01,489 INFO /usr/local/bin/bench --verbose --site all backup
+2025-06-01 00:00:01,629 INFO /usr/local/bin/bench --verbose --site all backup
+2025-06-01 06:00:01,464 INFO /usr/local/bin/bench --verbose --site all backup
+2025-06-01 12:00:02,007 INFO /usr/local/bin/bench --verbose --site all backup
+2025-06-01 18:00:01,237 INFO /usr/local/bin/bench --verbose --site all backup
+2025-06-02 00:00:01,753 INFO /usr/local/bin/bench --verbose --site all backup
+2025-06-02 02:35:27,073 INFO /usr/local/bin/bench schedule
+2025-06-02 02:35:27,081 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-06-02 02:35:27,081 INFO /usr/local/bin/bench worker --queue short,default
+2025-06-02 05:59:35,721 INFO /usr/local/bin/bench --site intern.com serve --port 8009
+2025-06-02 05:59:52,276 INFO /usr/local/bin/bench --site intern.com serve --port 8011
+2025-06-02 06:00:01,723 INFO /usr/local/bin/bench --site intern.com serve --port 8014
+2025-06-02 06:00:02,017 INFO /usr/local/bin/bench --verbose --site all backup
+2025-06-02 06:18:08,862 INFO /usr/local/bin/bench restart
+2025-06-02 06:18:09,279 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-06-02 06:18:12,592 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-06-02 06:18:13,111 INFO /usr/local/bin/bench schedule
+2025-06-02 06:18:13,149 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-06-02 06:18:13,233 INFO /usr/local/bin/bench worker --queue short,default
+2025-06-02 06:21:46,044 INFO /usr/local/bin/bench --site intern.com serve --port 8009
+2025-06-02 07:12:26,078 INFO /usr/local/bin/bench restart
+2025-06-02 07:12:26,409 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-06-02 07:12:28,863 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-06-02 07:12:30,340 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-06-02 07:12:30,359 INFO /usr/local/bin/bench worker --queue short,default
+2025-06-02 07:12:30,443 INFO /usr/local/bin/bench schedule
+2025-06-02 07:29:57,096 INFO /usr/local/bin/bench --site intern.com serve --port 8009
+2025-06-02 12:00:02,042 INFO /usr/local/bin/bench --verbose --site all backup
+2025-06-02 12:13:40,982 INFO /usr/local/bin/bench --site intern.com serve --port 8008
+2025-06-02 12:55:35,361 INFO /usr/local/bin/bench --site intern.com serve --port 8008
+2025-06-02 12:55:41,308 INFO /usr/local/bin/bench --site intern.com serve --port 8009
+2025-06-02 12:55:52,000 INFO /usr/local/bin/bench --site intern.com serve --port 8010
+2025-06-02 13:05:11,535 INFO /usr/local/bin/bench --site intern.com serve --port 8011
+2025-06-02 13:06:43,940 INFO /usr/local/bin/bench --site intern.com serve --port 8011
+2025-06-02 13:06:49,342 INFO /usr/local/bin/bench --site intern.com serve --port 8012
+2025-06-02 14:18:21,080 INFO /usr/local/bin/bench restart
+2025-06-02 14:18:21,500 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-web:
+2025-06-02 14:18:24,119 DEBUG cd /home/limendo/frappe-bench && sudo supervisorctl restart frappe-bench-workers:
+2025-06-02 14:18:24,768 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-06-02 14:18:24,824 INFO /usr/local/bin/bench worker --queue short,default
+2025-06-02 14:18:24,877 INFO /usr/local/bin/bench schedule
+2025-06-02 17:31:37,261 INFO /usr/local/bin/bench --site intern.com serve --port 8008
+2025-06-02 18:00:01,775 INFO /usr/local/bin/bench --verbose --site all backup
+2025-06-02 18:50:38,821 INFO /usr/local/bin/bench --site intern.com serve --port 8008
+2025-06-02 18:50:53,807 INFO /usr/local/bin/bench --site intern.com serve --port 8009
+2025-06-03 00:00:02,076 INFO /usr/local/bin/bench --verbose --site all backup
+2025-06-03 04:55:32,541 INFO /usr/local/bin/bench --site intern.com serve --port 8009
+2025-06-03 06:00:01,295 INFO /usr/local/bin/bench --verbose --site all backup

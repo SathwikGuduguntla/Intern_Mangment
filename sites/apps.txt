@@ -1,0 +1,9 @@
+frappe
+payments
+rentals
+intern_management
+hrms
+library_management
+rent
+hospital
+erpnext
