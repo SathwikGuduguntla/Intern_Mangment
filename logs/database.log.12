@@ -1,0 +1,46 @@
+2025-05-15 09:48:04,355 WARNING database DDL Query made to DB:
+create table `tabArticle` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-05-15 09:48:31,281 WARNING database DDL Query made to DB:
+ALTER TABLE `tabArticle` ADD COLUMN `article_name` varchar(140)
+2025-05-15 09:48:54,723 WARNING database DDL Query made to DB:
+ALTER TABLE `tabArticle` ADD COLUMN `image` text
+2025-05-15 09:50:29,812 WARNING database DDL Query made to DB:
+ALTER TABLE `tabArticle` ADD COLUMN `status` varchar(140)
+2025-05-15 10:10:16,774 WARNING database DDL Query made to DB:
+create table `tabLibrary Member` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-05-15 11:40:33,366 WARNING database DDL Query made to DB:
+ALTER TABLE `tabLibrary Transaction` ADD COLUMN `article` varchar(140), ADD COLUMN `library_member` varchar(140), ADD COLUMN `type` varchar(140)
+2025-05-15 12:21:30,212 WARNING database DDL Query made to DB:
+ALTER TABLE `tabArticle` ADD COLUMN `route` varchar(140), ADD COLUMN `published` int(1) not null default 0

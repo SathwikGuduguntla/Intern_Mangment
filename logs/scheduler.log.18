@@ -1,0 +1,1485 @@
+2025-05-18 09:29:34,114 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 09:30:34,184 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 09:31:34,266 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 09:32:34,380 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 09:33:34,493 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 09:34:34,598 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 09:35:34,689 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 09:36:34,787 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 09:37:34,865 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 09:38:34,980 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 09:39:35,092 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 09:40:35,177 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 09:41:35,288 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 09:42:35,398 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 09:43:35,492 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 09:44:35,598 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 09:45:35,706 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 09:46:35,769 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 09:47:35,877 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 09:48:35,984 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 09:49:36,096 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 09:50:36,210 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 09:51:36,324 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 09:52:36,438 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 09:53:36,550 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 09:54:36,611 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 09:55:36,727 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'

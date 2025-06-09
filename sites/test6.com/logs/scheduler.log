@@ -1,0 +1,572 @@
+2025-05-18 17:36:16,336 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 17:37:16,450 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 17:38:16,556 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 17:39:16,668 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 17:40:16,762 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 17:41:16,862 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 17:42:16,981 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 840, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1326, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 70, in get_meta
+    meta = Meta(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 124, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/meta.py", line 130, in load_from_db
+    super().load_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 207, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 237, in set
+    self.extend(key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 304, in extend
+    self.append(key, v)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 263, in append
+    d = self._init_child(value, key)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 322, in _init_child
+    value = get_controller(doctype)(value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-19 07:32:51,069 ERROR scheduler Skipped queueing frappe.utils.global_search.sync_global_search because it was found in queue for test6.com
+2025-05-19 07:32:51,135 ERROR scheduler Skipped queueing frappe.model.utils.user_settings.sync_user_settings because it was found in queue for test6.com
+2025-05-19 07:32:51,167 ERROR scheduler Skipped queueing erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs because it was found in queue for test6.com
+2025-05-19 07:32:51,272 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.project_status_update_reminder because it was found in queue for test6.com
+2025-05-19 07:32:51,289 ERROR scheduler Skipped queueing frappe.oauth.delete_oauth2_data because it was found in queue for test6.com
+2025-05-19 07:32:51,296 ERROR scheduler Skipped queueing frappe.desk.form.document_follow.send_hourly_updates because it was found in queue for test6.com
+2025-05-19 07:32:51,300 ERROR scheduler Skipped queueing erpnext.utilities.doctype.video.video.update_youtube_data because it was found in queue for test6.com
+2025-05-19 07:32:51,308 ERROR scheduler Skipped queueing frappe.email.doctype.newsletter.newsletter.send_scheduled_email because it was found in queue for test6.com
+2025-05-19 07:32:51,335 ERROR scheduler Skipped queueing frappe.deferred_insert.save_to_db because it was found in queue for test6.com
+2025-05-19 07:32:51,341 ERROR scheduler Skipped queueing frappe.website.doctype.web_page.web_page.check_publish_status because it was found in queue for test6.com
+2025-05-19 07:32:51,344 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.hourly_reminder because it was found in queue for test6.com
+2025-05-19 07:38:52,800 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for test6.com
+2025-05-19 07:38:52,839 ERROR scheduler Skipped queueing erpnext.stock.doctype.repost_item_valuation.repost_item_valuation.repost_entries because it was found in queue for test6.com
+2025-05-19 07:38:52,907 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for test6.com
+2025-05-19 07:38:52,995 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for test6.com
+2025-05-19 07:44:39,163 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for test6.com
+2025-05-20 10:16:12,855 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 806, in _write_bytes
+    self._sock.sendall(data)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/limendo/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/limendo/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/limendo/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 956, in _request_authentication
+    self.write_packet(data)
+  File "/home/limendo/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 732, in write_packet
+    self._write_bytes(data)
+  File "/home/limendo/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 809, in _write_bytes
+    raise err.OperationalError(
+pymysql.err.OperationalError: (2006, "MySQL server has gone away (ConnectionResetError(104, 'Connection reset by peer'))")
+2025-05-20 10:29:04,930 ERROR scheduler Skipped queueing frappe.deferred_insert.save_to_db because it was found in queue for test6.com
+2025-05-20 10:29:04,941 ERROR scheduler Skipped queueing frappe.website.doctype.web_page.web_page.check_publish_status because it was found in queue for test6.com
+2025-05-20 10:29:04,950 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for test6.com
+2025-05-20 10:29:04,951 ERROR scheduler Skipped queueing erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs because it was found in queue for test6.com
+2025-05-20 10:29:04,953 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.notify_unreplied because it was found in queue for test6.com
+2025-05-20 10:29:04,955 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for test6.com
+2025-05-20 10:29:04,957 ERROR scheduler Skipped queueing frappe.twofactor.delete_all_barcodes_for_users because it was found in queue for test6.com
+2025-05-20 10:29:04,962 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for test6.com
+2025-05-20 10:29:04,964 ERROR scheduler Skipped queueing frappe.utils.global_search.sync_global_search because it was found in queue for test6.com
+2025-05-20 10:29:04,968 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for test6.com
+2025-05-20 10:29:04,969 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for test6.com
+2025-05-20 10:29:04,972 ERROR scheduler Skipped queueing frappe.oauth.delete_oauth2_data because it was found in queue for test6.com
+2025-05-20 10:37:58,607 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for test6.com
+2025-05-20 10:38:02,140 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.notify_unreplied because it was found in queue for test6.com
+2025-05-20 10:38:02,204 ERROR scheduler Skipped queueing erpnext.utilities.doctype.video.video.update_youtube_data because it was found in queue for test6.com
+2025-05-20 10:38:02,204 ERROR scheduler Skipped queueing frappe.model.utils.user_settings.sync_user_settings because it was found in queue for test6.com
+2025-05-20 10:38:02,262 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.collect_project_status because it was found in queue for test6.com
+2025-05-20 10:38:02,407 ERROR scheduler Skipped queueing frappe.deferred_insert.save_to_db because it was found in queue for test6.com
+2025-05-20 10:38:03,349 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.hourly_reminder because it was found in queue for test6.com
+2025-05-20 10:38:06,191 ERROR scheduler Skipped queueing erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs because it was found in queue for test6.com
+2025-05-20 10:38:08,294 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.project_status_update_reminder because it was found in queue for test6.com
+2025-05-20 10:38:08,598 ERROR scheduler Skipped queueing frappe.desk.page.backups.backups.delete_downloadable_backups because it was found in queue for test6.com
+2025-05-20 10:50:05,285 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 806, in _write_bytes
+    self._sock.sendall(data)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/limendo/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/limendo/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/limendo/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 956, in _request_authentication
+    self.write_packet(data)
+  File "/home/limendo/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 732, in write_packet
+    self._write_bytes(data)
+  File "/home/limendo/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 809, in _write_bytes
+    raise err.OperationalError(
+pymysql.err.OperationalError: (2006, "MySQL server has gone away (ConnectionResetError(104, 'Connection reset by peer'))")
+2025-05-20 11:34:06,421 ERROR scheduler Skipped queueing frappe.model.utils.link_count.update_link_count because it was found in queue for test6.com
+2025-05-20 11:34:16,412 ERROR scheduler Skipped queueing frappe.website.doctype.web_page.web_page.check_publish_status because it was found in queue for test6.com
+2025-05-20 11:34:24,772 ERROR scheduler Skipped queueing frappe.website.doctype.personal_data_deletion_request.personal_data_deletion_request.process_data_deletion_request because it was found in queue for test6.com
+2025-05-20 11:34:25,118 ERROR scheduler Skipped queueing frappe.oauth.delete_oauth2_data because it was found in queue for test6.com
+2025-05-20 11:34:25,768 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for test6.com
+2025-05-20 11:34:25,770 ERROR scheduler Skipped queueing erpnext.erpnext_integrations.doctype.plaid_settings.plaid_settings.automatic_synchronization because it was found in queue for test6.com
+2025-05-20 11:34:25,773 ERROR scheduler Skipped queueing frappe.model.utils.user_settings.sync_user_settings because it was found in queue for test6.com
+2025-05-20 11:34:25,773 ERROR scheduler Skipped queueing frappe.twofactor.delete_all_barcodes_for_users because it was found in queue for test6.com
+2025-05-20 11:34:34,060 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.collect_project_status because it was found in queue for test6.com
+2025-05-20 11:34:35,815 ERROR scheduler Skipped queueing frappe.desk.form.document_follow.send_hourly_updates because it was found in queue for test6.com
+2025-05-20 11:34:37,968 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for test6.com
+2025-05-20 11:34:39,273 ERROR scheduler Skipped queueing frappe.email.doctype.newsletter.newsletter.send_scheduled_email because it was found in queue for test6.com
+2025-05-20 11:47:09,389 ERROR scheduler Skipped queueing frappe.desk.form.document_follow.send_hourly_updates because it was found in queue for test6.com
+2025-05-20 11:47:09,426 ERROR scheduler Skipped queueing frappe.model.utils.link_count.update_link_count because it was found in queue for test6.com
+2025-05-20 11:47:09,451 ERROR scheduler Skipped queueing frappe.website.doctype.personal_data_deletion_request.personal_data_deletion_request.process_data_deletion_request because it was found in queue for test6.com
+2025-05-20 11:47:09,460 ERROR scheduler Skipped queueing frappe.model.utils.user_settings.sync_user_settings because it was found in queue for test6.com
+2025-05-20 11:47:09,547 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for test6.com
+2025-05-20 11:47:09,552 ERROR scheduler Skipped queueing frappe.email.doctype.newsletter.newsletter.send_scheduled_email because it was found in queue for test6.com
+2025-05-20 11:47:09,593 ERROR scheduler Skipped queueing frappe.twofactor.delete_all_barcodes_for_users because it was found in queue for test6.com
+2025-05-20 11:47:09,619 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.collect_project_status because it was found in queue for test6.com
+2025-05-20 11:47:09,634 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.notify_unreplied because it was found in queue for test6.com
+2025-05-20 12:12:25,641 ERROR scheduler Exception in Enqueue Events for Site test6.com
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 806, in _write_bytes
+    self._sock.sendall(data)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/limendo/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/limendo/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/limendo/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 956, in _request_authentication
+    self.write_packet(data)
+  File "/home/limendo/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 732, in write_packet
+    self._write_bytes(data)
+  File "/home/limendo/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 809, in _write_bytes
+    raise err.OperationalError(
+pymysql.err.OperationalError: (2006, "MySQL server has gone away (ConnectionResetError(104, 'Connection reset by peer'))")
+2025-05-21 08:53:54,341 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for test6.com
+2025-05-21 08:53:54,403 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for test6.com
+2025-05-21 08:53:54,405 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for test6.com
+2025-05-21 08:53:54,412 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for test6.com
+2025-05-21 08:56:03,609 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for test6.com
+2025-05-21 08:56:03,661 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for test6.com
+2025-05-21 08:56:03,711 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for test6.com
+2025-05-21 08:56:03,731 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for test6.com

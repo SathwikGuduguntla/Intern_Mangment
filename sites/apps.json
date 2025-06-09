@@ -1,0 +1,91 @@
+{
+    "frappe": {
+        "resolution": {
+            "commit_hash": null,
+            "branch": null
+        },
+        "required": [],
+        "idx": 1,
+        "version": "15.68.0"
+    },
+    "payments": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "6012958d2139b7546837189b9615366d3525605b",
+            "branch": "develop"
+        },
+        "required": [],
+        "idx": 2,
+        "version": "0.0.1"
+    },
+    "erpnext": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "7fb557197acc646e1e39bf104ef96486ac03b32c",
+            "branch": "version-15"
+        },
+        "required": [],
+        "idx": 3,
+        "version": "15.60.2"
+    },
+    "hrms": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "204b94051754e37b676deb6c5134eb257cba21e9",
+            "branch": "develop"
+        },
+        "required": [],
+        "idx": 4,
+        "version": "16.0.0-dev"
+    },
+    "library_management": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "0158b8302b0eddda4a4d9279ae05259c4c165563",
+            "branch": "develop"
+        },
+        "required": [],
+        "idx": 5,
+        "version": "0.0.1"
+    },
+    "rentals": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "1a8ea76c6c565b23fb9258048aa2a26902476613",
+            "branch": "develop"
+        },
+        "required": [],
+        "idx": 6,
+        "version": "0.0.1"
+    },
+    "rent": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "806f4e831fd71acd91be65037fd3a632374f987a",
+            "branch": "develop"
+        },
+        "required": [],
+        "idx": 7,
+        "version": "0.0.1"
+    },
+    "hospital": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "2d893fd88fa042877ad4a94fecce7012fa0eb0e5",
+            "branch": "develop"
+        },
+        "required": [],
+        "idx": 8,
+        "version": "0.0.1"
+    },
+    "intern_management": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "d3f6eb2d3105277b4cda397862a749a04d5855f5",
+            "branch": "develop"
+        },
+        "required": [],
+        "idx": 9,
+        "version": "0.0.1"
+    }
+}

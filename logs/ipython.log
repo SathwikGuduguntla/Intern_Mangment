@@ -1,0 +1,12 @@
+2025-05-13 09:40:01,990 INFO ipython === bench console session ===
+2025-05-13 09:40:01,991 INFO ipython bench --site library.localhost mariadb
+2025-05-13 09:40:01,991 INFO ipython bench --site library_managment.localhost mariadb
+2025-05-13 09:40:01,991 INFO ipython === session end ===
+2025-05-14 13:00:55,567 INFO ipython === bench console session ===
+2025-05-14 13:00:55,568 INFO ipython bench --site library.localhost mariadb
+2025-05-14 13:00:55,568 INFO ipython bench --site library.localhost mariadb
+2025-05-14 13:00:55,568 INFO ipython bench --site library.test mariadb
+2025-05-14 13:00:55,568 INFO ipython === session end ===
+2025-05-16 06:23:04,544 INFO ipython === bench console session ===
+2025-05-16 06:23:04,545 INFO ipython print("hello D-code")
+2025-05-16 06:23:04,545 INFO ipython === session end ===

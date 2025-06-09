@@ -1,0 +1,141 @@
+2025-05-20 18:29:18,964 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctype': 'Appointments', 'name': 'test12', 'cmd': 'frappe.desk.form.load.getdoc'}
+2025-05-20 18:29:27,898 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctype': 'Appointments', 'name': 'test', 'cmd': 'frappe.desk.form.load.getdoc'}
+2025-05-20 18:29:32,125 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctype': 'Appointments', 'name': 'test12', 'cmd': 'frappe.desk.form.load.getdoc'}
+2025-05-20 18:30:04,117 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Appointments","name":"new-appointments-nrfpkprfkd","__islocal":1,"__unsaved":1,"owner":"Administrator","patient":"123","doctor":"G Sathwik","date":"2025-05-21","time_slot":"14:59:37","notes":"okk"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-20 18:31:29,521 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Appointments","name":"new-appointments-xbpammtnet","__islocal":1,"__unsaved":1,"owner":"Administrator","patient":"123","doctor":"G Sathwik","date":"2025-05-21","notes":"oio"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-21 05:49:14,595 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Appointments","name":"new-appointments-wivvyxfeun","__islocal":1,"__unsaved":1,"owner":"Administrator","patient":"test","doctor":"G Sathwik","date":"2025-05-23","time_slot":"11:19:09","notes":"okk"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-21 05:54:36,604 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Appointments","name":"new-appointments-hkgfqkxowp","__islocal":1,"__unsaved":1,"owner":"Administrator","patient":"test12","doctor":"G Sathwik","date":"2025-05-23","time_slot":"11:24:31","notes":"yes"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-21 05:55:54,262 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Appointments","name":"new-appointments-solzzkadtt","__islocal":1,"__unsaved":1,"owner":"Administrator","patient":"test","doctor":"G Sathwik","date":"2025-05-23","time_slot":"11:25:45","notes":"okk"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-21 05:58:43,844 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Appointments","name":"new-appointments-rzocobejfs","__islocal":1,"__unsaved":1,"owner":"Administrator","patient":"test12","doctor":"G Sathwik","date":"2025-05-23","time_slot":"11:28:36","notes":"okk"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-21 06:03:54,375 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Appointments","name":"new-appointments-wrrdnmnedf","__islocal":1,"__unsaved":1,"owner":"Administrator","patient":"test","doctor":"G Sathwik","date":"2025-05-23","time_slot":"11:33:42","notes":"okk"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-21 07:08:46,432 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Appointments","name":"new-appointments-stewpzoauw","__islocal":1,"__unsaved":1,"owner":"Administrator","patient":"test12","doctor":"G Sathwik","date":"2025-05-22","time_slot":"12:38:29","notes":"okk"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-21 09:52:48,274 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctype': 'Doctor', 'with_parent': '1', 'cached_timestamp': '2025-05-21 14:47:30.730258', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2025-05-21 09:57:15,774 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctype': 'Doctor', 'name': 'new-doctor-lemhodwmly', 'cmd': 'frappe.desk.form.load.getdoc'}
+2025-05-21 09:58:09,019 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'new-doctor-vxjsstgwlr', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 10:00:12,694 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'new-doctor-vxjsstgwlr', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 10:00:43,151 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'new-doctor-zceenvvhkz', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 10:05:06,572 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Doctor","name":"new-doctor-zceenvvhkz","__islocal":1,"__unsaved":1,"owner":"Administrator","availability":[],"available_to":"23:18:55","slot_duration":30,"doctor_name":"sathwik"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-21 10:07:51,847 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Doctor","name":"new-doctor-zceenvvhkz","__islocal":1,"__unsaved":1,"owner":"Administrator","availability":[],"available_to":"23:18:55","slot_duration":30,"doctor_name":"sathwik"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-21 10:08:18,263 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Doctor","name":"new-doctor-ioekvrnytk","__islocal":1,"__unsaved":1,"owner":"Administrator","availability":[],"available_to":"20:38:04","slot_duration":30,"doctor_name":"G Sathwik"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-21 10:10:51,759 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Doctor","name":"new-doctor-ioekvrnytk","__islocal":1,"__unsaved":1,"owner":"Administrator","availability":[],"available_to":"20:38:04","slot_duration":30,"doctor_name":"G Sathwik"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-21 10:11:01,579 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Doctor","name":"new-doctor-ioekvrnytk","__islocal":1,"__unsaved":1,"owner":"Administrator","availability":[],"available_to":"20:38:04","slot_duration":30,"doctor_name":"G Sathwik"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-21 10:16:08,309 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Doctor","name":"new-doctor-rgorjjxatb","__islocal":1,"__unsaved":1,"owner":"Administrator","availability":[],"available_from":"15:45:55","available_to":"23:45:48","slot_duration":20,"doctor_name":"G Sathwik"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-21 10:16:34,393 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Doctor","name":"new-doctor-rgorjjxatb","__islocal":1,"__unsaved":1,"owner":"Administrator","availability":[],"available_from":"15:45:55","available_to":"23:45:48","slot_duration":20,"doctor_name":"G Sathwik"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-21 10:19:04,523 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': '5cp5d6j2ih', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 10:20:59,727 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': '5cp5d6j2ih', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 10:24:54,073 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': '8sbil806fi', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 10:30:59,672 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'ce8tg6clfm', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 10:31:41,188 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'ce8tg6clfm', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 10:31:57,016 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'ce8tg6clfm', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 10:35:11,854 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'e8fvtil4rn', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 10:40:49,349 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'e8fvtil4rn', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 10:42:43,986 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'jagsej2dma', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 10:52:22,075 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'ouvldnudh2', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 10:55:39,822 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'ouvldnudh2', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 10:58:15,873 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'sdni4f5n6m', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 11:06:17,147 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': '13nf6r87au', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 11:06:33,708 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': '13nf6r87au', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 11:09:37,658 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': '13nf6r87au', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 11:12:41,928 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': '13nf6r87au', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 11:13:58,969 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': '13nf6r87au', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 11:14:08,720 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': '13nf6r87au', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 11:14:41,494 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': '13nf6r87au', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 11:16:27,397 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': '13nf6r87au', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 11:16:56,531 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': '13nf6r87au', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 11:29:29,083 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'bqau9jk4ad', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 11:30:38,142 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'bqau9jk4ad', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 11:31:23,498 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'bqau9jk4ad', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
