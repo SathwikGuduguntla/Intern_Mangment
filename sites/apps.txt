@@ -2,6 +2,7 @@ frappe
 payments
 rentals
 intern_management
+library
 hrms
 library_management
 rent

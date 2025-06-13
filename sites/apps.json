@@ -87,5 +87,15 @@
         "required": [],
         "idx": 9,
         "version": "0.0.1"
+    },
+    "library": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "b04cde59009ab08b712a1ea2e6114efd6e7f9229",
+            "branch": "develop"
+        },
+        "required": [],
+        "idx": 10,
+        "version": "0.0.1"
     }
 }

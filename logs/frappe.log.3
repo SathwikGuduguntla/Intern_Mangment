@@ -1,4 +1,4 @@
-2025-05-18 17:24:52,108 ERROR frappe Failed to run after request hook
+2025-05-18 17:24:52,308 ERROR frappe Failed to run after request hook
 Site: test6.com
 Form Dict: {}
 Traceback (most recent call last):
@@ -139,7 +139,7 @@ Traceback (most recent call last):
   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
   File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
 ModuleNotFoundError: No module named 'library_management.hooks'
-2025-05-18 17:24:53,112 ERROR frappe Failed to run after request hook
+2025-05-18 17:24:53,109 ERROR frappe Failed to run after request hook
 Site: test6.com
 Form Dict: {}
 Traceback (most recent call last):
@@ -280,7 +280,7 @@ Traceback (most recent call last):
   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
   File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
 ModuleNotFoundError: No module named 'library_management.hooks'
-2025-05-18 17:30:16,696 ERROR frappe Failed to run after request hook
+2025-05-18 17:24:53,504 ERROR frappe Failed to run after request hook
 Site: test6.com
 Form Dict: {}
 Traceback (most recent call last):
@@ -421,7 +421,7 @@ Traceback (most recent call last):
   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
   File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
 ModuleNotFoundError: No module named 'library_management.hooks'
-2025-05-18 17:30:17,662 ERROR frappe Failed to run after request hook
+2025-05-18 17:24:53,760 ERROR frappe Failed to run after request hook
 Site: test6.com
 Form Dict: {}
 Traceback (most recent call last):
@@ -562,7 +562,289 @@ Traceback (most recent call last):
   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
   File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
 ModuleNotFoundError: No module named 'library_management.hooks'
-2025-05-18 17:31:35,140 ERROR frappe Failed to run after request hook
+2025-05-18 17:25:35,804 ERROR frappe Failed to run after request hook
+Site: test6.com
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 100, in application
+    init_request(request)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 196, in init_request
+    frappe.local.http_request = HTTPRequest()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 44, in __init__
+    self.set_session()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 78, in set_session
+    frappe.local.login_manager = LoginManager()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 117, in __init__
+    self.make_session(resume=True)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 211, in make_session
+    frappe.local.session_obj = Session(
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 230, in __init__
+    self.resume()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 308, in resume
+    data = self.get_session_record()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 326, in get_session_record
+    r = self.get_session_data()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 343, in get_session_data
+    data = self.get_session_data_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 374, in get_session_data_from_db
+    .where(sessions.lastupdate > get_expired_threshold())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 455, in get_expired_threshold
+    now = frappe.utils.now()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/data.py", line 361, in now
+    return now_datetime().strftime(DATETIME_FORMAT)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/data.py", line 313, in now_datetime
+    dt = convert_utc_to_system_timezone(datetime.datetime.now(pytz.UTC))
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/data.py", line 348, in convert_utc_to_system_timezone
+    time_zone = get_system_timezone()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/data.py", line 328, in get_system_timezone
+    return frappe.get_system_settings("time_zone") or "Asia/Kolkata"  # Default to India ?!
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 2328, in get_system_settings
+    local.system_settings = system_settings = get_cached_doc("System Settings")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1179, in get_cached_doc
+    doc = get_doc(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1305, in get_doc
+    return frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 133, in application
+    response = handle_exception(e)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/permissions.py", line 870, in wrapper
+    return fn(e, *args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 325, in handle_exception
+    allow_traceback = frappe.get_system_settings("allow_error_traceback") if frappe.db else False
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 2328, in get_system_settings
+    local.system_settings = system_settings = get_cached_doc("System Settings")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1179, in get_cached_doc
+    doc = get_doc(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1305, in get_doc
+    return frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 147, in application
+    run_after_request_hooks(request, response)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 162, in run_after_request_hooks
+    for after_request_task in frappe.get_hooks("after_request"):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 17:25:36,083 ERROR frappe Failed to run after request hook
+Site: test6.com
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 100, in application
+    init_request(request)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 196, in init_request
+    frappe.local.http_request = HTTPRequest()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 44, in __init__
+    self.set_session()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 78, in set_session
+    frappe.local.login_manager = LoginManager()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 117, in __init__
+    self.make_session(resume=True)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 211, in make_session
+    frappe.local.session_obj = Session(
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 230, in __init__
+    self.resume()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 308, in resume
+    data = self.get_session_record()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 326, in get_session_record
+    r = self.get_session_data()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 343, in get_session_data
+    data = self.get_session_data_from_db()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 374, in get_session_data_from_db
+    .where(sessions.lastupdate > get_expired_threshold())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 455, in get_expired_threshold
+    now = frappe.utils.now()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/data.py", line 361, in now
+    return now_datetime().strftime(DATETIME_FORMAT)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/data.py", line 313, in now_datetime
+    dt = convert_utc_to_system_timezone(datetime.datetime.now(pytz.UTC))
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/data.py", line 348, in convert_utc_to_system_timezone
+    time_zone = get_system_timezone()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/data.py", line 328, in get_system_timezone
+    return frappe.get_system_settings("time_zone") or "Asia/Kolkata"  # Default to India ?!
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 2328, in get_system_settings
+    local.system_settings = system_settings = get_cached_doc("System Settings")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1179, in get_cached_doc
+    doc = get_doc(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1305, in get_doc
+    return frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 133, in application
+    response = handle_exception(e)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/permissions.py", line 870, in wrapper
+    return fn(e, *args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 325, in handle_exception
+    allow_traceback = frappe.get_system_settings("allow_error_traceback") if frappe.db else False
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 2328, in get_system_settings
+    local.system_settings = system_settings = get_cached_doc("System Settings")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1179, in get_cached_doc
+    doc = get_doc(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1305, in get_doc
+    return frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 147, in application
+    run_after_request_hooks(request, response)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 162, in run_after_request_hooks
+    for after_request_task in frappe.get_hooks("after_request"):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 17:34:19,428 ERROR frappe Failed to run after request hook
 Site: test6.com
 Form Dict: {}
 Traceback (most recent call last):
@@ -615,8 +897,12 @@ Traceback (most recent call last):
     return _bootstrap._gcd_import(name[level:], package, level)
   File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
   File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
-ModuleNotFoundError: No module named 'library_management.hooks'
+ModuleNotFoundError: No module named 'library_management'
 
 During handling of the above exception, another exception occurred:
 
@@ -658,8 +944,12 @@ Traceback (most recent call last):
     return _bootstrap._gcd_import(name[level:], package, level)
   File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
   File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
-ModuleNotFoundError: No module named 'library_management.hooks'
+ModuleNotFoundError: No module named 'library_management'
 
 During handling of the above exception, another exception occurred:
 
@@ -687,5 +977,227 @@ Traceback (most recent call last):
     return _bootstrap._gcd_import(name[level:], package, level)
   File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
   File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
-ModuleNotFoundError: No module named 'library_management.hooks'
+ModuleNotFoundError: No module named 'library_management'
+2025-05-19 08:44:33,965 ERROR frappe New Exception collected in error log
+Site: test6.com
+Form Dict: {'doc': '{"name":"LMS00002","owner":"Administrator","creation":"2025-05-19 14:14:29.193494","modified":"2025-05-19 14:14:29.193494","modified_by":"Administrator","docstatus":0,"idx":0,"library_member":"LM00014","full_name":"Sreeja G","from":"2025-05-21","to_date":"2025-05-30","paid":1,"amended_from":null,"doctype":"Library Membership","__last_sync_on":"2025-05-19T08:44:29.875Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-19 08:45:20,533 ERROR frappe New Exception collected in error log
+Site: test6.com
+Form Dict: {'doc': '{"name":"LMS00003","owner":"Administrator","creation":"2025-05-19 14:15:17.252451","modified":"2025-05-19 14:15:17.252451","modified_by":"Administrator","docstatus":0,"idx":0,"library_member":"LM00012","full_name":"Dev Test","from":"2025-05-27","to_date":"2025-05-31","paid":1,"amended_from":null,"doctype":"Library Membership","__last_sync_on":"2025-05-19T08:45:17.889Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-19 08:47:19,055 ERROR frappe New Exception collected in error log
+Site: test6.com
+Form Dict: {'doc': '{"name":"LMS00003","owner":"Administrator","creation":"2025-05-19 14:15:17.252451","modified":"2025-05-19 14:15:17.252451","modified_by":"Administrator","docstatus":0,"idx":0,"library_member":"LM00012","full_name":"Dev Test","from":"2025-05-27","to_date":"2025-05-31","paid":1,"amended_from":null,"doctype":"Library Membership","__last_sync_on":"2025-05-19T08:45:17.889Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-19 08:48:51,050 ERROR frappe New Exception collected in error log
+Site: test6.com
+Form Dict: {'doc': '{"name":"LMS00004","owner":"Administrator","creation":"2025-05-19 14:18:47.607287","modified":"2025-05-19 14:18:47.607287","modified_by":"Administrator","docstatus":0,"idx":0,"library_member":"LM00012","full_name":"Dev Test","from":"2025-05-19","to_date":"2025-05-31","paid":1,"amended_from":null,"doctype":"Library Membership","__last_sync_on":"2025-05-19T08:48:48.255Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-19 08:51:05,807 ERROR frappe New Exception collected in error log
+Site: test6.com
+Form Dict: {'doc': '{"name":"LMS00001","owner":"Administrator","creation":"2025-05-19 14:21:02.708187","modified":"2025-05-19 14:21:02.708187","modified_by":"Administrator","docstatus":0,"idx":0,"library_member":"LM00014","full_name":"Sreeja G","from":"2025-05-19","to_date":"2025-05-31","paid":1,"amended_from":null,"doctype":"Library Membership","__last_sync_on":"2025-05-19T08:51:03.360Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-19 08:52:35,083 ERROR frappe New Exception collected in error log
+Site: test6.com
+Form Dict: {'doc': '{"name":"LMS00001","owner":"Administrator","creation":"2025-05-19 14:21:02.708187","modified":"2025-05-19 14:21:02.708187","modified_by":"Administrator","docstatus":0,"idx":0,"library_member":"LM00014","full_name":"Sreeja G","from":"2025-05-19","to_date":"2025-05-31","paid":1,"doctype":"Library Membership","__last_sync_on":"2025-05-19T08:52:32.046Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-19 08:59:57,821 ERROR frappe New Exception collected in error log
+Site: test6.com
+Form Dict: {'doc': '{"name":"Library Transaction","creation":"2025-05-15 16:57:52.219998","modified":"2025-05-15 17:14:19.336788","modified_by":"Administrator","owner":"Administrator","docstatus":0,"idx":0,"issingle":0,"is_virtual":0,"is_tree":0,"istable":0,"editable_grid":0,"track_changes":0,"module":"Library Management","naming_rule":"","sort_field":"modified","sort_order":"DESC","read_only":0,"in_create":0,"allow_copy":0,"allow_rename":1,"allow_import":0,"hide_toolbar":0,"track_seen":0,"max_attachments":0,"document_type":"","engine":"InnoDB","is_submittable":0,"show_name_in_global_search":0,"custom":0,"beta":0,"has_web_view":0,"allow_guest_to_view":0,"email_append_to":0,"show_title_field_in_link":0,"translated_doctype":0,"is_calendar_and_gantt":0,"quick_entry":0,"grid_page_length":50,"track_views":0,"queue_in_background":0,"allow_events_in_timeline":0,"allow_auto_repeat":0,"make_attachments_public":0,"force_re_route_to_default_view":0,"show_preview_popup":0,"protect_attached_files":0,"index_web_pages_for_search":1,"row_format":"Dynamic","doctype":"DocType","fields":[{"docstatus":0,"doctype":"DocField","name":"new-docfield-xtgjxgcmxx","__islocal":1,"__unsaved":1,"owner":"Administrator","fieldtype":"Link","precision":"","non_negative":0,"hide_days":0,"hide_seconds":0,"reqd":0,"is_virtual":0,"search_index":0,"sort_options":0,"show_dashboard":0,"fetch_if_empty":0,"hidden":0,"show_on_timeline":0,"bold":0,"allow_in_quick_entry":0,"translatable":0,"print_hide":0,"print_hide_if_no_value":0,"report_hide":0,"collapsible":0,"hide_border":0,"in_list_view":0,"in_standard_filter":0,"in_preview":0,"in_filter":1,"in_global_search":0,"read_only":0,"allow_on_submit":0,"ignore_user_permissions":0,"allow_bulk_edit":0,"make_attachment_public":0,"permlevel":0,"ignore_xss_filter":0,"unique":0,"no_copy":0,"set_only_once":0,"remember_last_selected_value":0,"parent":"Library Transaction","parentfield":"fields","parenttype":"DocType","idx":1,"fieldname":"article","label":"Article","options":"Article","show_preview_popup":0,"columns":0,"length":0},{"docstatus":0,"doctype":"DocField","name":"new-docfield-sacfoizrki","__islocal":1,"__unsaved":1,"owner":"Administrator","fieldtype":"Link","precision":"","non_negative":0,"hide_days":0,"hide_seconds":0,"reqd":0,"is_virtual":0,"search_index":0,"sort_options":0,"show_dashboard":0,"fetch_if_empty":0,"hidden":0,"show_on_timeline":0,"bold":0,"allow_in_quick_entry":0,"translatable":0,"print_hide":0,"print_hide_if_no_value":0,"report_hide":0,"collapsible":0,"hide_border":0,"in_list_view":0,"in_standard_filter":0,"in_preview":0,"in_filter":0,"in_global_search":0,"read_only":0,"allow_on_submit":0,"ignore_user_permissions":0,"allow_bulk_edit":0,"make_attachment_public":0,"permlevel":0,"ignore_xss_filter":0,"unique":0,"no_copy":0,"set_only_once":0,"remember_last_selected_value":0,"parent":"Library Transaction","parentfield":"fields","parenttype":"DocType","idx":2,"fieldname":"library_member","label":"Library Member","options":"Library Member","show_preview_popup":0,"columns":0,"length":0},{"docstatus":0,"doctype":"DocField","name":"new-docfield-evoytysyba","__islocal":1,"__unsaved":1,"owner":"Administrator","fieldtype":"Select","precision":"","non_negative":0,"hide_days":0,"hide_seconds":0,"reqd":0,"is_virtual":0,"search_index":0,"sort_options":0,"show_dashboard":0,"fetch_if_empty":0,"hidden":0,"show_on_timeline":0,"bold":0,"allow_in_quick_entry":0,"translatable":0,"print_hide":0,"print_hide_if_no_value":0,"report_hide":0,"collapsible":0,"hide_border":0,"in_list_view":0,"in_standard_filter":0,"in_preview":0,"in_filter":0,"in_global_search":0,"read_only":0,"allow_on_submit":0,"ignore_user_permissions":0,"allow_bulk_edit":0,"make_attachment_public":0,"permlevel":0,"ignore_xss_filter":0,"unique":0,"no_copy":0,"set_only_once":0,"remember_last_selected_value":0,"parent":"Library Transaction","parentfield":"fields","parenttype":"DocType","idx":3,"fieldname":"type","label":"Type","options":"Issue\\nReturn","show_preview_popup":0,"columns":0,"length":0},{"docstatus":0,"doctype":"DocField","name":"new-docfield-fwxrqoghqb","__islocal":1,"__unsaved":1,"owner":"Administrator","fieldtype":"Date","precision":"","non_negative":0,"hide_days":0,"hide_seconds":0,"reqd":0,"is_virtual":0,"search_index":0,"sort_options":0,"show_dashboard":0,"fetch_if_empty":0,"hidden":0,"show_on_timeline":0,"bold":0,"allow_in_quick_entry":0,"translatable":0,"print_hide":0,"print_hide_if_no_value":0,"report_hide":0,"collapsible":0,"hide_border":0,"in_list_view":0,"in_standard_filter":0,"in_preview":0,"in_filter":0,"in_global_search":0,"read_only":0,"allow_on_submit":0,"ignore_user_permissions":0,"allow_bulk_edit":0,"make_attachment_public":0,"permlevel":0,"ignore_xss_filter":0,"unique":0,"no_copy":0,"set_only_once":0,"remember_last_selected_value":0,"parent":"Library Transaction","parentfield":"fields","parenttype":"DocType","idx":4,"fieldname":"date_of_transaction","label":"Date of Transaction","show_preview_popup":0,"columns":0,"length":0}],"links":[],"permissions":[{"name":"79ij85i8pv","creation":"2025-05-15 16:57:52.219998","modified":"2025-05-15 17:14:19.336788","modified_by":"Administrator","owner":"Administrator","docstatus":0,"parent":"Library Transaction","parentfield":"permissions","parenttype":"DocType","idx":1,"permlevel":0,"role":"System Manager","read":1,"write":1,"create":1,"submit":0,"cancel":0,"delete":1,"amend":0,"report":1,"export":1,"import":0,"share":1,"print":1,"email":1,"if_owner":0,"select":0,"doctype":"DocPerm"}],"actions":[],"states":[],"__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-19 09:01:38,266 ERROR frappe New Exception collected in error log
+Site: test6.com
+Form Dict: {'doc': '{"name":"Library Transaction","creation":"2025-05-15 16:57:52.219998","modified":"2025-05-19 14:29:57.660468","modified_by":"Administrator","owner":"Administrator","docstatus":0,"idx":0,"issingle":0,"is_virtual":0,"is_tree":0,"istable":0,"editable_grid":0,"track_changes":0,"module":"Library Management","naming_rule":"Expression (old style)","sort_field":"modified","sort_order":"DESC","read_only":0,"in_create":0,"allow_copy":0,"allow_rename":1,"allow_import":0,"hide_toolbar":0,"track_seen":0,"max_attachments":0,"document_type":"","engine":"InnoDB","is_submittable":0,"show_name_in_global_search":0,"custom":0,"beta":0,"has_web_view":0,"allow_guest_to_view":0,"email_append_to":0,"show_title_field_in_link":0,"translated_doctype":0,"is_calendar_and_gantt":0,"quick_entry":0,"grid_page_length":50,"track_views":0,"queue_in_background":0,"allow_events_in_timeline":0,"allow_auto_repeat":0,"make_attachments_public":0,"force_re_route_to_default_view":0,"show_preview_popup":0,"protect_attached_files":0,"index_web_pages_for_search":1,"row_format":"Dynamic","doctype":"DocType","fields":[{"name":"vk8amsl8a4","creation":"2025-05-15 16:57:52.219998","modified":"2025-05-19 14:29:57.660468","modified_by":"Administrator","owner":"Administrator","docstatus":0,"parent":"Library Transaction","parentfield":"fields","parenttype":"DocType","idx":1,"fieldname":"article","label":"Article","fieldtype":"Link","options":"Article","search_index":0,"show_dashboard":0,"hidden":0,"set_only_once":0,"allow_in_quick_entry":0,"print_hide":0,"report_hide":0,"reqd":0,"bold":0,"in_global_search":0,"collapsible":0,"unique":0,"no_copy":0,"allow_on_submit":0,"show_preview_popup":0,"permlevel":0,"ignore_user_permissions":0,"columns":0,"in_list_view":0,"fetch_if_empty":0,"in_filter":1,"remember_last_selected_value":0,"ignore_xss_filter":0,"print_hide_if_no_value":0,"allow_bulk_edit":0,"in_standard_filter":0,"in_preview":0,"read_only":0,"precision":"","length":0,"translatable":0,"hide_border":0,"hide_days":0,"hide_seconds":0,"non_negative":0,"is_virtual":0,"sort_options":0,"show_on_timeline":0,"make_attachment_public":0,"doctype":"DocField"},{"name":"vk8erc0uka","creation":"2025-05-15 16:57:52.219998","modified":"2025-05-19 14:29:57.660468","modified_by":"Administrator","owner":"Administrator","docstatus":0,"parent":"Library Transaction","parentfield":"fields","parenttype":"DocType","idx":2,"fieldname":"library_member","label":"Library Member","fieldtype":"Link","options":"Library Member","search_index":0,"show_dashboard":0,"hidden":0,"set_only_once":0,"allow_in_quick_entry":0,"print_hide":0,"report_hide":0,"reqd":0,"bold":0,"in_global_search":0,"collapsible":0,"unique":0,"no_copy":0,"allow_on_submit":0,"show_preview_popup":0,"permlevel":0,"ignore_user_permissions":0,"columns":0,"in_list_view":0,"fetch_if_empty":0,"in_filter":0,"remember_last_selected_value":0,"ignore_xss_filter":0,"print_hide_if_no_value":0,"allow_bulk_edit":0,"in_standard_filter":0,"in_preview":0,"read_only":0,"precision":"","length":0,"translatable":0,"hide_border":0,"hide_days":0,"hide_seconds":0,"non_negative":0,"is_virtual":0,"sort_options":0,"show_on_timeline":0,"make_attachment_public":0,"doctype":"DocField"},{"name":"vk839h7tcu","creation":"2025-05-15 16:57:52.219998","modified":"2025-05-19 14:29:57.660468","modified_by":"Administrator","owner":"Administrator","docstatus":0,"parent":"Library Transaction","parentfield":"fields","parenttype":"DocType","idx":3,"fieldname":"type","label":"Type","fieldtype":"Select","options":"Issue\\nReturn","search_index":0,"show_dashboard":0,"hidden":0,"set_only_once":0,"allow_in_quick_entry":0,"print_hide":0,"report_hide":0,"reqd":0,"bold":0,"in_global_search":0,"collapsible":0,"unique":0,"no_copy":0,"allow_on_submit":0,"show_preview_popup":0,"permlevel":0,"ignore_user_permissions":0,"columns":0,"in_list_view":0,"fetch_if_empty":0,"in_filter":0,"remember_last_selected_value":0,"ignore_xss_filter":0,"print_hide_if_no_value":0,"allow_bulk_edit":0,"in_standard_filter":0,"in_preview":0,"read_only":0,"precision":"","length":0,"translatable":0,"hide_border":0,"hide_days":0,"hide_seconds":0,"non_negative":0,"is_virtual":0,"sort_options":0,"show_on_timeline":0,"make_attachment_public":0,"doctype":"DocField"},{"name":"vk8tptmhr6","creation":"2025-05-15 16:57:52.219998","modified":"2025-05-19 14:29:57.660468","modified_by":"Administrator","owner":"Administrator","docstatus":0,"parent":"Library Transaction","parentfield":"fields","parenttype":"DocType","idx":4,"fieldname":"date_of_transaction","label":"Date of Transaction","fieldtype":"Date","search_index":0,"show_dashboard":0,"hidden":0,"set_only_once":0,"allow_in_quick_entry":0,"print_hide":0,"report_hide":0,"reqd":0,"bold":0,"in_global_search":0,"collapsible":0,"unique":0,"no_copy":0,"allow_on_submit":0,"show_preview_popup":0,"permlevel":0,"ignore_user_permissions":0,"columns":0,"in_list_view":0,"fetch_if_empty":0,"in_filter":0,"remember_last_selected_value":0,"ignore_xss_filter":0,"print_hide_if_no_value":0,"allow_bulk_edit":0,"in_standard_filter":0,"in_preview":0,"read_only":0,"precision":"","length":0,"translatable":0,"hide_border":0,"hide_days":0,"hide_seconds":0,"non_negative":0,"is_virtual":0,"sort_options":0,"show_on_timeline":0,"make_attachment_public":0,"doctype":"DocField"}],"links":[],"permissions":[{"name":"79ij85i8pv","creation":"2025-05-15 16:57:52.219998","modified":"2025-05-19 14:29:57.660468","modified_by":"Administrator","owner":"Administrator","docstatus":0,"parent":"Library Transaction","parentfield":"permissions","parenttype":"DocType","idx":1,"permlevel":0,"role":"System Manager","read":1,"write":1,"create":1,"submit":0,"cancel":0,"delete":1,"amend":0,"report":1,"export":1,"import":0,"share":1,"print":1,"email":1,"if_owner":0,"select":0,"doctype":"DocPerm"}],"actions":[],"states":[],"__unsaved":1,"autoname":"LMR.#####"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-19 09:03:09,972 ERROR frappe New Exception collected in error log
+Site: test6.com
+Form Dict: {'doc': '{"name":"Library Transaction","creation":"2025-05-15 16:57:52.219998","modified":"2025-05-19 14:31:38.185121","modified_by":"Administrator","owner":"Administrator","docstatus":0,"idx":0,"issingle":0,"is_virtual":0,"is_tree":0,"istable":0,"editable_grid":0,"track_changes":0,"module":"Library Management","autoname":"LMR.#####","naming_rule":"Expression (old style)","sort_field":"modified","sort_order":"DESC","read_only":0,"in_create":0,"allow_copy":0,"allow_rename":1,"allow_import":0,"hide_toolbar":0,"track_seen":0,"max_attachments":0,"document_type":"","engine":"InnoDB","is_submittable":0,"show_name_in_global_search":0,"custom":0,"beta":0,"has_web_view":0,"allow_guest_to_view":0,"email_append_to":0,"show_title_field_in_link":0,"translated_doctype":0,"is_calendar_and_gantt":0,"quick_entry":0,"grid_page_length":50,"track_views":0,"queue_in_background":0,"allow_events_in_timeline":0,"allow_auto_repeat":0,"make_attachments_public":0,"force_re_route_to_default_view":0,"show_preview_popup":0,"protect_attached_files":0,"index_web_pages_for_search":1,"row_format":"Dynamic","doctype":"DocType","fields":[{"name":"vk8amsl8a4","creation":"2025-05-15 16:57:52.219998","modified":"2025-05-19 14:31:38.185121","modified_by":"Administrator","owner":"Administrator","docstatus":0,"parent":"Library Transaction","parentfield":"fields","parenttype":"DocType","idx":1,"fieldname":"article","label":"Article","fieldtype":"Link","options":"Article","search_index":0,"show_dashboard":0,"hidden":0,"set_only_once":0,"allow_in_quick_entry":0,"print_hide":0,"report_hide":0,"reqd":0,"bold":0,"in_global_search":0,"collapsible":0,"unique":0,"no_copy":0,"allow_on_submit":0,"show_preview_popup":0,"permlevel":0,"ignore_user_permissions":0,"columns":0,"in_list_view":0,"fetch_if_empty":0,"in_filter":1,"remember_last_selected_value":0,"ignore_xss_filter":0,"print_hide_if_no_value":0,"allow_bulk_edit":0,"in_standard_filter":0,"in_preview":0,"read_only":0,"precision":"","length":0,"translatable":0,"hide_border":0,"hide_days":0,"hide_seconds":0,"non_negative":0,"is_virtual":0,"sort_options":0,"show_on_timeline":0,"make_attachment_public":0,"doctype":"DocField"},{"name":"vk8erc0uka","creation":"2025-05-15 16:57:52.219998","modified":"2025-05-19 14:31:38.185121","modified_by":"Administrator","owner":"Administrator","docstatus":0,"parent":"Library Transaction","parentfield":"fields","parenttype":"DocType","idx":2,"fieldname":"library_member","label":"Library Member","fieldtype":"Link","options":"Library Member","search_index":0,"show_dashboard":0,"hidden":0,"set_only_once":0,"allow_in_quick_entry":0,"print_hide":0,"report_hide":0,"reqd":0,"bold":0,"in_global_search":0,"collapsible":0,"unique":0,"no_copy":0,"allow_on_submit":0,"show_preview_popup":0,"permlevel":0,"ignore_user_permissions":0,"columns":0,"in_list_view":0,"fetch_if_empty":0,"in_filter":0,"remember_last_selected_value":0,"ignore_xss_filter":0,"print_hide_if_no_value":0,"allow_bulk_edit":0,"in_standard_filter":0,"in_preview":0,"read_only":0,"precision":"","length":0,"translatable":0,"hide_border":0,"hide_days":0,"hide_seconds":0,"non_negative":0,"is_virtual":0,"sort_options":0,"show_on_timeline":0,"make_attachment_public":0,"doctype":"DocField"},{"name":"vk839h7tcu","creation":"2025-05-15 16:57:52.219998","modified":"2025-05-19 14:31:38.185121","modified_by":"Administrator","owner":"Administrator","docstatus":0,"parent":"Library Transaction","parentfield":"fields","parenttype":"DocType","idx":3,"fieldname":"type","label":"Type","fieldtype":"Select","options":"Issue\\nReturn","search_index":0,"show_dashboard":0,"hidden":0,"set_only_once":0,"allow_in_quick_entry":0,"print_hide":0,"report_hide":0,"reqd":0,"bold":0,"in_global_search":0,"collapsible":0,"unique":0,"no_copy":0,"allow_on_submit":0,"show_preview_popup":0,"permlevel":0,"ignore_user_permissions":0,"columns":0,"in_list_view":0,"fetch_if_empty":0,"in_filter":0,"remember_last_selected_value":0,"ignore_xss_filter":0,"print_hide_if_no_value":0,"allow_bulk_edit":0,"in_standard_filter":0,"in_preview":0,"read_only":0,"precision":"","length":0,"translatable":0,"hide_border":0,"hide_days":0,"hide_seconds":0,"non_negative":0,"is_virtual":0,"sort_options":0,"show_on_timeline":0,"make_attachment_public":0,"doctype":"DocField"},{"name":"vk8tptmhr6","creation":"2025-05-15 16:57:52.219998","modified":"2025-05-19 14:31:38.185121","modified_by":"Administrator","owner":"Administrator","docstatus":0,"parent":"Library Transaction","parentfield":"fields","parenttype":"DocType","idx":4,"fieldname":"date_of_transaction","label":"Date of Transaction","fieldtype":"Date","search_index":0,"show_dashboard":0,"hidden":0,"set_only_once":0,"allow_in_quick_entry":0,"print_hide":0,"report_hide":0,"reqd":0,"bold":0,"in_global_search":0,"collapsible":0,"unique":0,"no_copy":0,"allow_on_submit":0,"show_preview_popup":0,"permlevel":0,"ignore_user_permissions":0,"columns":0,"in_list_view":0,"fetch_if_empty":0,"in_filter":0,"remember_last_selected_value":0,"ignore_xss_filter":0,"print_hide_if_no_value":0,"allow_bulk_edit":0,"in_standard_filter":0,"in_preview":0,"read_only":0,"precision":"","length":0,"translatable":0,"hide_border":0,"hide_days":0,"hide_seconds":0,"non_negative":0,"is_virtual":0,"sort_options":0,"show_on_timeline":0,"make_attachment_public":0,"doctype":"DocField"}],"links":[],"permissions":[{"name":"79ij85i8pv","creation":"2025-05-15 16:57:52.219998","modified":"2025-05-19 14:31:38.185121","modified_by":"Administrator","owner":"Administrator","docstatus":0,"parent":"Library Transaction","parentfield":"permissions","parenttype":"DocType","idx":1,"permlevel":0,"role":"System Manager","read":1,"write":1,"create":1,"submit":0,"cancel":0,"delete":1,"amend":0,"report":1,"export":1,"import":0,"share":1,"print":1,"email":1,"if_owner":0,"select":0,"doctype":"DocPerm"},{"docstatus":0,"doctype":"DocPerm","name":"new-docperm-swfzotnbgt","__islocal":1,"__unsaved":1,"owner":"Administrator","if_owner":0,"permlevel":0,"select":0,"read":1,"write":1,"create":1,"delete":1,"submit":0,"cancel":0,"amend":0,"report":1,"export":1,"import":0,"share":1,"print":1,"email":1,"parent":"Library Transaction","parentfield":"permissions","parenttype":"DocType","idx":2,"__unedited":false,"role":"Librarian"}],"actions":[],"states":[],"__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-20 18:29:18,964 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctype': 'Appointments', 'name': 'test12', 'cmd': 'frappe.desk.form.load.getdoc'}
+2025-05-20 18:29:27,898 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctype': 'Appointments', 'name': 'test', 'cmd': 'frappe.desk.form.load.getdoc'}
+2025-05-20 18:29:32,125 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctype': 'Appointments', 'name': 'test12', 'cmd': 'frappe.desk.form.load.getdoc'}
+2025-05-20 18:30:04,117 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Appointments","name":"new-appointments-nrfpkprfkd","__islocal":1,"__unsaved":1,"owner":"Administrator","patient":"123","doctor":"G Sathwik","date":"2025-05-21","time_slot":"14:59:37","notes":"okk"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-20 18:31:29,521 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Appointments","name":"new-appointments-xbpammtnet","__islocal":1,"__unsaved":1,"owner":"Administrator","patient":"123","doctor":"G Sathwik","date":"2025-05-21","notes":"oio"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-21 05:49:14,595 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Appointments","name":"new-appointments-wivvyxfeun","__islocal":1,"__unsaved":1,"owner":"Administrator","patient":"test","doctor":"G Sathwik","date":"2025-05-23","time_slot":"11:19:09","notes":"okk"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-21 05:54:36,604 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Appointments","name":"new-appointments-hkgfqkxowp","__islocal":1,"__unsaved":1,"owner":"Administrator","patient":"test12","doctor":"G Sathwik","date":"2025-05-23","time_slot":"11:24:31","notes":"yes"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-21 05:55:54,262 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Appointments","name":"new-appointments-solzzkadtt","__islocal":1,"__unsaved":1,"owner":"Administrator","patient":"test","doctor":"G Sathwik","date":"2025-05-23","time_slot":"11:25:45","notes":"okk"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-21 05:58:43,844 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Appointments","name":"new-appointments-rzocobejfs","__islocal":1,"__unsaved":1,"owner":"Administrator","patient":"test12","doctor":"G Sathwik","date":"2025-05-23","time_slot":"11:28:36","notes":"okk"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-21 06:03:54,375 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Appointments","name":"new-appointments-wrrdnmnedf","__islocal":1,"__unsaved":1,"owner":"Administrator","patient":"test","doctor":"G Sathwik","date":"2025-05-23","time_slot":"11:33:42","notes":"okk"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-21 06:45:20,690 ERROR frappe New Exception collected in error log
+Site: test6.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Library Member","name":"new-library-member-cuknrbswzf","__islocal":1,"__unsaved":1,"owner":"Administrator","first_name":"Sathwik","last_name":"G","phone":"09573785559","email":"sathwik@outlook.com"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-21 07:08:46,432 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Appointments","name":"new-appointments-stewpzoauw","__islocal":1,"__unsaved":1,"owner":"Administrator","patient":"test12","doctor":"G Sathwik","date":"2025-05-22","time_slot":"12:38:29","notes":"okk"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-21 09:52:48,274 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctype': 'Doctor', 'with_parent': '1', 'cached_timestamp': '2025-05-21 14:47:30.730258', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2025-05-21 09:57:15,774 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctype': 'Doctor', 'name': 'new-doctor-lemhodwmly', 'cmd': 'frappe.desk.form.load.getdoc'}
+2025-05-21 09:58:09,019 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'new-doctor-vxjsstgwlr', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 10:00:12,694 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'new-doctor-vxjsstgwlr', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 10:00:43,151 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'new-doctor-zceenvvhkz', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 10:05:06,572 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Doctor","name":"new-doctor-zceenvvhkz","__islocal":1,"__unsaved":1,"owner":"Administrator","availability":[],"available_to":"23:18:55","slot_duration":30,"doctor_name":"sathwik"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-21 10:07:51,847 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Doctor","name":"new-doctor-zceenvvhkz","__islocal":1,"__unsaved":1,"owner":"Administrator","availability":[],"available_to":"23:18:55","slot_duration":30,"doctor_name":"sathwik"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-21 10:08:18,263 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Doctor","name":"new-doctor-ioekvrnytk","__islocal":1,"__unsaved":1,"owner":"Administrator","availability":[],"available_to":"20:38:04","slot_duration":30,"doctor_name":"G Sathwik"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-21 10:10:51,759 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Doctor","name":"new-doctor-ioekvrnytk","__islocal":1,"__unsaved":1,"owner":"Administrator","availability":[],"available_to":"20:38:04","slot_duration":30,"doctor_name":"G Sathwik"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-21 10:11:01,579 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Doctor","name":"new-doctor-ioekvrnytk","__islocal":1,"__unsaved":1,"owner":"Administrator","availability":[],"available_to":"20:38:04","slot_duration":30,"doctor_name":"G Sathwik"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-21 10:16:08,309 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Doctor","name":"new-doctor-rgorjjxatb","__islocal":1,"__unsaved":1,"owner":"Administrator","availability":[],"available_from":"15:45:55","available_to":"23:45:48","slot_duration":20,"doctor_name":"G Sathwik"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-21 10:16:34,393 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Doctor","name":"new-doctor-rgorjjxatb","__islocal":1,"__unsaved":1,"owner":"Administrator","availability":[],"available_from":"15:45:55","available_to":"23:45:48","slot_duration":20,"doctor_name":"G Sathwik"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-21 10:19:04,523 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': '5cp5d6j2ih', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 10:20:59,727 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': '5cp5d6j2ih', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 10:24:54,073 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': '8sbil806fi', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 10:30:59,672 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'ce8tg6clfm', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 10:31:41,188 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'ce8tg6clfm', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 10:31:57,016 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'ce8tg6clfm', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 10:35:11,854 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'e8fvtil4rn', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 10:40:49,349 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'e8fvtil4rn', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 10:42:43,986 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'jagsej2dma', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 10:52:22,075 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'ouvldnudh2', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 10:55:39,822 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'ouvldnudh2', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 10:58:15,873 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'sdni4f5n6m', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 11:06:17,147 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': '13nf6r87au', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 11:06:33,708 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': '13nf6r87au', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 11:09:37,658 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': '13nf6r87au', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 11:12:41,928 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': '13nf6r87au', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 11:13:58,969 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': '13nf6r87au', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 11:14:08,720 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': '13nf6r87au', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 11:14:41,494 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': '13nf6r87au', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 11:16:27,397 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': '13nf6r87au', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 11:16:56,531 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': '13nf6r87au', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 11:29:29,083 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'bqau9jk4ad', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 11:30:38,142 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'bqau9jk4ad', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-21 11:31:23,498 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {'doctor_name': 'bqau9jk4ad', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-05-29 06:20:04,142 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doc': '{"name":"INT-00001","owner":"Administrator","creation":"2025-05-29 11:49:32.084887","modified":"2025-05-29 11:49:32.084887","modified_by":"Administrator","docstatus":0,"idx":0,"intern_id":"1","name1":"G SATHWIK","email":"guduguntlasathwik@gmail.com","phone":"+91-9573785559","start_date":"2025-05-29","end_date":"2025-04-03","doctype":"Intern","__last_sync_on":"2025-05-29T06:19:32.804Z","__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-05-29 06:34:56,955 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'with_parent': '1', 'cached_timestamp': '', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2025-05-29 11:13:46,647 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'task_name', 'name': 'TASK-0002', 'cmd': 'frappe.client.get'}
+2025-05-29 11:14:29,352 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'task_name', 'name': 'TASK-0003', 'cmd': 'frappe.client.get'}
+2025-05-29 11:15:54,604 ERROR frappe Error while inserting deferred Error Log record: Error Log 4pab19ke02: '<strong>Title</strong>' (Module import failed for task_name, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.task_name') will get truncated, as max characters allowed is 140
+Site: intern.com
+Form Dict: {}
+2025-05-29 11:15:54,606 ERROR frappe Error while inserting deferred Error Log record: Error Log 4pao0l494q: '<strong>Title</strong>' (Module import failed for task_name, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.task_name') will get truncated, as max characters allowed is 140
+Site: intern.com
+Form Dict: {}
+2025-05-29 11:15:56,102 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'task_name', 'name': 'TASK-0002', 'cmd': 'frappe.client.get'}
+2025-05-29 11:17:28,863 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'task_name', 'name': 'TASK-0002', 'cmd': 'frappe.client.get'}
+2025-05-29 11:20:03,252 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'task_name', 'name': 'TASK-0001', 'cmd': 'frappe.client.get'}
+2025-05-29 11:21:47,365 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'task_name', 'name': 'TASK-0003', 'cmd': 'frappe.client.get'}
+2025-05-29 11:25:06,660 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'task_name', 'name': 'TASK-0003', 'cmd': 'frappe.client.get'}
+2025-05-29 11:30:43,968 ERROR frappe Error while inserting deferred Error Log record: Error Log df7aos33vt: '<strong>Title</strong>' (Module import failed for task_name, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.task_name') will get truncated, as max characters allowed is 140
+Site: intern.com
+Form Dict: {}
+2025-05-29 11:30:43,970 ERROR frappe Error while inserting deferred Error Log record: Error Log df79837vu1: '<strong>Title</strong>' (Module import failed for task_name, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.task_name') will get truncated, as max characters allowed is 140
+Site: intern.com
+Form Dict: {}
+2025-05-29 11:30:43,971 ERROR frappe Error while inserting deferred Error Log record: Error Log df7umajb2a: '<strong>Title</strong>' (Module import failed for task_name, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.task_name') will get truncated, as max characters allowed is 140
+Site: intern.com
+Form Dict: {}
