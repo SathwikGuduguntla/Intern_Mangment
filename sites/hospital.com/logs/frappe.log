@@ -139,3 +139,21 @@ Form Dict: {'doctor_name': 'bqau9jk4ad', 'cmd': 'hospital.hospital.doctype.docto
 2025-05-21 11:31:23,498 ERROR frappe New Exception collected in error log
 Site: hospital.com
 Form Dict: {'doctor_name': 'bqau9jk4ad', 'cmd': 'hospital.hospital.doctype.doctor.doctor.generate_slots'}
+2025-06-10 07:28:35,419 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {}
+2025-06-10 07:28:37,060 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {}
+2025-06-10 07:29:14,069 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {}
+2025-06-10 07:29:16,383 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {}
+2025-06-10 07:30:35,335 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {}
+2025-06-10 07:30:35,935 ERROR frappe New Exception collected in error log
+Site: hospital.com
+Form Dict: {}

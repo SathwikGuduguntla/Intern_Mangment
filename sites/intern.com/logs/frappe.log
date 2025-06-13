@@ -1,108 +1,269 @@
-2025-05-29 06:20:04,142 ERROR frappe New Exception collected in error log
+2025-06-11 10:17:47,033 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {'doc': '{"name":"INT-00001","owner":"Administrator","creation":"2025-05-29 11:49:32.084887","modified":"2025-05-29 11:49:32.084887","modified_by":"Administrator","docstatus":0,"idx":0,"intern_id":"1","name1":"G SATHWIK","email":"guduguntlasathwik@gmail.com","phone":"+91-9573785559","start_date":"2025-05-29","end_date":"2025-04-03","doctype":"Intern","__last_sync_on":"2025-05-29T06:19:32.804Z","__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
-2025-05-29 06:34:56,955 ERROR frappe New Exception collected in error log
+Form Dict: {'doctype': 'Intern', 'fields': '["`tabIntern`.`name`","`tabIntern`.`owner`","`tabIntern`.`creation`","`tabIntern`.`modified`","`tabIntern`.`modified_by`","`tabIntern`.`_user_tags`","`tabIntern`.`_comments`","`tabIntern`.`_assign`","`tabIntern`.`_liked_by`","`tabIntern`.`docstatus`","`tabIntern`.`idx`","`tabIntern`.`email_id`"]', 'filters': '[]', 'order_by': '`tabIntern`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-11 12:45:27,150 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {'with_parent': '1', 'cached_timestamp': '', 'cmd': 'frappe.desk.form.load.getdoctype'}
-2025-05-29 11:13:46,647 ERROR frappe New Exception collected in error log
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Intern","name":"new-intern-aozuuuylev","__islocal":1,"__unsaved":1,"owner":"Administrator","user":"sathwik","email_id":"sathwik@gmail.com","mentor":"MENTI-2025-0002"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-06-11 12:50:22,247 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {'doctype': 'task_name', 'name': 'TASK-0002', 'cmd': 'frappe.client.get'}
-2025-05-29 11:14:29,352 ERROR frappe New Exception collected in error log
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Intern","name":"new-intern-aozuuuylev","__islocal":1,"__unsaved":1,"owner":"Administrator","user":"sathwik","email_id":"sathwik@gmail.com","mentor":"MENTI-2025-0002"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-06-11 12:51:18,289 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {'doctype': 'task_name', 'name': 'TASK-0003', 'cmd': 'frappe.client.get'}
-2025-05-29 11:15:54,604 ERROR frappe Error while inserting deferred Error Log record: Error Log 4pab19ke02: '<strong>Title</strong>' (Module import failed for task_name, the DocType you're trying to open might be deleted.
-Error: No module named 'frappe.core.doctype.task_name') will get truncated, as max characters allowed is 140
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Intern","name":"new-intern-xylzijeloe","__islocal":1,"__unsaved":1,"owner":"Administrator","user":"ram","email_id":"ram@gmail.com","mentor":"MENTI-2025-0002"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-06-11 13:03:54,555 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {}
-2025-05-29 11:15:54,606 ERROR frappe Error while inserting deferred Error Log record: Error Log 4pao0l494q: '<strong>Title</strong>' (Module import failed for task_name, the DocType you're trying to open might be deleted.
-Error: No module named 'frappe.core.doctype.task_name') will get truncated, as max characters allowed is 140
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Intern","name":"new-intern-gpglnnnffe","__islocal":1,"__unsaved":1,"owner":"Administrator","user":"sai","email_id":"sai@gmail.com","mentor":"MENTI-2025-0002"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-06-11 13:08:12,156 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {}
-2025-05-29 11:15:56,102 ERROR frappe New Exception collected in error log
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Intern","name":"new-intern-zdmogrsykj","__islocal":1,"__unsaved":1,"owner":"Administrator","user":"sai","email_id":"sai@gmail.com","mentor":"MENTI-2025-0002"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-06-11 13:08:51,001 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {'doctype': 'task_name', 'name': 'TASK-0002', 'cmd': 'frappe.client.get'}
-2025-05-29 11:17:28,863 ERROR frappe New Exception collected in error log
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Intern","name":"new-intern-zdmogrsykj","__islocal":1,"__unsaved":1,"owner":"Administrator","user":"sai","email_id":"sai@gmail.com","mentor":"MENTI-2025-0002"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-06-11 13:11:31,444 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {'doctype': 'task_name', 'name': 'TASK-0002', 'cmd': 'frappe.client.get'}
-2025-05-29 11:20:03,252 ERROR frappe New Exception collected in error log
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Intern","name":"new-intern-zdmogrsykj","__islocal":1,"__unsaved":1,"owner":"Administrator","user":"sai","email_id":"sai@gmail.com","mentor":"MENTI-2025-0002"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-06-11 13:13:01,448 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {'doctype': 'task_name', 'name': 'TASK-0001', 'cmd': 'frappe.client.get'}
-2025-05-29 11:21:47,365 ERROR frappe New Exception collected in error log
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Intern","name":"new-intern-zdmogrsykj","__islocal":1,"__unsaved":1,"owner":"Administrator","user":"sai","email_id":"sai@gmail.com","mentor":"MENTI-2025-0002"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-06-11 13:16:33,855 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {'doctype': 'task_name', 'name': 'TASK-0003', 'cmd': 'frappe.client.get'}
-2025-05-29 11:25:06,660 ERROR frappe New Exception collected in error log
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Intern","name":"new-intern-zdmogrsykj","__islocal":1,"__unsaved":1,"owner":"Administrator","user":"sai","email_id":"sai@gmail.com","mentor":"MENTI-2025-0002"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-06-11 13:17:27,589 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {'doctype': 'task_name', 'name': 'TASK-0003', 'cmd': 'frappe.client.get'}
-2025-05-29 11:30:43,968 ERROR frappe Error while inserting deferred Error Log record: Error Log df7aos33vt: '<strong>Title</strong>' (Module import failed for task_name, the DocType you're trying to open might be deleted.
-Error: No module named 'frappe.core.doctype.task_name') will get truncated, as max characters allowed is 140
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Intern","name":"new-intern-zdmogrsykj","__islocal":1,"__unsaved":1,"owner":"Administrator","user":"sai","email_id":"sai@gmail.com","mentor":"MENTI-2025-0002"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-06-11 13:18:16,106 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {}
-2025-05-29 11:30:43,970 ERROR frappe Error while inserting deferred Error Log record: Error Log df79837vu1: '<strong>Title</strong>' (Module import failed for task_name, the DocType you're trying to open might be deleted.
-Error: No module named 'frappe.core.doctype.task_name') will get truncated, as max characters allowed is 140
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Intern","name":"new-intern-zdmogrsykj","__islocal":1,"__unsaved":1,"owner":"Administrator","user":"sai","email_id":"sai@gmail.com","mentor":"MENTI-2025-0002"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-06-11 13:22:20,651 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {}
-2025-05-29 11:30:43,971 ERROR frappe Error while inserting deferred Error Log record: Error Log df7umajb2a: '<strong>Title</strong>' (Module import failed for task_name, the DocType you're trying to open might be deleted.
-Error: No module named 'frappe.core.doctype.task_name') will get truncated, as max characters allowed is 140
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Intern","name":"new-intern-zdmogrsykj","__islocal":1,"__unsaved":1,"owner":"Administrator","user":"sai","email_id":"sai@gmail.com","mentor":"MENTI-2025-0002"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-06-11 13:24:35,912 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {}
-2025-05-29 11:30:43,972 ERROR frappe Error while inserting deferred Error Log record: Error Log df7ovimkv2: '<strong>Title</strong>' (Module import failed for task_name, the DocType you're trying to open might be deleted.
-Error: No module named 'frappe.core.doctype.task_name') will get truncated, as max characters allowed is 140
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Intern","name":"new-intern-zdmogrsykj","__islocal":1,"__unsaved":1,"owner":"Administrator","user":"sai","email_id":"sai@gmail.com","mentor":"MENTI-2025-0002"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-06-11 13:25:50,433 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {}
-2025-05-29 11:30:43,975 ERROR frappe Error while inserting deferred Error Log record: Error Log df7t7v03mi: '<strong>Title</strong>' (Module import failed for task_name, the DocType you're trying to open might be deleted.
-Error: No module named 'frappe.core.doctype.task_name') will get truncated, as max characters allowed is 140
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Intern","name":"new-intern-zdmogrsykj","__islocal":1,"__unsaved":1,"owner":"Administrator","user":"sai","email_id":"sai@gmail.com","mentor":"MENTI-2025-0002"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-06-11 13:25:59,132 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {}
-2025-05-29 11:43:29,544 ERROR frappe New Exception collected in error log
+Form Dict: {'doctype': 'Intern', 'name': 'new-intern-zdmogrsykj', 'cmd': 'frappe.desk.form.load.getdoc'}
+2025-06-11 13:26:58,722 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {'doc': '{"docstatus":0,"doctype":"Intern","name":"new-intern-gznbfcploa","__islocal":1,"__unsaved":1,"owner":"Administrator","name1":"Lean","phone":"+91-9798789878","end_date":"2025-05-27","start_date":"2025-05-29"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
-2025-05-29 11:44:00,011 ERROR frappe New Exception collected in error log
+Form Dict: {'doctype': 'Intern', 'name': 'new-intern-zdmogrsykj', 'cmd': 'frappe.desk.form.load.getdoc'}
+2025-06-11 13:29:15,307 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {'doc': '{"name":"INT-00003","owner":"Administrator","creation":"2025-05-29 17:13:49.361328","modified":"2025-05-29 17:13:49.361328","modified_by":"Administrator","docstatus":0,"idx":0,"name1":"Lean","email":null,"phone":"+91-9798789878","start_date":"2025-05-29","end_date":"2025-05-28","aadar_card":null,"doctype":"Intern","__last_sync_on":"2025-05-29T11:43:50.716Z","__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
-2025-05-29 13:14:29,798 ERROR frappe New Exception collected in error log
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Intern","name":"new-intern-kklwdxhbmv","__islocal":1,"__unsaved":1,"owner":"Administrator","user":"sai","email_id":"sai@gmail.com","mentor":"MENTI-2025-0002"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-06-12 09:30:57,057 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {'doc': '{"docstatus":0,"doctype":"Work Allocation","name":"new-work-allocation-qptjofneok","__islocal":1,"__unsaved":1,"owner":"Administrator","task":[{"docstatus":0,"doctype":"Task Template","name":"new-task-template-alzylpdkzs","__islocal":1,"__unsaved":1,"owner":"Administrator","parent":"new-work-allocation-qptjofneok","parentfield":"task","parenttype":"Work Allocation","idx":1,"task_name":"html"}],"status":"Completed","intern":"INT-00001","assigned_by":"MENTI-0002","start_date":"2025-05-29","end_date":"2025-05-31","template":"TASK-0004","Task":[]}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
-2025-05-29 13:14:41,578 ERROR frappe New Exception collected in error log
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Work Allocations","name":"new-work-allocations-vjxtbmsmaz","__islocal":1,"__unsaved":1,"owner":"sindhu@limendo.com","task":[{"docstatus":0,"doctype":"Work Allocations Task Item","name":"new-work-allocations-task-item-szdwclczxx","__islocal":1,"__unsaved":1,"owner":"sindhu@limendo.com","parent":"new-work-allocations-vjxtbmsmaz","parentfield":"task","parenttype":"Work Allocations","idx":1,"task":"html","due_date":"2025-06-19 12:50:19"}],"completion_status":"Not Started","intern":"INTERN-2025-0004","template":"WT-2025-0001"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-06-12 09:34:58,815 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {'doc': '{"docstatus":0,"doctype":"Work Allocation","name":"new-work-allocation-qptjofneok","__islocal":1,"__unsaved":1,"owner":"Administrator","task":[{"docstatus":0,"doctype":"Task Template","name":"new-task-template-alzylpdkzs","__islocal":1,"__unsaved":1,"owner":"Administrator","parent":"new-work-allocation-qptjofneok","parentfield":"task","parenttype":"Work Allocation","idx":1,"task_name":"html"}],"status":"Completed","intern":"INT-00001","assigned_by":"MENTI-0002","start_date":"2025-05-29","end_date":"2025-05-31","template":"TASK-0003","Task":[]}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
-2025-05-29 13:15:43,808 ERROR frappe New Exception collected in error log
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Work Allocations","name":"new-work-allocations-fsgvvguuqv","__islocal":1,"__unsaved":1,"owner":"sindhu@limendo.com","intern":"INTERN-2025-0004","task":[{"docstatus":0,"doctype":"Work Allocations Task Item","name":"new-work-allocations-task-item-dmvebkaojp","__islocal":1,"__unsaved":1,"owner":"sindhu@limendo.com","parent":"new-work-allocations-fsgvvguuqv","parentfield":"task","parenttype":"Work Allocations","idx":1,"task":"html","due_date":"2025-06-19 12:50:19"}],"completion_status":"Not Started","template":"WT-2025-0001"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-06-12 09:35:47,487 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {'doc': '{"docstatus":0,"doctype":"Work Allocation","name":"new-work-allocation-qptjofneok","__islocal":1,"__unsaved":1,"owner":"Administrator","task":[{"docstatus":0,"doctype":"Task Template","name":"new-task-template-xiabcaeoiu","__islocal":1,"__unsaved":1,"owner":"Administrator","parent":"new-work-allocation-qptjofneok","parentfield":"task","parenttype":"Work Allocation","idx":1,"task_name":"css"}],"status":"Completed","intern":"INT-00001","assigned_by":"MENTI-0002","start_date":"2025-05-29","end_date":"2025-05-31","template":"TASK-0005","Task":[]}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
-2025-05-29 13:17:01,226 ERROR frappe New Exception collected in error log
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Work Allocations","name":"new-work-allocations-fsgvvguuqv","__islocal":1,"__unsaved":1,"owner":"sindhu@limendo.com","intern":"INTERN-2025-0004","task":[{"docstatus":0,"doctype":"Work Allocations Task Item","name":"new-work-allocations-task-item-dmvebkaojp","__islocal":1,"__unsaved":1,"owner":"sindhu@limendo.com","parent":"new-work-allocations-fsgvvguuqv","parentfield":"task","parenttype":"Work Allocations","idx":1,"task":"html","due_date":"2025-06-19 12:50:19"}],"completion_status":"Not Started","template":"WT-2025-0001"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-06-12 09:36:03,697 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {'doc': '{"docstatus":0,"doctype":"Work Allocation","name":"new-work-allocation-nexdqkmqml","__islocal":1,"__unsaved":1,"owner":"Administrator","task":[{"docstatus":0,"doctype":"Task Template","name":"new-task-template-szvtsnmpuq","__islocal":1,"__unsaved":1,"owner":"Administrator","parent":"new-work-allocation-nexdqkmqml","parentfield":"task","parenttype":"Work Allocation","idx":1,"task_name":"css"}],"status":"Completed","intern":"INT-00004","assigned_by":"MENTI-0002","start_date":"2025-05-29","end_date":"2025-06-27","template":"TASK-0005","Task":[]}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
-2025-05-29 13:17:28,816 ERROR frappe New Exception collected in error log
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Work Allocations","name":"new-work-allocations-fsgvvguuqv","__islocal":1,"__unsaved":1,"owner":"sindhu@limendo.com","intern":"INTERN-2025-0004","task":[{"docstatus":0,"doctype":"Work Allocations Task Item","name":"new-work-allocations-task-item-dmvebkaojp","__islocal":1,"__unsaved":1,"owner":"sindhu@limendo.com","parent":"new-work-allocations-fsgvvguuqv","parentfield":"task","parenttype":"Work Allocations","idx":1,"task":"html","due_date":"2025-06-19 12:50:19"}],"completion_status":"Not Started","template":"WT-2025-0001"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-06-12 10:20:52,080 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {'doc': '{"docstatus":0,"doctype":"Work Allocation","name":"new-work-allocation-nexdqkmqml","__islocal":1,"__unsaved":1,"owner":"Administrator","task":[{"docstatus":0,"doctype":"Task Template","name":"new-task-template-szvtsnmpuq","__islocal":1,"__unsaved":1,"owner":"Administrator","parent":"new-work-allocation-nexdqkmqml","parentfield":"task","parenttype":"Work Allocation","idx":1,"task_name":"css"}],"status":"Completed","intern":"INT-00004","assigned_by":"MENTI-0002","start_date":"2025-05-29","end_date":"2025-06-27","template":"TASK-0005","Task":[]}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
-2025-05-29 13:24:58,725 ERROR frappe New Exception collected in error log
+Form Dict: {'doctype': 'Work Allocations', 'fields': '["`tabWork Allocations`.`name`","`tabWork Allocations`.`owner`","`tabWork Allocations`.`creation`","`tabWork Allocations`.`modified`","`tabWork Allocations`.`modified_by`","`tabWork Allocations`.`_user_tags`","`tabWork Allocations`.`_comments`","`tabWork Allocations`.`_assign`","`tabWork Allocations`.`_liked_by`","`tabWork Allocations`.`docstatus`","`tabWork Allocations`.`idx`"]', 'filters': '[]', 'order_by': '`tabWork Allocations`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-12 11:10:26,415 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {'doc': '{"docstatus":0,"doctype":"Work Allocation","name":"new-work-allocation-rjrdmolyda","__islocal":1,"__unsaved":1,"owner":"Administrator","task":[{"docstatus":0,"doctype":"Task Template","name":"new-task-template-asenwjknaj","__islocal":1,"__unsaved":1,"owner":"Administrator","parent":"new-work-allocation-rjrdmolyda","parentfield":"task","parenttype":"Work Allocation","idx":1,"task_name":"css"}],"status":"Completed","intern":"INT-00001","review":"","template":"TASK-0005","Task":[]}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
-2025-05-29 13:27:11,782 ERROR frappe New Exception collected in error log
+Form Dict: {'doctype': 'Work Allocations', 'fields': '["`tabWork Allocations`.`name`","`tabWork Allocations`.`owner`","`tabWork Allocations`.`creation`","`tabWork Allocations`.`modified`","`tabWork Allocations`.`modified_by`","`tabWork Allocations`.`_user_tags`","`tabWork Allocations`.`_comments`","`tabWork Allocations`.`_assign`","`tabWork Allocations`.`_liked_by`","`tabWork Allocations`.`docstatus`","`tabWork Allocations`.`idx`"]', 'filters': '[]', 'order_by': '`tabWork Allocations`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-12 11:23:50,908 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {'doc': '{"docstatus":0,"doctype":"Work Allocation","name":"new-work-allocation-ohhiwqgbqy","__islocal":1,"__unsaved":1,"owner":"Administrator","task":[],"status":"Completed","intern":"INT-00001","template":"TASK-0003","Task":[]}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
-2025-05-29 13:27:58,671 ERROR frappe New Exception collected in error log
+Form Dict: {'user': 'ram@gmail.com', 'cmd': 'frappe.core.doctype.user.user.reset_password'}
+2025-06-12 11:28:11,942 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {'doc': '{"docstatus":0,"doctype":"Work Allocation","name":"new-work-allocation-ohhiwqgbqy","__islocal":1,"__unsaved":1,"owner":"Administrator","task":[],"status":"Completed","intern":"INT-00001","template":"TASK-0005","Task":[]}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
-2025-05-29 13:28:49,464 ERROR frappe New Exception collected in error log
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Work Allocations","name":"new-work-allocations-jhqahzqhcn","__islocal":1,"__unsaved":1,"owner":"sindu@limendo.com","task":[{"docstatus":0,"doctype":"Work Allocations Task Item","name":"new-work-allocations-task-item-mqyevyzcxs","__islocal":1,"__unsaved":1,"owner":"sindu@limendo.com","parent":"new-work-allocations-jhqahzqhcn","parentfield":"task","parenttype":"Work Allocations","idx":1,"task":"html","due_date":"2025-06-20 16:19:56"},{"docstatus":0,"doctype":"Work Allocations Task Item","name":"new-work-allocations-task-item-nhoieiwtbb","__islocal":1,"__unsaved":1,"owner":"sindu@limendo.com","parent":"new-work-allocations-jhqahzqhcn","parentfield":"task","parenttype":"Work Allocations","idx":2,"task":"CSS","due_date":"2025-06-21 16:20:16"}],"completion_status":"Not Started","intern":"INTERN-2025-0004","template":"WT-2025-0001"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-06-12 11:31:15,409 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {'doc': '{"docstatus":0,"doctype":"Work Allocation","name":"new-work-allocation-ohhiwqgbqy","__islocal":1,"__unsaved":1,"owner":"Administrator","task":[],"status":"Completed","intern":"INT-00001","template":"TASK-0004","Task":[]}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
-2025-06-02 07:35:06,179 ERROR frappe New Exception collected in error log
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Work Allocations","name":"new-work-allocations-jhqahzqhcn","__islocal":1,"__unsaved":1,"owner":"sindu@limendo.com","task":[{"docstatus":0,"doctype":"Work Allocations Task Item","name":"new-work-allocations-task-item-mqyevyzcxs","__islocal":1,"__unsaved":1,"owner":"sindu@limendo.com","parent":"new-work-allocations-jhqahzqhcn","parentfield":"task","parenttype":"Work Allocations","idx":1,"task":"html","due_date":"2025-06-20 16:19:56"},{"docstatus":0,"doctype":"Work Allocations Task Item","name":"new-work-allocations-task-item-nhoieiwtbb","__islocal":1,"__unsaved":1,"owner":"sindu@limendo.com","parent":"new-work-allocations-jhqahzqhcn","parentfield":"task","parenttype":"Work Allocations","idx":2,"task":"CSS","due_date":"2025-06-21 16:20:16"}],"completion_status":"Not Started","intern":"INTERN-2025-0004","template":"WT-2025-0001"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-06-12 11:39:41,597 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {'doc': '{"docstatus":0,"doctype":"Work Allocation","name":"new-work-allocation-pabdenclfl","__islocal":1,"__unsaved":1,"owner":"sathwik_12@limendo.com","task":[{"docstatus":0,"doctype":"Task Template","name":"new-task-template-xtifokeurs","__islocal":1,"__unsaved":1,"owner":"sathwik_12@limendo.com","parent":"new-work-allocation-pabdenclfl","parentfield":"task","parenttype":"Work Allocation","idx":1,"__unedited":true},{"docstatus":0,"doctype":"Task Template","name":"new-task-template-lqwrejgvdu","__islocal":1,"__unsaved":1,"owner":"sathwik_12@limendo.com","parent":"new-work-allocation-pabdenclfl","parentfield":"task","parenttype":"Work Allocation","idx":2,"__unedited":true},{"docstatus":0,"doctype":"Task Template","name":"new-task-template-fbzqoxuvuk","__islocal":1,"__unsaved":1,"owner":"sathwik_12@limendo.com","parent":"new-work-allocation-pabdenclfl","parentfield":"task","parenttype":"Work Allocation","idx":3,"task_name":"html"}],"status":"Completed","template":"TASK-0003","Task":[]}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
-2025-06-03 06:40:57,610 ERROR frappe New Exception collected in error log
+Form Dict: {'doctype': 'Performance Review', 'fields': '["`tabPerformance Review`.`name`","`tabPerformance Review`.`owner`","`tabPerformance Review`.`creation`","`tabPerformance Review`.`modified`","`tabPerformance Review`.`modified_by`","`tabPerformance Review`.`_user_tags`","`tabPerformance Review`.`_comments`","`tabPerformance Review`.`_assign`","`tabPerformance Review`.`_liked_by`","`tabPerformance Review`.`docstatus`","`tabPerformance Review`.`idx`"]', 'filters': '[]', 'order_by': '`tabPerformance Review`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-12 12:49:31,144 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {'doctype': 'Intern', 'with_parent': '1', 'cached_timestamp': '2025-06-03 11:10:08.139542', 'cmd': 'frappe.desk.form.load.getdoctype'}
-2025-06-03 06:40:59,196 ERROR frappe New Exception collected in error log
+Form Dict: {'doctype': 'Performance Review', 'fields': '["`tabPerformance Review`.`name`","`tabPerformance Review`.`owner`","`tabPerformance Review`.`creation`","`tabPerformance Review`.`modified`","`tabPerformance Review`.`modified_by`","`tabPerformance Review`.`_user_tags`","`tabPerformance Review`.`_comments`","`tabPerformance Review`.`_assign`","`tabPerformance Review`.`_liked_by`","`tabPerformance Review`.`docstatus`","`tabPerformance Review`.`idx`"]', 'filters': '[]', 'order_by': '`tabPerformance Review`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-13 06:18:28,447 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {'doc': '{"name":"Intern","creation":"2025-06-03 11:02:48.209408","modified":"2025-06-03 12:08:45.802410","modified_by":"Administrator","owner":"Administrator","docstatus":0,"idx":0,"issingle":0,"is_virtual":0,"is_tree":0,"istable":0,"editable_grid":0,"track_changes":0,"module":"Intern Management","autoname":"INTERN-.YYYY.-.####","naming_rule":"By \\"Naming Series\\" field","sort_field":"modified","sort_order":"DESC","read_only":0,"in_create":0,"allow_copy":0,"allow_rename":1,"allow_import":0,"hide_toolbar":0,"track_seen":0,"max_attachments":0,"document_type":"","engine":"InnoDB","is_submittable":0,"show_name_in_global_search":0,"custom":0,"beta":0,"has_web_view":0,"allow_guest_to_view":0,"email_append_to":0,"show_title_field_in_link":0,"translated_doctype":0,"is_calendar_and_gantt":0,"quick_entry":0,"grid_page_length":50,"track_views":0,"queue_in_background":0,"allow_events_in_timeline":0,"allow_auto_repeat":0,"make_attachments_public":0,"force_re_route_to_default_view":0,"show_preview_popup":0,"protect_attached_files":0,"index_web_pages_for_search":1,"row_format":"Dynamic","doctype":"DocType","links":[],"states":[],"actions":[],"fields":[{"docstatus":0,"doctype":"DocField","name":"new-docfield-tlzmwbgxeq","__islocal":1,"__unsaved":1,"owner":"Administrator","fieldtype":"Data","precision":"","non_negative":0,"hide_days":0,"hide_seconds":0,"reqd":0,"is_virtual":0,"search_index":0,"sort_options":0,"show_dashboard":0,"fetch_if_empty":0,"hidden":0,"show_on_timeline":0,"bold":0,"allow_in_quick_entry":0,"translatable":0,"print_hide":0,"print_hide_if_no_value":0,"report_hide":0,"collapsible":0,"hide_border":0,"in_list_view":0,"in_standard_filter":0,"in_preview":0,"in_filter":0,"in_global_search":0,"read_only":0,"allow_on_submit":0,"ignore_user_permissions":0,"allow_bulk_edit":0,"make_attachment_public":0,"permlevel":0,"ignore_xss_filter":0,"unique":0,"no_copy":0,"set_only_once":0,"remember_last_selected_value":0,"parent":"Intern","parentfield":"fields","parenttype":"DocType","idx":1,"fieldname":"name1","label":"Name","show_preview_popup":0,"columns":0,"length":0},{"docstatus":0,"doctype":"DocField","name":"new-docfield-wdnfjhwwzk","__islocal":1,"__unsaved":1,"owner":"Administrator","fieldtype":"Data","precision":"","non_negative":0,"hide_days":0,"hide_seconds":0,"reqd":0,"is_virtual":0,"search_index":0,"sort_options":0,"show_dashboard":0,"fetch_if_empty":0,"hidden":0,"show_on_timeline":0,"bold":0,"allow_in_quick_entry":0,"translatable":0,"print_hide":0,"print_hide_if_no_value":0,"report_hide":0,"collapsible":0,"hide_border":0,"in_list_view":0,"in_standard_filter":0,"in_preview":0,"in_filter":0,"in_global_search":0,"read_only":0,"allow_on_submit":0,"ignore_user_permissions":0,"allow_bulk_edit":0,"make_attachment_public":0,"permlevel":0,"ignore_xss_filter":0,"unique":0,"no_copy":0,"set_only_once":0,"remember_last_selected_value":0,"parent":"Intern","parentfield":"fields","parenttype":"DocType","idx":2,"__run_link_triggers":1,"fieldname":"email_id","label":"Email Id","columns":0,"length":0},{"docstatus":0,"doctype":"DocField","name":"new-docfield-dybqtgwutt","__islocal":1,"__unsaved":1,"owner":"Administrator","fieldtype":"Date","precision":"","non_negative":0,"hide_days":0,"hide_seconds":0,"reqd":0,"is_virtual":0,"search_index":0,"sort_options":0,"show_dashboard":0,"fetch_if_empty":0,"hidden":0,"show_on_timeline":0,"bold":0,"allow_in_quick_entry":0,"translatable":0,"print_hide":0,"print_hide_if_no_value":0,"report_hide":0,"collapsible":0,"hide_border":0,"in_list_view":0,"in_standard_filter":0,"in_preview":0,"in_filter":0,"in_global_search":0,"read_only":1,"allow_on_submit":0,"ignore_user_permissions":0,"allow_bulk_edit":0,"make_attachment_public":0,"permlevel":0,"ignore_xss_filter":0,"unique":0,"no_copy":0,"set_only_once":0,"remember_last_selected_value":0,"parent":"Intern","parentfield":"fields","parenttype":"DocType","idx":3,"fieldname":"date_of_joining","label":"Date of joining","show_preview_popup":0,"columns":0,"length":0},{"docstatus":0,"doctype":"DocField","name":"new-docfield-uicwhsmopc","__islocal":1,"__unsaved":1,"owner":"Administrator","fieldtype":"Phone","precision":"","non_negative":0,"hide_days":0,"hide_seconds":0,"reqd":0,"is_virtual":0,"search_index":0,"sort_options":0,"show_dashboard":0,"fetch_if_empty":0,"hidden":0,"show_on_timeline":0,"bold":0,"allow_in_quick_entry":0,"translatable":0,"print_hide":0,"print_hide_if_no_value":0,"report_hide":0,"collapsible":0,"hide_border":0,"in_list_view":0,"in_standard_filter":0,"in_preview":0,"in_filter":0,"in_global_search":0,"read_only":0,"allow_on_submit":0,"ignore_user_permissions":0,"allow_bulk_edit":0,"make_attachment_public":0,"permlevel":0,"ignore_xss_filter":0,"unique":0,"no_copy":0,"set_only_once":0,"remember_last_selected_value":0,"parent":"Intern","parentfield":"fields","parenttype":"DocType","idx":4,"fieldname":"phone_number","label":"Phone Number","show_preview_popup":0,"columns":0,"length":0},{"docstatus":0,"doctype":"DocField","name":"new-docfield-tjchpjbkzo","__islocal":1,"__unsaved":1,"owner":"Administrator","fieldtype":"Link","precision":"","non_negative":0,"hide_days":0,"hide_seconds":0,"reqd":0,"is_virtual":0,"search_index":0,"sort_options":0,"show_dashboard":0,"fetch_if_empty":0,"hidden":0,"show_on_timeline":0,"bold":0,"allow_in_quick_entry":0,"translatable":0,"print_hide":0,"print_hide_if_no_value":0,"report_hide":0,"collapsible":0,"hide_border":0,"in_list_view":0,"in_standard_filter":0,"in_preview":0,"in_filter":0,"in_global_search":0,"read_only":0,"allow_on_submit":0,"ignore_user_permissions":0,"allow_bulk_edit":0,"make_attachment_public":0,"permlevel":0,"ignore_xss_filter":0,"unique":0,"no_copy":0,"set_only_once":0,"remember_last_selected_value":0,"parent":"Intern","parentfield":"fields","parenttype":"DocType","idx":5,"fieldname":"mentor","label":"Mentor","options":"Mentor","show_preview_popup":0,"columns":0,"length":0},{"docstatus":0,"doctype":"DocField","name":"new-docfield-dvuybjkscp","__islocal":1,"__unsaved":1,"owner":"Administrator","fieldtype":"Attach","precision":"","non_negative":0,"hide_days":0,"hide_seconds":0,"reqd":0,"is_virtual":0,"search_index":0,"sort_options":0,"show_dashboard":0,"fetch_if_empty":0,"hidden":0,"show_on_timeline":0,"bold":0,"allow_in_quick_entry":0,"translatable":0,"print_hide":0,"print_hide_if_no_value":0,"report_hide":0,"collapsible":0,"hide_border":0,"in_list_view":0,"in_standard_filter":0,"in_preview":0,"in_filter":0,"in_global_search":0,"read_only":0,"allow_on_submit":0,"ignore_user_permissions":0,"allow_bulk_edit":0,"make_attachment_public":0,"permlevel":0,"ignore_xss_filter":0,"unique":0,"no_copy":0,"set_only_once":0,"remember_last_selected_value":0,"parent":"Intern","parentfield":"fields","parenttype":"DocType","idx":6,"fieldname":"aadhar_card","label":"Aadhar Card","show_preview_popup":0,"columns":0,"length":0}],"permissions":[{"name":"mg277km594","creation":"2025-06-03 11:02:48.209408","modified":"2025-06-03 12:08:45.802410","modified_by":"Administrator","owner":"Administrator","docstatus":0,"parent":"Intern","parentfield":"permissions","parenttype":"DocType","idx":1,"permlevel":0,"role":"System Manager","read":1,"write":1,"create":1,"submit":0,"cancel":0,"delete":1,"amend":0,"report":1,"export":1,"import":0,"share":1,"print":1,"email":1,"if_owner":0,"select":0,"doctype":"DocPerm"}],"__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
-2025-06-03 06:45:31,977 ERROR frappe Error while inserting deferred Error Log record: Error Log 13nahu4t26: '<strong>Title</strong>' (Module import failed for Intern, the DocType you're trying to open might be deleted.
-Error: cannot import name 'now_date' from 'frappe.utils' (/home/limendo/frappe-bench/apps/frappe/frappe/utils/__init__.py)) will get truncated, as max characters allowed is 140
+Form Dict: {'doctype': 'Work Allocations', 'fields': '["`tabWork Allocations`.`name`","`tabWork Allocations`.`owner`","`tabWork Allocations`.`creation`","`tabWork Allocations`.`modified`","`tabWork Allocations`.`modified_by`","`tabWork Allocations`.`_user_tags`","`tabWork Allocations`.`_comments`","`tabWork Allocations`.`_assign`","`tabWork Allocations`.`_liked_by`","`tabWork Allocations`.`docstatus`","`tabWork Allocations`.`idx`"]', 'filters': '[]', 'order_by': '`tabWork Allocations`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-13 06:18:35,381 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {}
-2025-06-03 06:45:31,978 ERROR frappe Error while inserting deferred Error Log record: Error Log 13nlgdqf4f: '<strong>Title</strong>' (Module import failed for Intern, the DocType you're trying to open might be deleted.
-Error: cannot import name 'now_date' from 'frappe.utils' (/home/limendo/frappe-bench/apps/frappe/frappe/utils/__init__.py)) will get truncated, as max characters allowed is 140
+Form Dict: {'doctype': 'Work Allocations', 'fields': '["`tabWork Allocations`.`name`","`tabWork Allocations`.`owner`","`tabWork Allocations`.`creation`","`tabWork Allocations`.`modified`","`tabWork Allocations`.`modified_by`","`tabWork Allocations`.`_user_tags`","`tabWork Allocations`.`_comments`","`tabWork Allocations`.`_assign`","`tabWork Allocations`.`_liked_by`","`tabWork Allocations`.`docstatus`","`tabWork Allocations`.`idx`"]', 'filters': '[]', 'order_by': '`tabWork Allocations`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-13 06:20:15,226 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {}
-2025-06-03 06:58:52,097 ERROR frappe New Exception collected in error log
+Form Dict: {'doctype': 'Work Allocations', 'fields': '["`tabWork Allocations`.`name`","`tabWork Allocations`.`owner`","`tabWork Allocations`.`creation`","`tabWork Allocations`.`modified`","`tabWork Allocations`.`modified_by`","`tabWork Allocations`.`_user_tags`","`tabWork Allocations`.`_comments`","`tabWork Allocations`.`_assign`","`tabWork Allocations`.`_liked_by`","`tabWork Allocations`.`docstatus`","`tabWork Allocations`.`idx`"]', 'filters': '[]', 'order_by': '`tabWork Allocations`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-13 06:20:42,172 ERROR frappe New Exception collected in error log
 Site: intern.com
-Form Dict: {'doc': '{"docstatus":0,"doctype":"Mentor","name":"new-mentor-gqtkfayvhe","__islocal":1,"__unsaved":1,"owner":"Administrator","email":"@"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+Form Dict: {'doctype': 'Work Allocations', 'fields': '["`tabWork Allocations`.`name`","`tabWork Allocations`.`owner`","`tabWork Allocations`.`creation`","`tabWork Allocations`.`modified`","`tabWork Allocations`.`modified_by`","`tabWork Allocations`.`_user_tags`","`tabWork Allocations`.`_comments`","`tabWork Allocations`.`_assign`","`tabWork Allocations`.`_liked_by`","`tabWork Allocations`.`docstatus`","`tabWork Allocations`.`idx`"]', 'filters': '[]', 'order_by': '`tabWork Allocations`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-13 06:21:43,447 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Work Allocations', 'filters': '[]', 'fields': '[]', 'distinct': 'false', 'limit': '1001', 'cmd': 'frappe.desk.reportview.get_count'}
+2025-06-13 06:22:05,508 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Work Allocations', 'fields': '["`tabWork Allocations`.`name`","`tabWork Allocations`.`owner`","`tabWork Allocations`.`creation`","`tabWork Allocations`.`modified`","`tabWork Allocations`.`modified_by`","`tabWork Allocations`.`_user_tags`","`tabWork Allocations`.`_comments`","`tabWork Allocations`.`_assign`","`tabWork Allocations`.`_liked_by`","`tabWork Allocations`.`docstatus`","`tabWork Allocations`.`idx`"]', 'filters': '[]', 'order_by': '`tabWork Allocations`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-13 06:22:26,862 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Work Allocations', 'fields': '["`tabWork Allocations`.`name`","`tabWork Allocations`.`owner`","`tabWork Allocations`.`creation`","`tabWork Allocations`.`modified`","`tabWork Allocations`.`modified_by`","`tabWork Allocations`.`_user_tags`","`tabWork Allocations`.`_comments`","`tabWork Allocations`.`_assign`","`tabWork Allocations`.`_liked_by`","`tabWork Allocations`.`docstatus`","`tabWork Allocations`.`idx`"]', 'filters': '[]', 'order_by': '`tabWork Allocations`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-13 06:56:25,673 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Work Allocations', 'fields': '["`tabWork Allocations`.`name`","`tabWork Allocations`.`owner`","`tabWork Allocations`.`creation`","`tabWork Allocations`.`modified`","`tabWork Allocations`.`modified_by`","`tabWork Allocations`.`_user_tags`","`tabWork Allocations`.`_comments`","`tabWork Allocations`.`_assign`","`tabWork Allocations`.`_liked_by`","`tabWork Allocations`.`docstatus`","`tabWork Allocations`.`idx`"]', 'filters': '[]', 'order_by': '`tabWork Allocations`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-13 06:57:20,482 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Work Allocations', 'fields': '["`tabWork Allocations`.`name`","`tabWork Allocations`.`owner`","`tabWork Allocations`.`creation`","`tabWork Allocations`.`modified`","`tabWork Allocations`.`modified_by`","`tabWork Allocations`.`_user_tags`","`tabWork Allocations`.`_comments`","`tabWork Allocations`.`_assign`","`tabWork Allocations`.`_liked_by`","`tabWork Allocations`.`docstatus`","`tabWork Allocations`.`idx`"]', 'filters': '[]', 'order_by': '`tabWork Allocations`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-13 07:09:43,114 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Work Allocations', 'fields': '["`tabWork Allocations`.`name`","`tabWork Allocations`.`owner`","`tabWork Allocations`.`creation`","`tabWork Allocations`.`modified`","`tabWork Allocations`.`modified_by`","`tabWork Allocations`.`_user_tags`","`tabWork Allocations`.`_comments`","`tabWork Allocations`.`_assign`","`tabWork Allocations`.`_liked_by`","`tabWork Allocations`.`docstatus`","`tabWork Allocations`.`idx`"]', 'filters': '[]', 'order_by': '`tabWork Allocations`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-13 07:24:09,152 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Performance Review', 'fields': '["`tabPerformance Review`.`name`","`tabPerformance Review`.`owner`","`tabPerformance Review`.`creation`","`tabPerformance Review`.`modified`","`tabPerformance Review`.`modified_by`","`tabPerformance Review`.`_user_tags`","`tabPerformance Review`.`_comments`","`tabPerformance Review`.`_assign`","`tabPerformance Review`.`_liked_by`","`tabPerformance Review`.`docstatus`","`tabPerformance Review`.`idx`"]', 'filters': '[]', 'order_by': '`tabPerformance Review`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-13 07:29:27,855 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Mentor', 'fields': '["`tabMentor`.`name`","`tabMentor`.`owner`","`tabMentor`.`creation`","`tabMentor`.`modified`","`tabMentor`.`modified_by`","`tabMentor`.`_user_tags`","`tabMentor`.`_comments`","`tabMentor`.`_assign`","`tabMentor`.`_liked_by`","`tabMentor`.`docstatus`","`tabMentor`.`idx`"]', 'filters': '[]', 'order_by': '`tabMentor`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-13 07:30:07,973 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Mentor', 'fields': '["`tabMentor`.`name`","`tabMentor`.`owner`","`tabMentor`.`creation`","`tabMentor`.`modified`","`tabMentor`.`modified_by`","`tabMentor`.`_user_tags`","`tabMentor`.`_comments`","`tabMentor`.`_assign`","`tabMentor`.`_liked_by`","`tabMentor`.`docstatus`","`tabMentor`.`idx`"]', 'filters': '[]', 'order_by': '`tabMentor`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-13 07:32:04,938 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Mentor', 'fields': '["`tabMentor`.`name`","`tabMentor`.`owner`","`tabMentor`.`creation`","`tabMentor`.`modified`","`tabMentor`.`modified_by`","`tabMentor`.`_user_tags`","`tabMentor`.`_comments`","`tabMentor`.`_assign`","`tabMentor`.`_liked_by`","`tabMentor`.`docstatus`","`tabMentor`.`idx`"]', 'filters': '[]', 'order_by': '`tabMentor`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-13 09:59:09,524 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Intern', 'fields': '["`tabIntern`.`name`","`tabIntern`.`owner`","`tabIntern`.`creation`","`tabIntern`.`modified`","`tabIntern`.`modified_by`","`tabIntern`.`_user_tags`","`tabIntern`.`_comments`","`tabIntern`.`_assign`","`tabIntern`.`_liked_by`","`tabIntern`.`docstatus`","`tabIntern`.`idx`","`tabIntern`.`email_id`"]', 'filters': '[]', 'order_by': '`tabIntern`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-13 10:19:08,644 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Intern', 'fields': '["`tabIntern`.`name`","`tabIntern`.`owner`","`tabIntern`.`creation`","`tabIntern`.`modified`","`tabIntern`.`modified_by`","`tabIntern`.`_user_tags`","`tabIntern`.`_comments`","`tabIntern`.`_assign`","`tabIntern`.`_liked_by`","`tabIntern`.`docstatus`","`tabIntern`.`idx`","`tabIntern`.`email_id`"]', 'filters': '[]', 'order_by': '`tabIntern`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-13 10:20:21,117 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Intern', 'fields': '["`tabIntern`.`name`","`tabIntern`.`owner`","`tabIntern`.`creation`","`tabIntern`.`modified`","`tabIntern`.`modified_by`","`tabIntern`.`_user_tags`","`tabIntern`.`_comments`","`tabIntern`.`_assign`","`tabIntern`.`_liked_by`","`tabIntern`.`docstatus`","`tabIntern`.`idx`","`tabIntern`.`email_id`"]', 'filters': '[]', 'order_by': '`tabIntern`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-13 10:48:51,561 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Mentor', 'name': 'MENTI-2025-0001', 'cmd': 'frappe.desk.form.load.getdoc'}
+2025-06-13 11:01:35,562 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Mentor', 'fields': '["`tabMentor`.`name`","`tabMentor`.`owner`","`tabMentor`.`creation`","`tabMentor`.`modified`","`tabMentor`.`modified_by`","`tabMentor`.`_user_tags`","`tabMentor`.`_comments`","`tabMentor`.`_assign`","`tabMentor`.`_liked_by`","`tabMentor`.`docstatus`","`tabMentor`.`idx`"]', 'filters': '[]', 'order_by': '`tabMentor`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-13 11:02:38,976 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Mentor', 'fields': '["`tabMentor`.`name`","`tabMentor`.`owner`","`tabMentor`.`creation`","`tabMentor`.`modified`","`tabMentor`.`modified_by`","`tabMentor`.`_user_tags`","`tabMentor`.`_comments`","`tabMentor`.`_assign`","`tabMentor`.`_liked_by`","`tabMentor`.`docstatus`","`tabMentor`.`idx`"]', 'filters': '[]', 'order_by': '`tabMentor`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-13 11:03:20,724 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Mentor', 'fields': '["`tabMentor`.`name`","`tabMentor`.`owner`","`tabMentor`.`creation`","`tabMentor`.`modified`","`tabMentor`.`modified_by`","`tabMentor`.`_user_tags`","`tabMentor`.`_comments`","`tabMentor`.`_assign`","`tabMentor`.`_liked_by`","`tabMentor`.`docstatus`","`tabMentor`.`idx`"]', 'filters': '[]', 'order_by': '`tabMentor`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-13 11:24:33,276 ERROR frappe Could not take error snapshot: '{' was never closed (hooks.py, line 171)
+Site: intern.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Intern","name":"new-intern-btyfvrdbhp","__islocal":1,"__unsaved":1,"owner":"guru@limendo.com","user":"sathwik","email_id":"sathwik@gmail.com","mentor":"MENTI-2025-0002"}', 'action': 'Save'}
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 100, in application
+    init_request(request)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 198, in init_request
+    for before_request_task in frappe.get_hooks("before_request"):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/limendo/frappe-bench/apps/intern_management/intern_management/hooks.py", line 171
+    doc_events = {
+                 ^
+SyntaxError: '{' was never closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/error.py", line 86, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/error.py", line 61, in log_error
+    error_log = frappe.get_doc(
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1305, in get_doc
+    return frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/limendo/frappe-bench/apps/intern_management/intern_management/hooks.py", line 171
+    doc_events = {
+                 ^
+SyntaxError: '{' was never closed
+2025-06-13 11:24:33,277 ERROR frappe Failed to run after request hook
+Site: intern.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Intern","name":"new-intern-btyfvrdbhp","__islocal":1,"__unsaved":1,"owner":"guru@limendo.com","user":"sathwik","email_id":"sathwik@gmail.com","mentor":"MENTI-2025-0002"}', 'action': 'Save'}
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 147, in application
+    run_after_request_hooks(request, response)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 162, in run_after_request_hooks
+    for after_request_task in frappe.get_hooks("after_request"):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/limendo/frappe-bench/apps/intern_management/intern_management/hooks.py", line 171
+    doc_events = {
+                 ^
+SyntaxError: '{' was never closed

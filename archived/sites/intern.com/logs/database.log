@@ -1,0 +1,156 @@
+2025-06-03 05:10:23,748 WARNING database DDL Query made to DB:
+alter table `tabWork Allocations Task Item` add column if not exists parent varchar(140)
+2025-06-03 05:10:23,749 WARNING database DDL Query made to DB:
+alter table `tabWork Allocations Task Item` add column if not exists parenttype varchar(140)
+2025-06-03 05:10:23,750 WARNING database DDL Query made to DB:
+alter table `tabWork Allocations Task Item` add column if not exists parentfield varchar(140)
+2025-06-03 05:10:23,814 WARNING database DDL Query made to DB:
+ALTER TABLE `tabWork Allocations Task Item` ADD COLUMN `due_date` datetime(6)
+2025-06-03 05:12:11,553 WARNING database DDL Query made to DB:
+alter table `tabWork Allocations Task Item` add column if not exists parent varchar(140)
+2025-06-03 05:12:11,553 WARNING database DDL Query made to DB:
+alter table `tabWork Allocations Task Item` add column if not exists parenttype varchar(140)
+2025-06-03 05:12:11,554 WARNING database DDL Query made to DB:
+alter table `tabWork Allocations Task Item` add column if not exists parentfield varchar(140)
+2025-06-03 05:12:11,614 WARNING database DDL Query made to DB:
+ALTER TABLE `tabWork Allocations Task Item` MODIFY `due_date` varchar(140)
+2025-06-03 05:15:21,115 WARNING database DDL Query made to DB:
+ALTER TABLE `tabWork Template` ADD COLUMN `due_date` datetime(6)
+2025-06-03 05:20:40,363 WARNING database DDL Query made to DB:
+alter table `tabWork Template Task Item` add column if not exists parent varchar(140)
+2025-06-03 05:20:40,363 WARNING database DDL Query made to DB:
+alter table `tabWork Template Task Item` add column if not exists parenttype varchar(140)
+2025-06-03 05:20:40,364 WARNING database DDL Query made to DB:
+alter table `tabWork Template Task Item` add column if not exists parentfield varchar(140)
+2025-06-03 05:23:46,442 WARNING database DDL Query made to DB:
+alter table `tabWork Template Task Item` add column if not exists parent varchar(140)
+2025-06-03 05:23:46,443 WARNING database DDL Query made to DB:
+alter table `tabWork Template Task Item` add column if not exists parenttype varchar(140)
+2025-06-03 05:23:46,444 WARNING database DDL Query made to DB:
+alter table `tabWork Template Task Item` add column if not exists parentfield varchar(140)
+2025-06-03 05:24:51,369 WARNING database DDL Query made to DB:
+alter table `tabWork Template Task Item` add column if not exists parent varchar(140)
+2025-06-03 05:24:51,370 WARNING database DDL Query made to DB:
+alter table `tabWork Template Task Item` add column if not exists parenttype varchar(140)
+2025-06-03 05:24:51,370 WARNING database DDL Query made to DB:
+alter table `tabWork Template Task Item` add column if not exists parentfield varchar(140)
+2025-06-03 05:33:47,544 WARNING database DDL Query made to DB:
+ALTER TABLE `tabIntern` ADD COLUMN `date_of_joining` date
+2025-06-03 05:34:19,753 WARNING database DDL Query made to DB:
+ALTER TABLE `tabIntern` ADD COLUMN `phone_number` varchar(140)
+2025-06-03 05:34:52,224 WARNING database DDL Query made to DB:
+ALTER TABLE `tabIntern` ADD COLUMN `aadhar_card` text
+2025-06-03 05:38:27,542 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMentor` ADD COLUMN `name1` varchar(140)
+2025-06-03 05:40:08,217 WARNING database DDL Query made to DB:
+ALTER TABLE `tabIntern` ADD COLUMN `mentor` varchar(140)
+2025-06-03 05:41:13,498 WARNING database DDL Query made to DB:
+ALTER TABLE `tabWork Allocations` ADD COLUMN `intern` varchar(140)
+2025-06-03 05:59:59,841 WARNING database DDL Query made to DB:
+ALTER TABLE `tabWork Allocations` ADD COLUMN `completion_status` varchar(140)
+2025-06-03 06:02:20,678 WARNING database DDL Query made to DB:
+ALTER TABLE `tabWork Allocations` ADD COLUMN `task_delegation` varchar(140)
+2025-06-03 06:03:10,337 WARNING database DDL Query made to DB:
+ALTER TABLE `tabWork Allocations` ADD COLUMN `amended_from` varchar(140)
+2025-06-03 06:03:10,364 WARNING database DDL Query made to DB:
+ALTER TABLE `tabWork Allocations` ADD INDEX `amended_from_index`(`amended_from`)
+2025-06-03 06:05:06,202 WARNING database DDL Query made to DB:
+create table `tabPerformance Review` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `amended_from`(`amended_from`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-06-03 06:05:39,047 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPerformance Review` ADD COLUMN `intern` varchar(140)
+2025-06-03 06:06:15,911 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPerformance Review` ADD COLUMN `mentor` varchar(140)
+2025-06-03 06:06:32,952 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPerformance Review` ADD COLUMN `rating` decimal(3,2)
+2025-06-03 06:07:09,007 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPerformance Review` ADD COLUMN `task_name` varchar(140)
+2025-06-03 06:07:09,026 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPerformance Review` MODIFY `rating` decimal(3,2)
+2025-06-03 06:08:23,952 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPerformance Review` MODIFY `rating` decimal(3,2)
+2025-06-03 06:08:56,433 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPerformance Review` MODIFY `rating` decimal(3,2)
+2025-06-03 06:15:17,842 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPerformance Review` ADD COLUMN `review_date` datetime(6)
+2025-06-03 06:15:17,861 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPerformance Review` MODIFY `rating` decimal(3,2)
+2025-06-03 06:15:50,534 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPerformance Review` MODIFY `rating` decimal(3,2)
+2025-06-03 06:29:56,002 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPerformance Review` MODIFY `rating` decimal(3,2)
+2025-06-03 06:31:19,921 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPerformance Review` MODIFY `rating` decimal(3,2)
+2025-06-03 06:35:42,167 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPerformance Review` MODIFY `rating` decimal(3,2)
+2025-06-03 06:38:22,929 WARNING database DDL Query made to DB:
+ALTER TABLE `tabIntern` ADD COLUMN `email_id` varchar(140)
+2025-06-03 10:57:56,120 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-06-03 10:57:56,851 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPerformance Review` MODIFY `rating` decimal(3,2)
+2025-06-04 06:11:13,320 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMentor` ADD COLUMN `user` varchar(140)
+2025-06-04 06:15:13,529 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMentor` ADD COLUMN `first_name` varchar(140)
+2025-06-04 07:05:02,155 WARNING database DDL Query made to DB:
+ALTER TABLE `tabIntern` ADD COLUMN `user` varchar(140)
+2025-06-05 05:17:39,604 WARNING database DDL Query made to DB:
+create table `tabSystem User` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-06-05 05:21:29,187 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSystem User` ADD COLUMN `full_name` varchar(140)
+2025-06-05 05:22:21,356 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSystem User` ADD COLUMN `email` varchar(140)
+2025-06-05 05:23:55,014 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSystem User` ADD COLUMN `role` varchar(140)
+2025-06-05 05:24:20,867 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSystem User` ADD COLUMN `phone_number` varchar(140)
+2025-06-05 05:38:02,281 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSystem User` ADD COLUMN `user_name` varchar(140)
+2025-06-09 05:57:59,645 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPerformance Review` MODIFY `rating` decimal(3,2)
+2025-06-09 05:59:03,959 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPerformance Review` MODIFY `rating` decimal(3,2)
+2025-06-09 05:59:47,196 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPerformance Review` MODIFY `rating` decimal(3,2)
+2025-06-09 13:42:06,346 WARNING database DDL Query made to DB:
+ALTER TABLE `tabIntern` ADD COLUMN `full_name` varchar(140)
+2025-06-10 07:14:56,310 WARNING database DDL Query made to DB:
+DROP DATABASE IF EXISTS `_fdb89f7e12235c7b`
+2025-06-10 07:14:56,311 WARNING database DDL Query made to DB:
+DROP USER IF EXISTS '_fdb89f7e12235c7b'@'%'
+2025-06-10 07:14:56,313 WARNING database DDL Query made to DB:
+DROP USER IF EXISTS '_fdb89f7e12235c7b'@'localhost'

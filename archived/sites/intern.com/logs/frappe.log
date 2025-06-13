@@ -1,0 +1,169 @@
+2025-06-09 10:09:20,278 ERROR frappe Failed to run after request hook
+Site: intern.com
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 100, in application
+    init_request(request)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 198, in init_request
+    for before_request_task in frappe.get_hooks("before_request"):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1590, in _load_app_hooks
+    append_hook(hooks, key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1634, in append_hook
+    target[key].extend(value)
+AttributeError: 'dict' object has no attribute 'extend'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/website/serve.py", line 19, in get_response
+    endpoint, renderer_instance = path_resolver.resolve()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/website/path_resolver.py", line 38, in resolve
+    resolve_redirect(self.path, request.query_string)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/website/path_resolver.py", line 117, in resolve_redirect
+    redirects = frappe.get_hooks("website_redirects")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1590, in _load_app_hooks
+    append_hook(hooks, key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1634, in append_hook
+    target[key].extend(value)
+AttributeError: 'dict' object has no attribute 'extend'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 133, in application
+    response = handle_exception(e)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/permissions.py", line 870, in wrapper
+    return fn(e, *args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 397, in handle_exception
+    response = get_response("message", http_status_code=http_status_code)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/website/serve.py", line 23, in get_response
+    return handle_exception(e, endpoint, path, http_status_code)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/permissions.py", line 870, in wrapper
+    return fn(e, *args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/website/serve.py", line 37, in handle_exception
+    return ErrorPage(exception=e).render()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 84, in render
+    html = self.get_html()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/website/utils.py", line 534, in cache_html_decorator
+    html = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 92, in get_html
+    self.init_context()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/website/page_renderers/error_page.py", line 14, in init_context
+    super().init_context()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/website/page_renderers/base_template_page.py", line 15, in init_context
+    self.context.update(get_website_settings())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/website/doctype/website_settings/website_settings.py", line 172, in get_website_settings
+    hooks = frappe.get_hooks()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1590, in _load_app_hooks
+    append_hook(hooks, key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1634, in append_hook
+    target[key].extend(value)
+AttributeError: 'dict' object has no attribute 'extend'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 147, in application
+    run_after_request_hooks(request, response)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 162, in run_after_request_hooks
+    for after_request_task in frappe.get_hooks("after_request"):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1590, in _load_app_hooks
+    append_hook(hooks, key, value)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1634, in append_hook
+    target[key].extend(value)
+AttributeError: 'dict' object has no attribute 'extend'
+2025-06-09 10:15:25,787 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Work Allocations', 'name': 'WA-2025-0004', 'cmd': 'frappe.desk.form.load.getdoc'}
+2025-06-09 10:44:36,762 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Work Allocations', 'name': 'WA-2025-0001', 'cmd': 'frappe.desk.form.load.getdoc'}
+2025-06-09 10:45:05,654 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Work Allocations', 'name': 'WA-2025-0001', 'cmd': 'frappe.desk.form.load.getdoc'}
+2025-06-09 10:52:58,546 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Work Allocations', 'name': 'WA-2025-0004', 'cmd': 'frappe.desk.form.load.getdoc'}
+2025-06-09 10:53:22,970 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Work Allocations', 'name': 'WA-2025-0004', 'cmd': 'frappe.desk.form.load.getdoc'}
+2025-06-09 10:56:10,567 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Work Allocations', 'name': 'WA-2025-0001', 'cmd': 'frappe.desk.form.load.getdoc'}
+2025-06-09 10:57:17,279 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Work Allocations', 'name': 'WA-2025-0001', 'cmd': 'frappe.desk.form.load.getdoc'}
+2025-06-09 12:09:10,432 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Work Allocations","name":"new-work-allocations-ggoqspvozq","__islocal":1,"__unsaved":1,"owner":"sindhu@limendo.com","task":[{"docstatus":0,"doctype":"Work Allocations Task Item","name":"new-work-allocations-task-item-mkmitenghm","__islocal":1,"__unsaved":1,"owner":"sindhu@limendo.com","parent":"new-work-allocations-ggoqspvozq","parentfield":"task","parenttype":"Work Allocations","idx":1,"task":"html","due_date":null},{"docstatus":0,"doctype":"Work Allocations Task Item","name":"new-work-allocations-task-item-amnnrtmfnu","__islocal":1,"__unsaved":1,"owner":"sindhu@limendo.com","parent":"new-work-allocations-ggoqspvozq","parentfield":"task","parenttype":"Work Allocations","idx":2,"task":"css","due_date":null}],"completion_status":"Not Started","intern":"INTERN-2025-0001","template":"WT-2025-0003"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-06-09 13:13:04,740 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Mentor', 'name': 'MENTI-2025-0003', 'cmd': 'frappe.client.delete'}
+2025-06-09 17:31:36,265 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Work Allocations', 'fields': '["`tabWork Allocations`.`name`","`tabWork Allocations`.`owner`","`tabWork Allocations`.`creation`","`tabWork Allocations`.`modified`","`tabWork Allocations`.`modified_by`","`tabWork Allocations`.`_user_tags`","`tabWork Allocations`.`_comments`","`tabWork Allocations`.`_assign`","`tabWork Allocations`.`_liked_by`","`tabWork Allocations`.`docstatus`","`tabWork Allocations`.`idx`"]', 'filters': '[]', 'order_by': '`tabWork Allocations`.`creation` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-09 17:33:10,993 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Work Allocations', 'with_parent': '1', 'cached_timestamp': '2025-06-09 17:34:15.134365', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2025-06-09 17:33:42,785 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Work Allocations', 'fields': '["`tabWork Allocations`.`name`","`tabWork Allocations`.`owner`","`tabWork Allocations`.`creation`","`tabWork Allocations`.`modified`","`tabWork Allocations`.`modified_by`","`tabWork Allocations`.`_user_tags`","`tabWork Allocations`.`_comments`","`tabWork Allocations`.`_assign`","`tabWork Allocations`.`_liked_by`","`tabWork Allocations`.`docstatus`","`tabWork Allocations`.`idx`"]', 'filters': '[]', 'order_by': '`tabWork Allocations`.`creation` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-09 17:34:13,670 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Work Allocations', 'fields': '["`tabWork Allocations`.`name`","`tabWork Allocations`.`owner`","`tabWork Allocations`.`creation`","`tabWork Allocations`.`modified`","`tabWork Allocations`.`modified_by`","`tabWork Allocations`.`_user_tags`","`tabWork Allocations`.`_comments`","`tabWork Allocations`.`_assign`","`tabWork Allocations`.`_liked_by`","`tabWork Allocations`.`docstatus`","`tabWork Allocations`.`idx`"]', 'filters': '[]', 'order_by': '`tabWork Allocations`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-09 17:34:31,111 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Work Allocations', 'fields': '["`tabWork Allocations`.`name`","`tabWork Allocations`.`owner`","`tabWork Allocations`.`creation`","`tabWork Allocations`.`modified`","`tabWork Allocations`.`modified_by`","`tabWork Allocations`.`_user_tags`","`tabWork Allocations`.`_comments`","`tabWork Allocations`.`_assign`","`tabWork Allocations`.`_liked_by`","`tabWork Allocations`.`docstatus`","`tabWork Allocations`.`idx`"]', 'filters': '[]', 'order_by': '`tabWork Allocations`.`creation` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-10 05:43:24,090 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Intern', 'fields': '["`tabIntern`.`name`","`tabIntern`.`owner`","`tabIntern`.`creation`","`tabIntern`.`modified`","`tabIntern`.`modified_by`","`tabIntern`.`_user_tags`","`tabIntern`.`_comments`","`tabIntern`.`_assign`","`tabIntern`.`_liked_by`","`tabIntern`.`docstatus`","`tabIntern`.`idx`","`tabIntern`.`email_id`"]', 'filters': '[]', 'order_by': '`tabIntern`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-10 05:43:28,265 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Intern', 'fields': '["`tabIntern`.`name`","`tabIntern`.`owner`","`tabIntern`.`creation`","`tabIntern`.`modified`","`tabIntern`.`modified_by`","`tabIntern`.`_user_tags`","`tabIntern`.`_comments`","`tabIntern`.`_assign`","`tabIntern`.`_liked_by`","`tabIntern`.`docstatus`","`tabIntern`.`idx`","`tabIntern`.`email_id`"]', 'filters': '[]', 'order_by': '`tabIntern`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}
+2025-06-10 05:44:17,501 ERROR frappe New Exception collected in error log
+Site: intern.com
+Form Dict: {'doctype': 'Intern', 'fields': '["`tabIntern`.`name`","`tabIntern`.`owner`","`tabIntern`.`creation`","`tabIntern`.`modified`","`tabIntern`.`modified_by`","`tabIntern`.`_user_tags`","`tabIntern`.`_comments`","`tabIntern`.`_assign`","`tabIntern`.`_liked_by`","`tabIntern`.`docstatus`","`tabIntern`.`idx`","`tabIntern`.`email_id`"]', 'filters': '[]', 'order_by': '`tabIntern`.`modified` desc', 'start': '0', 'page_length': '20', 'view': 'List', 'group_by': '', 'with_comment_count': '1', 'cmd': 'frappe.desk.reportview.get'}

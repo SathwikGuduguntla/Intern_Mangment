@@ -1,512 +1,4 @@
-2025-05-18 05:55:16,089 ERROR frappe Failed to run after request hook
-Site: test6.com
-Form Dict: {'s': '/index/\\think\\app/invokefunction', 'function': 'call_user_func_array', 'vars[0]': 'md5', 'vars[1][]': 'Hello'}
-Traceback (most recent call last):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
-    return frappe.local.request_cache[func][args_key]
-KeyError: 5740354900026072187
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 100, in application
-    init_request(request)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 196, in init_request
-    frappe.local.http_request = HTTPRequest()
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 44, in __init__
-    self.set_session()
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 78, in set_session
-    frappe.local.login_manager = LoginManager()
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 117, in __init__
-    self.make_session(resume=True)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 211, in make_session
-    frappe.local.session_obj = Session(
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 230, in __init__
-    self.resume()
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 313, in resume
-    self.validate_user()
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 238, in validate_user
-    if not frappe.get_cached_value("User", self.user, "enabled"):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1236, in get_cached_value
-    doc = get_cached_doc(doctype, name)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1179, in get_cached_doc
-    doc = get_doc(*args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1305, in get_doc
-    return frappe.model.document.get_doc(*args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
-    controller = get_controller(doctype)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
-    site_controllers[doctype] = import_controller(doctype)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
-    class_overrides = frappe.get_hooks("override_doctype_class")
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
-    hooks = _dict(_load_app_hooks())
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
-    return_val = func(*args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
-    app_hooks = get_module(f"{app}.hooks")
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
-    return importlib.import_module(modulename)
-  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
-ModuleNotFoundError: No module named 'library_management.hooks'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
-    return frappe.local.request_cache[func][args_key]
-KeyError: 5740354900026072187
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 133, in application
-    response = handle_exception(e)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/permissions.py", line 870, in wrapper
-    return fn(e, *args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 325, in handle_exception
-    allow_traceback = frappe.get_system_settings("allow_error_traceback") if frappe.db else False
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 2328, in get_system_settings
-    local.system_settings = system_settings = get_cached_doc("System Settings")
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1179, in get_cached_doc
-    doc = get_doc(*args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1305, in get_doc
-    return frappe.model.document.get_doc(*args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
-    controller = get_controller(doctype)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
-    site_controllers[doctype] = import_controller(doctype)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
-    class_overrides = frappe.get_hooks("override_doctype_class")
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
-    hooks = _dict(_load_app_hooks())
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
-    return_val = func(*args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
-    app_hooks = get_module(f"{app}.hooks")
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
-    return importlib.import_module(modulename)
-  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
-ModuleNotFoundError: No module named 'library_management.hooks'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
-    return frappe.local.request_cache[func][args_key]
-KeyError: 5740354900026072187
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 147, in application
-    run_after_request_hooks(request, response)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 162, in run_after_request_hooks
-    for after_request_task in frappe.get_hooks("after_request"):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
-    hooks = _dict(_load_app_hooks())
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
-    return_val = func(*args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
-    app_hooks = get_module(f"{app}.hooks")
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
-    return importlib.import_module(modulename)
-  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
-ModuleNotFoundError: No module named 'library_management.hooks'
-2025-05-18 05:55:16,651 ERROR frappe Failed to run after request hook
-Site: test6.com
-Form Dict: {'s': '/index/\\think\\app/invokefunction', 'function': 'call_user_func_array', 'vars[0]': 'md5', 'vars[1][]': 'Hello'}
-Traceback (most recent call last):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
-    return frappe.local.request_cache[func][args_key]
-KeyError: 5740354900026072187
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 100, in application
-    init_request(request)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 196, in init_request
-    frappe.local.http_request = HTTPRequest()
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 44, in __init__
-    self.set_session()
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 78, in set_session
-    frappe.local.login_manager = LoginManager()
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 117, in __init__
-    self.make_session(resume=True)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 211, in make_session
-    frappe.local.session_obj = Session(
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 230, in __init__
-    self.resume()
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 313, in resume
-    self.validate_user()
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 238, in validate_user
-    if not frappe.get_cached_value("User", self.user, "enabled"):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1236, in get_cached_value
-    doc = get_cached_doc(doctype, name)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1179, in get_cached_doc
-    doc = get_doc(*args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1305, in get_doc
-    return frappe.model.document.get_doc(*args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
-    controller = get_controller(doctype)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
-    site_controllers[doctype] = import_controller(doctype)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
-    class_overrides = frappe.get_hooks("override_doctype_class")
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
-    hooks = _dict(_load_app_hooks())
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
-    return_val = func(*args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
-    app_hooks = get_module(f"{app}.hooks")
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
-    return importlib.import_module(modulename)
-  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
-ModuleNotFoundError: No module named 'library_management.hooks'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
-    return frappe.local.request_cache[func][args_key]
-KeyError: 5740354900026072187
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 133, in application
-    response = handle_exception(e)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/permissions.py", line 870, in wrapper
-    return fn(e, *args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 325, in handle_exception
-    allow_traceback = frappe.get_system_settings("allow_error_traceback") if frappe.db else False
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 2328, in get_system_settings
-    local.system_settings = system_settings = get_cached_doc("System Settings")
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1179, in get_cached_doc
-    doc = get_doc(*args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1305, in get_doc
-    return frappe.model.document.get_doc(*args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
-    controller = get_controller(doctype)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
-    site_controllers[doctype] = import_controller(doctype)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
-    class_overrides = frappe.get_hooks("override_doctype_class")
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
-    hooks = _dict(_load_app_hooks())
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
-    return_val = func(*args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
-    app_hooks = get_module(f"{app}.hooks")
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
-    return importlib.import_module(modulename)
-  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
-ModuleNotFoundError: No module named 'library_management.hooks'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
-    return frappe.local.request_cache[func][args_key]
-KeyError: 5740354900026072187
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 147, in application
-    run_after_request_hooks(request, response)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 162, in run_after_request_hooks
-    for after_request_task in frappe.get_hooks("after_request"):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
-    hooks = _dict(_load_app_hooks())
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
-    return_val = func(*args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
-    app_hooks = get_module(f"{app}.hooks")
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
-    return importlib.import_module(modulename)
-  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
-ModuleNotFoundError: No module named 'library_management.hooks'
-2025-05-18 05:55:17,162 ERROR frappe Failed to run after request hook
-Site: test6.com
-Form Dict: {'lang': '../../../../../../../../usr/local/lib/php/pearcmd', ' config-create /': '', '/<?echo(md5("hi"));?> /tmp/index1.php': ''}
-Traceback (most recent call last):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
-    return frappe.local.request_cache[func][args_key]
-KeyError: 5740354900026072187
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 100, in application
-    init_request(request)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 196, in init_request
-    frappe.local.http_request = HTTPRequest()
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 44, in __init__
-    self.set_session()
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 78, in set_session
-    frappe.local.login_manager = LoginManager()
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 117, in __init__
-    self.make_session(resume=True)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 211, in make_session
-    frappe.local.session_obj = Session(
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 230, in __init__
-    self.resume()
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 313, in resume
-    self.validate_user()
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 238, in validate_user
-    if not frappe.get_cached_value("User", self.user, "enabled"):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1236, in get_cached_value
-    doc = get_cached_doc(doctype, name)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1179, in get_cached_doc
-    doc = get_doc(*args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1305, in get_doc
-    return frappe.model.document.get_doc(*args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
-    controller = get_controller(doctype)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
-    site_controllers[doctype] = import_controller(doctype)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
-    class_overrides = frappe.get_hooks("override_doctype_class")
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
-    hooks = _dict(_load_app_hooks())
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
-    return_val = func(*args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
-    app_hooks = get_module(f"{app}.hooks")
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
-    return importlib.import_module(modulename)
-  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
-ModuleNotFoundError: No module named 'library_management.hooks'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
-    return frappe.local.request_cache[func][args_key]
-KeyError: 5740354900026072187
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 133, in application
-    response = handle_exception(e)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/permissions.py", line 870, in wrapper
-    return fn(e, *args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 325, in handle_exception
-    allow_traceback = frappe.get_system_settings("allow_error_traceback") if frappe.db else False
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 2328, in get_system_settings
-    local.system_settings = system_settings = get_cached_doc("System Settings")
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1179, in get_cached_doc
-    doc = get_doc(*args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1305, in get_doc
-    return frappe.model.document.get_doc(*args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
-    controller = get_controller(doctype)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
-    site_controllers[doctype] = import_controller(doctype)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
-    class_overrides = frappe.get_hooks("override_doctype_class")
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
-    hooks = _dict(_load_app_hooks())
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
-    return_val = func(*args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
-    app_hooks = get_module(f"{app}.hooks")
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
-    return importlib.import_module(modulename)
-  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
-ModuleNotFoundError: No module named 'library_management.hooks'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
-    return frappe.local.request_cache[func][args_key]
-KeyError: 5740354900026072187
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 147, in application
-    run_after_request_hooks(request, response)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 162, in run_after_request_hooks
-    for after_request_task in frappe.get_hooks("after_request"):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
-    hooks = _dict(_load_app_hooks())
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
-    return_val = func(*args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
-    app_hooks = get_module(f"{app}.hooks")
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
-    return importlib.import_module(modulename)
-  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
-ModuleNotFoundError: No module named 'library_management.hooks'
-2025-05-18 05:55:17,690 ERROR frappe Failed to run after request hook
-Site: test6.com
-Form Dict: {'lang': '../../../../../../../../tmp/index1'}
-Traceback (most recent call last):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
-    return frappe.local.request_cache[func][args_key]
-KeyError: 5740354900026072187
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 100, in application
-    init_request(request)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 196, in init_request
-    frappe.local.http_request = HTTPRequest()
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 44, in __init__
-    self.set_session()
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 78, in set_session
-    frappe.local.login_manager = LoginManager()
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 117, in __init__
-    self.make_session(resume=True)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 211, in make_session
-    frappe.local.session_obj = Session(
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 230, in __init__
-    self.resume()
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 313, in resume
-    self.validate_user()
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 238, in validate_user
-    if not frappe.get_cached_value("User", self.user, "enabled"):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1236, in get_cached_value
-    doc = get_cached_doc(doctype, name)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1179, in get_cached_doc
-    doc = get_doc(*args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1305, in get_doc
-    return frappe.model.document.get_doc(*args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
-    controller = get_controller(doctype)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
-    site_controllers[doctype] = import_controller(doctype)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
-    class_overrides = frappe.get_hooks("override_doctype_class")
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
-    hooks = _dict(_load_app_hooks())
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
-    return_val = func(*args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
-    app_hooks = get_module(f"{app}.hooks")
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
-    return importlib.import_module(modulename)
-  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
-ModuleNotFoundError: No module named 'library_management.hooks'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
-    return frappe.local.request_cache[func][args_key]
-KeyError: 5740354900026072187
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 133, in application
-    response = handle_exception(e)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/permissions.py", line 870, in wrapper
-    return fn(e, *args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 325, in handle_exception
-    allow_traceback = frappe.get_system_settings("allow_error_traceback") if frappe.db else False
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 2328, in get_system_settings
-    local.system_settings = system_settings = get_cached_doc("System Settings")
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1179, in get_cached_doc
-    doc = get_doc(*args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1305, in get_doc
-    return frappe.model.document.get_doc(*args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
-    controller = get_controller(doctype)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
-    site_controllers[doctype] = import_controller(doctype)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
-    class_overrides = frappe.get_hooks("override_doctype_class")
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
-    hooks = _dict(_load_app_hooks())
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
-    return_val = func(*args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
-    app_hooks = get_module(f"{app}.hooks")
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
-    return importlib.import_module(modulename)
-  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
-ModuleNotFoundError: No module named 'library_management.hooks'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
-    return frappe.local.request_cache[func][args_key]
-KeyError: 5740354900026072187
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 147, in application
-    run_after_request_hooks(request, response)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 162, in run_after_request_hooks
-    for after_request_task in frappe.get_hooks("after_request"):
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
-    hooks = _dict(_load_app_hooks())
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
-    return_val = func(*args, **kwargs)
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
-    app_hooks = get_module(f"{app}.hooks")
-  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
-    return importlib.import_module(modulename)
-  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
-ModuleNotFoundError: No module named 'library_management.hooks'
-2025-05-18 05:55:18,243 ERROR frappe Failed to run after request hook
+2025-05-18 06:19:29,301 ERROR frappe Failed to run after request hook
 Site: test6.com
 Form Dict: {}
 Traceback (most recent call last):
@@ -633,7 +125,7 @@ Traceback (most recent call last):
   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
   File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
 ModuleNotFoundError: No module named 'library_management.hooks'
-2025-05-18 06:12:09,015 ERROR frappe Failed to run after request hook
+2025-05-18 06:33:52,356 ERROR frappe Failed to run after request hook
 Site: test6.com
 Form Dict: {}
 Traceback (most recent call last):
@@ -760,7 +252,7 @@ Traceback (most recent call last):
   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
   File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
 ModuleNotFoundError: No module named 'library_management.hooks'
-2025-05-18 07:23:28,556 ERROR frappe Failed to run after request hook
+2025-05-18 06:46:06,557 ERROR frappe Failed to run after request hook
 Site: test6.com
 Form Dict: {}
 Traceback (most recent call last):
@@ -887,7 +379,7 @@ Traceback (most recent call last):
   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
   File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
 ModuleNotFoundError: No module named 'library_management.hooks'
-2025-05-18 07:23:32,219 ERROR frappe Failed to run after request hook
+2025-05-18 07:37:34,324 ERROR frappe Failed to run after request hook
 Site: test6.com
 Form Dict: {}
 Traceback (most recent call last):
@@ -1014,7 +506,7 @@ Traceback (most recent call last):
   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
   File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
 ModuleNotFoundError: No module named 'library_management.hooks'
-2025-05-18 08:36:41,011 ERROR frappe Failed to run after request hook
+2025-05-18 08:12:02,803 ERROR frappe Failed to run after request hook
 Site: test6.com
 Form Dict: {}
 Traceback (most recent call last):
@@ -1141,7 +633,7 @@ Traceback (most recent call last):
   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
   File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
 ModuleNotFoundError: No module named 'library_management.hooks'
-2025-05-18 08:36:41,179 ERROR frappe Failed to run after request hook
+2025-05-18 08:36:48,518 ERROR frappe Failed to run after request hook
 Site: test6.com
 Form Dict: {}
 Traceback (most recent call last):
@@ -1268,7 +760,7 @@ Traceback (most recent call last):
   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
   File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
 ModuleNotFoundError: No module named 'library_management.hooks'
-2025-05-18 08:36:42,074 ERROR frappe Failed to run after request hook
+2025-05-18 08:36:48,625 ERROR frappe Failed to run after request hook
 Site: test6.com
 Form Dict: {}
 Traceback (most recent call last):
@@ -1395,7 +887,515 @@ Traceback (most recent call last):
   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
   File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
 ModuleNotFoundError: No module named 'library_management.hooks'
-2025-05-18 08:36:42,478 ERROR frappe Failed to run after request hook
+2025-05-18 08:36:48,747 ERROR frappe Failed to run after request hook
+Site: test6.com
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 100, in application
+    init_request(request)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 196, in init_request
+    frappe.local.http_request = HTTPRequest()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 44, in __init__
+    self.set_session()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 78, in set_session
+    frappe.local.login_manager = LoginManager()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 117, in __init__
+    self.make_session(resume=True)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 211, in make_session
+    frappe.local.session_obj = Session(
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 230, in __init__
+    self.resume()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 313, in resume
+    self.validate_user()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 238, in validate_user
+    if not frappe.get_cached_value("User", self.user, "enabled"):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1236, in get_cached_value
+    doc = get_cached_doc(doctype, name)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1179, in get_cached_doc
+    doc = get_doc(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1305, in get_doc
+    return frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 133, in application
+    response = handle_exception(e)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/permissions.py", line 870, in wrapper
+    return fn(e, *args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 325, in handle_exception
+    allow_traceback = frappe.get_system_settings("allow_error_traceback") if frappe.db else False
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 2328, in get_system_settings
+    local.system_settings = system_settings = get_cached_doc("System Settings")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1179, in get_cached_doc
+    doc = get_doc(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1305, in get_doc
+    return frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 147, in application
+    run_after_request_hooks(request, response)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 162, in run_after_request_hooks
+    for after_request_task in frappe.get_hooks("after_request"):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 08:36:48,817 ERROR frappe Failed to run after request hook
+Site: test6.com
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 100, in application
+    init_request(request)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 196, in init_request
+    frappe.local.http_request = HTTPRequest()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 44, in __init__
+    self.set_session()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 78, in set_session
+    frappe.local.login_manager = LoginManager()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 117, in __init__
+    self.make_session(resume=True)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 211, in make_session
+    frappe.local.session_obj = Session(
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 230, in __init__
+    self.resume()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 313, in resume
+    self.validate_user()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 238, in validate_user
+    if not frappe.get_cached_value("User", self.user, "enabled"):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1236, in get_cached_value
+    doc = get_cached_doc(doctype, name)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1179, in get_cached_doc
+    doc = get_doc(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1305, in get_doc
+    return frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 133, in application
+    response = handle_exception(e)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/permissions.py", line 870, in wrapper
+    return fn(e, *args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 325, in handle_exception
+    allow_traceback = frappe.get_system_settings("allow_error_traceback") if frappe.db else False
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 2328, in get_system_settings
+    local.system_settings = system_settings = get_cached_doc("System Settings")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1179, in get_cached_doc
+    doc = get_doc(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1305, in get_doc
+    return frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 147, in application
+    run_after_request_hooks(request, response)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 162, in run_after_request_hooks
+    for after_request_task in frappe.get_hooks("after_request"):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 08:36:51,560 ERROR frappe Failed to run after request hook
+Site: test6.com
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 100, in application
+    init_request(request)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 196, in init_request
+    frappe.local.http_request = HTTPRequest()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 44, in __init__
+    self.set_session()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 78, in set_session
+    frappe.local.login_manager = LoginManager()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 117, in __init__
+    self.make_session(resume=True)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 211, in make_session
+    frappe.local.session_obj = Session(
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 230, in __init__
+    self.resume()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 313, in resume
+    self.validate_user()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 238, in validate_user
+    if not frappe.get_cached_value("User", self.user, "enabled"):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1236, in get_cached_value
+    doc = get_cached_doc(doctype, name)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1179, in get_cached_doc
+    doc = get_doc(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1305, in get_doc
+    return frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 133, in application
+    response = handle_exception(e)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/permissions.py", line 870, in wrapper
+    return fn(e, *args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 325, in handle_exception
+    allow_traceback = frappe.get_system_settings("allow_error_traceback") if frappe.db else False
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 2328, in get_system_settings
+    local.system_settings = system_settings = get_cached_doc("System Settings")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1179, in get_cached_doc
+    doc = get_doc(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1305, in get_doc
+    return frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 147, in application
+    run_after_request_hooks(request, response)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 162, in run_after_request_hooks
+    for after_request_task in frappe.get_hooks("after_request"):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 08:37:01,515 ERROR frappe Failed to run after request hook
+Site: test6.com
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 100, in application
+    init_request(request)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 196, in init_request
+    frappe.local.http_request = HTTPRequest()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 44, in __init__
+    self.set_session()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 78, in set_session
+    frappe.local.login_manager = LoginManager()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 117, in __init__
+    self.make_session(resume=True)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/auth.py", line 211, in make_session
+    frappe.local.session_obj = Session(
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 230, in __init__
+    self.resume()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 313, in resume
+    self.validate_user()
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/sessions.py", line 238, in validate_user
+    if not frappe.get_cached_value("User", self.user, "enabled"):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1236, in get_cached_value
+    doc = get_cached_doc(doctype, name)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1179, in get_cached_doc
+    doc = get_doc(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1305, in get_doc
+    return frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 133, in application
+    response = handle_exception(e)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/permissions.py", line 870, in wrapper
+    return fn(e, *args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 325, in handle_exception
+    allow_traceback = frappe.get_system_settings("allow_error_traceback") if frappe.db else False
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 2328, in get_system_settings
+    local.system_settings = system_settings = get_cached_doc("System Settings")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1179, in get_cached_doc
+    doc = get_doc(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1305, in get_doc
+    return frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 71, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 147, in application
+    run_after_request_hooks(request, response)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/app.py", line 162, in run_after_request_hooks
+    for after_request_task in frappe.get_hooks("after_request"):
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1607, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/limendo/frappe-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management.hooks'
+2025-05-18 08:37:02,012 ERROR frappe Failed to run after request hook
 Site: test6.com
 Form Dict: {}
 Traceback (most recent call last):
